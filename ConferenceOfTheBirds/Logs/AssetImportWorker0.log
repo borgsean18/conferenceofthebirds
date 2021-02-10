@@ -1459,3 +1459,91 @@ System memory in use after: 89.7 MB.
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2420.
 Total: 2.024700 ms (FindLiveObjects: 0.193400 ms CreateObjectMapping: 0.072600 ms MarkObjects: 1.659700 ms  DeleteObjects: 0.098200 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 3032.391408 seconds.
+  path: Assets/Scripts/OwlBoy/charMovementOBScript.cs
+  artifactKey: Guid(d2be441d98053b54a8d27be10b5d2aa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/OwlBoy/charMovementOBScript.cs using Guid(d2be441d98053b54a8d27be10b5d2aa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ba729ee54c67c0fc07701ec7fe13bf5') in 0.005841 seconds
+  Import took 0.009140 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000617 seconds.
+  path: Assets/Scripts/OwlBoy/charMovementOBScript.cs
+  artifactKey: Guid(d2be441d98053b54a8d27be10b5d2aa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/OwlBoy/charMovementOBScript.cs using Guid(d2be441d98053b54a8d27be10b5d2aa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ba729ee54c67c0fc07701ec7fe13bf5') in 0.003527 seconds
+  Import took 0.007012 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001000 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.901 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.8 MB.
+System memory in use after: 89.8 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2423.
+Total: 3.073700 ms (FindLiveObjects: 0.381800 ms CreateObjectMapping: 0.063400 ms MarkObjects: 2.461300 ms  DeleteObjects: 0.166200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 136.874843 seconds.
+  path: Assets/Scripts/OwlBoy/charMovementOBScript.cs
+  artifactKey: Guid(d2be441d98053b54a8d27be10b5d2aa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/OwlBoy/charMovementOBScript.cs using Guid(d2be441d98053b54a8d27be10b5d2aa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef1dbe4b987b642acb9b49f14f11d31f') in 0.006037 seconds
+  Import took 0.009248 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001568 seconds.
+  path: Assets/Scripts/OwlBoy/charMovementOBScript.cs
+  artifactKey: Guid(d2be441d98053b54a8d27be10b5d2aa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/OwlBoy/charMovementOBScript.cs using Guid(d2be441d98053b54a8d27be10b5d2aa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef1dbe4b987b642acb9b49f14f11d31f') in 0.003852 seconds
+  Import took 0.006953 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001119 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.866 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.8 MB.
+System memory in use after: 89.8 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2426.
+Total: 2.313100 ms (FindLiveObjects: 0.293100 ms CreateObjectMapping: 0.092800 ms MarkObjects: 1.790400 ms  DeleteObjects: 0.135800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.501303 seconds.
+  path: Assets/Scripts/OwlBoy/charMovementOBScript.cs
+  artifactKey: Guid(d2be441d98053b54a8d27be10b5d2aa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/OwlBoy/charMovementOBScript.cs using Guid(d2be441d98053b54a8d27be10b5d2aa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5a7f5ad6fbaa842958b2bef26ae25f1') in 0.008840 seconds
+  Import took 0.013484 seconds .
+

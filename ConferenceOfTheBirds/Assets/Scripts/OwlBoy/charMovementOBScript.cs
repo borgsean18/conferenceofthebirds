@@ -21,7 +21,6 @@ public class charMovementOBScript : MonoBehaviour
 
     //Triggers
     private bool enteredFlymode = false;
-    private bool enteredColdPatch = false;
 
     //Components
     private Rigidbody2D rb;
@@ -99,9 +98,8 @@ public class charMovementOBScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "ColdPatch" && enteredColdPatch == false)
+        if (collision.gameObject.tag == "ColdPatch")
         {
-            enteredColdPatch = true;
             speed = 1;
             mainCameraComponent.backgroundColor = Color.Lerp(Color.blue, Color.cyan, 3f);
         }
@@ -111,7 +109,6 @@ public class charMovementOBScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "ColdPatch")
         {
-            enteredColdPatch = false;
             speed = normalSpeed;
             mainCameraComponent.backgroundColor = Color.Lerp(Color.cyan, Color.blue, 3f);
         }
