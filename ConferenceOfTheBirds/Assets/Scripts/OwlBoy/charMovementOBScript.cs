@@ -8,11 +8,18 @@ public class charMovementOBScript : MonoBehaviour
     //singleton
     public static charMovementOBScript current;
 
+
+    [Header("Stats")]
     //stats
     public float normalSpeed = 2f;
     private float speed = 0;
     public int jumps = 1;
     public bool flyMode = false;
+
+    [Header("Equipment")]
+    public GameObject eqippedItem;
+    private GameObject equipmentParent;
+    private int selectedItem = 0;
 
     [Header("Scene Objects")]
     //Camera
@@ -39,6 +46,13 @@ public class charMovementOBScript : MonoBehaviour
 
         //stats
         speed = normalSpeed;
+
+        //Equipment
+        equipmentParent = transform.GetChild(1).gameObject;
+        for (int i = 0; i < equipmentParent.transform.childCount; i++)
+        {
+            equipmentParent.transform.GetChild(i).gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -49,6 +63,8 @@ public class charMovementOBScript : MonoBehaviour
         Fly();
 
         enteredFlymode = false;
+
+        ChangeEquippedItem();
     }
 
     private void Walk()
@@ -96,11 +112,47 @@ public class charMovementOBScript : MonoBehaviour
         }
     }
 
+    private void ChangeEquippedItem()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            equipmentParent.transform.GetChild(selectedItem).gameObject.SetActive(false);
+            selectedItem++;
+            if (selectedItem >= equipmentParent.transform.childCount)
+            {
+                selectedItem = 0;
+            }
+            equipmentParent.transform.GetChild(selectedItem).gameObject.SetActive(true);
+            eqippedItem = equipmentParent.transform.GetChild(selectedItem).gameObject;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            equipmentParent.transform.GetChild(selectedItem).gameObject.SetActive(false);
+            selectedItem--;
+            if (selectedItem < 0)
+            {
+                selectedItem = equipmentParent.transform.childCount - 1;
+            }
+            equipmentParent.transform.GetChild(selectedItem).gameObject.SetActive(true);
+            eqippedItem = equipmentParent.transform.GetChild(selectedItem).gameObject;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            for (int i = 0; i < equipmentParent.transform.childCount; i++)
+            {
+                equipmentParent.transform.GetChild(i).gameObject.SetActive(false);
+                eqippedItem = null;
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "ColdPatch")
         {
-            speed = 1;
+            speed = 1.5f;
             mainCameraComponent.backgroundColor = Color.Lerp(Color.blue, Color.cyan, 3f);
         }
     }
