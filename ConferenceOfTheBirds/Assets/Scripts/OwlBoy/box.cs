@@ -35,4 +35,7 @@ public class box : MonoBehaviour
     {
         door.transform.position += Vector3.up * 10f * Time.deltaTime;
     }
+ //I am a box, I contain things. Sometimes people fill me with their memories and put me in the attic. It is not that bad here,
+ //I met a spider once, he's name is Greg. Greg built his nest inside me. Together we look at the old photo albums of this family.
+ //We know all about them, all their secrets...
 }
