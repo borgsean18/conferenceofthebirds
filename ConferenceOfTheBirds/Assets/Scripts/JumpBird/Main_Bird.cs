@@ -13,7 +13,7 @@ public class Main_Bird : MonoBehaviour
     public Transform[] ground_checks;
     public bool is_on_ground;
     public float height;
-    public bool face_left;
+    public int face_direction;
     public float gliding_speed;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class Main_Bird : MonoBehaviour
         m_stateMachine.SetCurrentState(Walk.Instance);
         sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        face_left = true;
+        face_direction = -1;
     }
     public StateMachine<Main_Bird> GetFSM()
     {
@@ -34,7 +34,7 @@ public class Main_Bird : MonoBehaviour
         print(GetFSM().CurrentState());
         m_stateMachine.StateMachineUpdate();
         Check_On_The_Ground();
-        if (face_left)
+        if (face_direction==-1)
             sprite.flipX = false;
         else
             sprite.flipX = true;
