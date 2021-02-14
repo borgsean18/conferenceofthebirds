@@ -23,6 +23,7 @@ public class Walk : State<Main_Bird>
     public static Walk Instance { get; private set; }
     float timer;
     bool ready_to_jump;
+    bool is_down;
     static Walk()
     {
         Instance = new Walk();
@@ -32,6 +33,7 @@ public class Walk : State<Main_Bird>
     {
         timer = 0;
         ready_to_jump = false;
+        is_down = false;
     }
 
     public override void Execute(Main_Bird bird)
@@ -42,12 +44,19 @@ public class Walk : State<Main_Bird>
             {
                 bird.sprite.flipX = true;
                 bird.face_direction = 1;
-                bird.rb.velocity = new Vector2(bird.walk_speed, 0);
+                bird.rb.velocity = new Vector2(bird.walk_speed, bird.rb.velocity.y);
                 timer += Time.deltaTime;
-                if (timer > 0.2)
+                if (timer > 0.2 && !is_down)
                 {
+                    bird.transform.position += new Vector3(0, 0.05f, 0);
                     timer = 0;
-                    bird.transform.position += new Vector3(0, 0.05f,0);
+                    is_down = true;
+                }
+                else if (timer > 0.2 && is_down)
+                {
+                    bird.sprite.transform.position -= new Vector3(0, 0.05f, 0);
+                    timer = 0;
+                    is_down = false;
                 }
             }
             else if (Input.GetKeyUp(KeyCode.D))
@@ -60,13 +69,19 @@ public class Walk : State<Main_Bird>
                 bird.sprite.flipX = false;
                 bird.face_direction = -1;
 
-                bird.rb.velocity = new Vector2(-bird.walk_speed, 0);
+                bird.rb.velocity = new Vector2(-bird.walk_speed, bird.rb.velocity.y);
                 timer += Time.deltaTime;
-                if (timer > 0.2)
-                {
-                    timer = 0;
+                if (timer > 0.2&&!is_down)
+                {                   
                     bird.transform.position += new Vector3(0, 0.05f, 0);
-
+                    timer = 0;
+                    is_down = true;
+                }
+                else if (timer > 0.2&&is_down)
+                {
+                    bird.sprite.transform.position -= new Vector3(0, 0.05f, 0);
+                    timer = 0;
+                    is_down = false;
                 }
             }
             else if (Input.GetKeyUp(KeyCode.A))
