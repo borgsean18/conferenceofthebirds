@@ -41,7 +41,7 @@ public class Walk : State<Main_Bird>
             if (Input.GetKey(KeyCode.D))
             {
                 bird.sprite.flipX = true;
-                bird.face_left = false;
+                bird.face_direction = 1;
                 bird.rb.velocity = new Vector2(bird.walk_speed, 0);
                 timer += Time.deltaTime;
                 if (timer > 0.2)
@@ -58,7 +58,7 @@ public class Walk : State<Main_Bird>
             else if (Input.GetKey(KeyCode.A))
             {
                 bird.sprite.flipX = false;
-                bird.face_left = true;
+                bird.face_direction = -1;
 
                 bird.rb.velocity = new Vector2(-bird.walk_speed, 0);
                 timer += Time.deltaTime;
@@ -100,19 +100,15 @@ public class Walk : State<Main_Bird>
             }
             else if(timer>=0.2f&&timer<0.5f)
             {
-                if(bird.face_left)
-                    bird.rb.velocity += new Vector2(-bird.walk_speed * timer * 2, bird.charge_jump_speed*timer*2);
-                else
-                    bird.rb.velocity += new Vector2(bird.walk_speed * timer * 2, bird.charge_jump_speed * timer * 2);
+              
+                bird.rb.velocity += new Vector2(bird.face_direction*bird.walk_speed * timer * 2, bird.charge_jump_speed * timer * 2);
 
                 bird.GetFSM().ChangeState(Jump.Instance);
             }
             else if(timer>=0.5f)
             {
-                if (bird.face_left)
-                    bird.rb.velocity += new Vector2(-bird.walk_speed, bird.charge_jump_speed);
-                else
-                    bird.rb.velocity += new Vector2(bird.walk_speed , bird.charge_jump_speed);
+             
+               bird.rb.velocity += new Vector2(bird.face_direction*bird.walk_speed , bird.charge_jump_speed);
 
                 bird.GetFSM().ChangeState(Jump.Instance);
 
@@ -152,7 +148,7 @@ public class Jump : State<Main_Bird>
             {
                 double_fly = true;
                 bird.height = height;
-                bird.rb.velocity = new Vector2(bird.rb.velocity.x / Mathf.Abs(bird.rb.velocity.x) * (Mathf.Abs(bird.rb.velocity.x) + 3), bird.rb.velocity.y + 3);
+                bird.rb.velocity = new Vector2(bird.face_direction * (Mathf.Abs(bird.rb.velocity.x) + 3), bird.rb.velocity.y + 3);
             }
         }
         else
@@ -260,12 +256,12 @@ public class Gliding : State<Main_Bird>
         {
             if(Input.GetKey(KeyCode.A))
             {
-                bird.face_left = true;
+                bird.face_direction = -1;
                 bird.rb.velocity = new Vector2(-bird.walk_speed, bird.rb.velocity.y);
             }
             else if(Input.GetKey(KeyCode.D))
             {
-                bird.face_left = false;
+                bird.face_direction = 1;
                 bird.rb.velocity = new Vector2(bird.walk_speed, bird.rb.velocity.y);
             }
             //if(Input.GetKey(KeyCode.W))
@@ -320,12 +316,12 @@ public class Fall : State<Main_Bird>
         }
         else if(Input.GetKey(KeyCode.Space))
         {
-            bird.rb.velocity = new Vector2(bird.rb.velocity.x/Mathf.Abs(bird.rb.velocity.x)*bird.gliding_speed, bird.rb.velocity.y);
+            bird.rb.velocity = new Vector2(bird.face_direction*bird.gliding_speed, bird.rb.velocity.y);
             bird.GetFSM().ChangeState(Gliding.Instance);
         }
         else if(Input.GetKeyDown(KeyCode.Mouse0))
         {
-            bird.rb.velocity = new Vector2(bird.rb.velocity.x / Mathf.Abs(bird.rb.velocity.x) * 8, 3);
+            bird.rb.velocity = new Vector2(bird.face_direction * 8, 3);
         }
     }
 
