@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - ColdPatch
+  - Breakable
   layers:
   - Default
   - TransparentFX
