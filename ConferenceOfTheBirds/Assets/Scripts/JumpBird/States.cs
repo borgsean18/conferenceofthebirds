@@ -38,6 +38,7 @@ public class Walk : State<Main_Bird>
 
     public override void Execute(Main_Bird bird)
     {
+        
         if(!ready_to_jump)
         {
             if (Input.GetKey(KeyCode.D))
@@ -90,8 +91,11 @@ public class Walk : State<Main_Bird>
                 timer = 0;
             }
         }
-
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (!bird.is_on_ground)
+        {
+            bird.GetFSM().ChangeState(Fall.Instance);
+        }
+        else if(Input.GetKeyDown(KeyCode.Space))
         {
             ready_to_jump = true;
             timer = 0;
