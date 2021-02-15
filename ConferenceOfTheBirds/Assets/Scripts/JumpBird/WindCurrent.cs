@@ -24,6 +24,7 @@ public class WindCurrent : MonoBehaviour
             print("hello");
             player_is_in = true;
             collision.GetComponent<Rigidbody2D>().AddForce(new Vector2(wind_x_force * wind_x_direction, wind_y_force * wind_y_direction));
+            timer = 0;
         }
         
     }
