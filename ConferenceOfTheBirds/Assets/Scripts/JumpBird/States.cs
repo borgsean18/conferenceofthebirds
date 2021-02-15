@@ -163,7 +163,7 @@ public class Jump : State<Main_Bird>
             {
                 double_fly = true;
                 bird.height = height;
-                bird.rb.velocity = new Vector2(bird.face_direction * (Mathf.Abs(bird.rb.velocity.x) + 3), bird.rb.velocity.y + 3);
+                bird.rb.velocity = new Vector2(bird.face_direction * (Mathf.Abs(bird.rb.velocity.x) + 3), bird.rb.velocity.y + 5);
             }
         }
         else
