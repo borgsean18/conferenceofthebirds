@@ -31,7 +31,7 @@ public class Main_Bird : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(GetFSM().CurrentState());
+        //print(GetFSM().CurrentState());
         m_stateMachine.StateMachineUpdate();
         Check_On_The_Ground();
         if (face_direction==-1)
@@ -49,7 +49,7 @@ public class Main_Bird : MonoBehaviour
             is_on_ground = checkResult;
             if (is_on_ground)
             {
-                print("onground");
+                //print("onground");
                 break;
             }
 
