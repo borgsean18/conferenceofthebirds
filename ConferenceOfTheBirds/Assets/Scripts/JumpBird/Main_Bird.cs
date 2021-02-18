@@ -27,6 +27,8 @@ public class Main_Bird : MonoBehaviour
     public float double_jump_x_speed;
     public float gliding_gravity;
     public float fall_x_speed;
+    public float health;
+    public Slider health_slider;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,15 @@ public class Main_Bird : MonoBehaviour
         face_direction = -1;
         text = GetComponentInChildren<Text>();
         text.text = "hello";
+        health_slider = GetComponentInChildren<Slider>();
+        health_slider.maxValue = health;
+        health_slider.value = health_slider.maxValue;
+    }
+    public void get_hurt(float damage)
+    {
+        GetFSM().ChangeState(Hurt.Instance);
+        health -= damage;
+        health_slider.value = health;
     }
     public StateMachine<Main_Bird> GetFSM()
     {

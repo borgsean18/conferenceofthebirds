@@ -189,7 +189,6 @@ public class Jump : State<Main_Bird>
 public class Charging_Jump : State<Main_Bird>
 {
     public static Charging_Jump Instance { get; private set; }
-    float timer;
     float height;
 
     static Charging_Jump()
@@ -199,7 +198,6 @@ public class Charging_Jump : State<Main_Bird>
 
     public override void Enter(Main_Bird bird)
     {
-        timer = 0;
     }
 
     public override void Execute(Main_Bird bird)
@@ -341,25 +339,53 @@ public class Fall : State<Main_Bird>
         {
             bird.GetFSM().ChangeState(Walk.Instance);
         }
-        else if (Input.GetKey(KeyCode.A))
+        else
         {
-            bird.face_direction = -1;
-            bird.rb.velocity = new Vector2(-bird.fall_x_speed, bird.rb.velocity.y);
+            if (Input.GetKey(KeyCode.A))
+            {
+                bird.face_direction = -1;
+                bird.rb.velocity = new Vector2(-bird.fall_x_speed, bird.rb.velocity.y);
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                bird.face_direction = 1;
+                bird.rb.velocity = new Vector2(bird.fall_x_speed, bird.rb.velocity.y);
+            }
+            if (Input.GetKey(KeyCode.Space))
+            {
+                bird.rb.velocity = new Vector2(bird.face_direction * bird.gliding_speed, bird.rb.velocity.y);
+                bird.GetFSM().ChangeState(Gliding.Instance);
+            }
+            else if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                //bird.rb.velocity = new Vector2(bird.face_direction * 8, 3);
+            }
         }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            bird.face_direction = 1;
-            bird.rb.velocity = new Vector2(bird.fall_x_speed, bird.rb.velocity.y);
-        }
-        else if(Input.GetKey(KeyCode.Space))
-        {
-            bird.rb.velocity = new Vector2(bird.face_direction*bird.gliding_speed, bird.rb.velocity.y);
-            bird.GetFSM().ChangeState(Gliding.Instance);
-        }
-        else if(Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            //bird.rb.velocity = new Vector2(bird.face_direction * 8, 3);
-        }
+        
+    }
+
+    public override void Exit(Main_Bird bird)
+    {
+
+    }
+}
+
+public class Hurt : State<Main_Bird>
+{
+    public static Hurt Instance { get; private set; }
+    static Hurt()
+    {
+        Instance = new Hurt();
+    }
+
+    public override void Enter(Main_Bird bird)
+    {
+        bird.rb.gravityScale = 1f;
+    }
+
+    public override void Execute(Main_Bird bird)
+    {
+       bird.GetFSM().ChangeState(Fall.Instance);
     }
 
     public override void Exit(Main_Bird bird)
