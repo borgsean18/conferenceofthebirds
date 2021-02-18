@@ -43,23 +43,23 @@ public class CharacterAbilitiesScript : MonoBehaviour
 
     private void PowerDash()
     {   
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            MovementStateMachineScript.current.currentState = MovementStateMachineScript.state.none;
+            //MovementStateMachineScript.current.currentState = MovementStateMachineScript.state.none; //commented out for tianleis code
             x = transform.position.x;
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.P))
         {
             StartCoroutine(Vibrate());
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.P))
         {
             //shoot into that direction
             //...
             power = power * 10;
             GetComponent<Rigidbody2D>().AddForce(new Vector2(power, 0));
-            MovementStateMachineScript.current.currentState = MovementStateMachineScript.state.walking;
+            //MovementStateMachineScript.current.currentState = MovementStateMachineScript.state.walking; //commented out for tianleis code
             power = 0;
         }
     }
