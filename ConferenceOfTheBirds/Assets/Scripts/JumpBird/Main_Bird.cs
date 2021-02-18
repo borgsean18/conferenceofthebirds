@@ -1,20 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Main_Bird : MonoBehaviour
 {
     private StateMachine<Main_Bird> m_stateMachine;
+    private Text text;
     public float walk_speed;
     public float jump_speed;
     public float charge_jump_speed;
+    [HideInInspector]
     public SpriteRenderer sprite;
+    [HideInInspector]
     public Rigidbody2D rb;
     public Transform[] ground_checks;
+    [HideInInspector]
     public bool is_on_ground;
+    [HideInInspector]
     public float height;
+    [HideInInspector]
     public int face_direction;// right is 1, left is -1
     public float gliding_speed;
+    public float max_charge_jump_holding_time;
+    public float min_charge_jump_holding_time;
+    public float double_jump_y_speed;
+    public float double_jump_x_speed;
+    public float gliding_gravity;
+    public float fall_x_speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +35,8 @@ public class Main_Bird : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         face_direction = -1;
+        text = GetComponentInChildren<Text>();
+        text.text = "hello";
     }
     public StateMachine<Main_Bird> GetFSM()
     {
@@ -31,7 +45,7 @@ public class Main_Bird : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //print(GetFSM().CurrentState());
+        text.text=GetFSM().CurrentState().ToString();
         m_stateMachine.StateMachineUpdate();
         Check_On_The_Ground();
         if (face_direction==-1)
