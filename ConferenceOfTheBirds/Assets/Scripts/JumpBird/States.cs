@@ -42,6 +42,13 @@ public class Walk : State<Main_Bird>
         {
             bird.GetFSM().ChangeState(Fall.Instance);
         }
+        else if(Input.GetKeyDown(KeyCode.F))
+        {
+            if(bird.magic_to_save>=bird.magic_cost_to_save)
+            {
+                bird.GetFSM().ChangeState(Save_Game.Instance);
+            }
+        }
         else
         {
             if (!ready_to_jump)
@@ -391,5 +398,83 @@ public class Hurt : State<Main_Bird>
     public override void Exit(Main_Bird bird)
     {
 
+    }
+}
+
+public class Save_Game : State<Main_Bird>
+{
+    public static Save_Game Instance { get; private set; }
+    float timer;
+    float height;
+
+    static Save_Game()
+    {
+        Instance = new Save_Game();
+    }
+
+    public override void Enter(Main_Bird bird)
+    {
+        timer = 0;
+    }
+
+    public override void Execute(Main_Bird bird)
+    {
+        timer += Time.deltaTime;
+        if(Input.GetKeyUp(KeyCode.F))
+        {
+            bird.GetFSM().ChangeState(Walk.Instance);
+        }
+        else if(timer>bird.hold_to_save_time)
+        {
+            bird.save_point_position = bird.transform.position;
+            bird.respawn_point.transform.position = bird.transform.position;
+            bird.GetFSM().ChangeState(Walk.Instance);
+
+            bird.magic_to_save -= bird.magic_cost_to_save;
+            bird.magic_to_save_slider.value -= bird.magic_cost_to_save;
+
+        }
+    }
+
+    public override void Exit(Main_Bird bird)
+    {
+        timer = 0;
+    }
+}
+
+public class Death : State<Main_Bird>
+{
+    public static Death Instance { get; private set; }
+    float timer;
+    float height;
+
+    static Death()
+    {
+        Instance = new Death();
+    }
+
+    public override void Enter(Main_Bird bird)
+    {
+        timer = 0;
+        bird.text.text = "DEAD";
+    }
+
+    public override void Execute(Main_Bird bird)
+    {
+        timer += Time.deltaTime;
+        
+        if (timer>0.2f)
+        {
+            bird.transform.position = bird.save_point_position;
+            bird.health = 100;
+            bird.health_slider.value = bird.health;
+            bird.magic_to_save = 0;
+            bird.magic_to_save_slider.value = 0;
+            bird.GetFSM().ChangeState(Walk.Instance);
+        }
+    }
+
+    public override void Exit(Main_Bird bird)
+    {
     }
 }

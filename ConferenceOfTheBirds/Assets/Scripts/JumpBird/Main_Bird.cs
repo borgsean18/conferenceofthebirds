@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class Main_Bird : MonoBehaviour
 {
     private StateMachine<Main_Bird> m_stateMachine;
-    private Text text;
+    [HideInInspector]
+    public Text text;
     public float walk_speed;
     public float jump_speed;
     public float charge_jump_speed;
@@ -28,7 +29,18 @@ public class Main_Bird : MonoBehaviour
     public float gliding_gravity;
     public float fall_x_speed;
     public float health;
+    [HideInInspector]
     public Slider health_slider;
+    public float max_magic_to_save;
+    public float magic_to_save;
+    public float magic_cost_to_save;
+    public float hold_to_save_time;
+    [HideInInspector]
+    public Slider magic_to_save_slider;
+    [HideInInspector]
+    public Vector3 save_point_position;
+    [HideInInspector]
+    public GameObject respawn_point;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,15 +51,26 @@ public class Main_Bird : MonoBehaviour
         face_direction = -1;
         text = GetComponentInChildren<Text>();
         text.text = "hello";
-        health_slider = GetComponentInChildren<Slider>();
+        Slider[] slider_array = GetComponentsInChildren<Slider>();
+        health_slider = slider_array[0];
         health_slider.maxValue = health;
         health_slider.value = health_slider.maxValue;
+        magic_to_save_slider = slider_array[1];
+        magic_to_save_slider.maxValue = max_magic_to_save;
+        magic_to_save_slider.value = magic_to_save;
+        save_point_position = transform.position;
+        respawn_point = GameObject.FindGameObjectWithTag("RespawnPoint");
+        respawn_point.transform.position = transform.position;
     }
     public void get_hurt(float damage)
     {
         GetFSM().ChangeState(Hurt.Instance);
         health -= damage;
         health_slider.value = health;
+        if(health<=0)
+        {
+            GetFSM().ChangeState(Death.Instance);
+        }
     }
     public StateMachine<Main_Bird> GetFSM()
     {
