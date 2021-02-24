@@ -45,6 +45,11 @@ public class Main_Bird : MonoBehaviour
     public Vector3 save_point_position;
     [HideInInspector]
     public GameObject respawn_point;
+    bool is_grab_thing;
+    public float grab_decrease_gliding_speed;
+    public float grab_decrease_jump_speed;
+    public float grab_decrease_gliding_time;
+    public float grab_state_gravity;
 
     // Start is called before the first frame update
     void Start()
@@ -80,6 +85,24 @@ public class Main_Bird : MonoBehaviour
             GetFSM().ChangeState(Death.Instance);
         }
     }
+
+    void grab_thing()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            RaycastHit2D temp_result = Physics2D.Linecast(transform.position,
+                          ground_checks[i].position,
+                          1 << LayerMask.NameToLayer("GrabbableObject") );
+            if(temp_result)
+            {
+                if(!is_grab_thing)
+                {
+                    is_grab_thing = true;
+                    temp_result.transform.parent = transform;
+                }
+            }
+        }
+    }
     public StateMachine<Main_Bird> GetFSM()
     {
         return m_stateMachine;
@@ -95,6 +118,10 @@ public class Main_Bird : MonoBehaviour
         else
             sprite.flipX = true;
         stamina_meter.value = gliding_time;
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            grab_thing();
+        }
     }
     private void Check_On_The_Ground()
     {
@@ -102,7 +129,7 @@ public class Main_Bird : MonoBehaviour
         {
             RaycastHit2D checkResult = Physics2D.Linecast(transform.position,
                           ground_checks[i].position,
-                          1 << LayerMask.NameToLayer("Ground"));
+                          1 << LayerMask.NameToLayer("Ground") );
             is_on_ground = checkResult;
             if (is_on_ground)
             {
