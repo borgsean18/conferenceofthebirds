@@ -7272,6 +7272,10 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3843997474120107094, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
+      propertyPath: gliding_time_max
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843997474120107094, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
       propertyPath: charge_jump_speed
       value: 10
       objectReference: {fileID: 0}

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Main_Bird : MonoBehaviour
 {
     private StateMachine<Main_Bird> m_stateMachine;
+    Slider stamina_meter;
     [HideInInspector]
     public Text text;
     public float walk_speed;
@@ -27,6 +28,9 @@ public class Main_Bird : MonoBehaviour
     public float double_jump_y_speed;
     public float double_jump_x_speed;
     public float gliding_gravity;
+    public float gliding_time_max;
+    [HideInInspector]
+    public float gliding_time;
     public float fall_x_speed;
     public float health;
     [HideInInspector]
@@ -41,6 +45,7 @@ public class Main_Bird : MonoBehaviour
     public Vector3 save_point_position;
     [HideInInspector]
     public GameObject respawn_point;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +66,9 @@ public class Main_Bird : MonoBehaviour
         save_point_position = transform.position;
         respawn_point = GameObject.FindGameObjectWithTag("RespawnPoint");
         respawn_point.transform.position = transform.position;
+        gliding_time = gliding_time_max;
+        stamina_meter = slider_array[2];
+        stamina_meter.maxValue = gliding_time_max;
     }
     public void get_hurt(float damage)
     {
@@ -86,6 +94,7 @@ public class Main_Bird : MonoBehaviour
             sprite.flipX = false;
         else
             sprite.flipX = true;
+        stamina_meter.value = gliding_time;
     }
     private void Check_On_The_Ground()
     {

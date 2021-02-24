@@ -130,10 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1716584756515251543, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1871393401702830315, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -215,6 +211,10 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3843997474120107094, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
+      propertyPath: gliding_time_max
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843997474120107094, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
       propertyPath: charge_jump_speed
       value: 10
       objectReference: {fileID: 0}
@@ -266,33 +266,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.106
       objectReference: {fileID: 0}
-    - target: {fileID: 6966019323133660469, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 83.95
+    - target: {fileID: 8148925423376260098, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6966019323133660469, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 18.3235
-      objectReference: {fileID: 0}
-    - target: {fileID: 6966019323133660469, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 6966019323133660469, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 6966019323133660469, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6966019323133660469, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -441.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 6966019323133660469, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -198.66
+    - target: {fileID: 8148925423376260098, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8832975388748064736, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
       propertyPath: m_AnchorMax.x
