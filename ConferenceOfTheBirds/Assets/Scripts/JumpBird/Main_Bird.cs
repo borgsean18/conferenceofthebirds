@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -46,6 +47,7 @@ public class Main_Bird : MonoBehaviour
     [HideInInspector]
     public GameObject respawn_point;
     bool is_grab_thing;
+    Transform grabbed_thing;
     public float grab_decrease_gliding_speed;
     public float grab_decrease_jump_speed;
     public float grab_decrease_gliding_time;
@@ -88,21 +90,45 @@ public class Main_Bird : MonoBehaviour
 
     void grab_thing()
     {
-        for (int i = 0; i < 3; i++)
+        if(!is_grab_thing)
         {
             RaycastHit2D temp_result = Physics2D.Linecast(transform.position,
-                          ground_checks[i].position,
-                          1 << LayerMask.NameToLayer("GrabbableObject") );
-            if(temp_result)
+                          ground_checks[1].position,
+                          1 << LayerMask.NameToLayer("GrabbableObject"));
+
+            if (temp_result)
             {
-                if(!is_grab_thing)
-                {
-                    is_grab_thing = true;
-                    temp_result.transform.parent = transform;
-                }
+                grabbed_thing = temp_result.transform;
+                grabbed_thing.GetComponent<FixedJoint2D>().enabled = true;
+                grabbed_thing.GetComponent<FixedJoint2D>().connectedBody = rb;
+                ground_checks[0].position = grabbed_thing.position;
+                ground_checks[1].position = grabbed_thing.position-new Vector3(0,0.1f,0);
+                ground_checks[2].position = grabbed_thing.position - new Vector3(0, 0.1f, 0);
+                grabbed_thing.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                grabbed_thing.gameObject.layer = 0;
+                is_grab_thing = true;
             }
         }
+        else
+        {
+            is_grab_thing = false;
+
+            grabbed_thing.gameObject.layer = 9;
+            ground_checks[0].localPosition = new Vector3(0,0,0);
+            ground_checks[1].localPosition = new Vector3(0, -0.1025f, 0);
+            ground_checks[2].localPosition = new Vector3(0, -0.1025f, 0);
+            grabbed_thing.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+
+            grabbed_thing.GetComponent<FixedJoint2D>().enabled=false;
+            grabbed_thing = null;
+        }
     }
+
+    IEnumerator wait3()
+    {
+        yield return new WaitForSeconds(1);    //注意等待时间的写法
+    }
+
     public StateMachine<Main_Bird> GetFSM()
     {
         return m_stateMachine;
@@ -129,8 +155,11 @@ public class Main_Bird : MonoBehaviour
         {
             RaycastHit2D checkResult = Physics2D.Linecast(transform.position,
                           ground_checks[i].position,
-                          1 << LayerMask.NameToLayer("Ground") );
-            is_on_ground = checkResult;
+                          1 << LayerMask.NameToLayer("Ground"));
+            RaycastHit2D temp_result = Physics2D.Linecast(transform.position,
+                          ground_checks[i].position,
+                          1 << LayerMask.NameToLayer("GrabbableObject"));
+            is_on_ground = checkResult| temp_result;
             if (is_on_ground)
             {
                 //print("onground");
