@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    public GameObject DialogueManager;
+    private DialogueManagerScript dms;
     public bool canTalk = false;
     public Dialogue dialogue;
+
+    private void Start()
+    {
+        dms = DialogueManager.GetComponent<DialogueManagerScript>();
+    }
 
     private void Update()
     {
@@ -20,7 +27,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManagerScript>().StartDialogue(dialogue);
+        dms.StartDialogue(dialogue);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
