@@ -8,6 +8,7 @@ TagManager:
   - ColdPatch
   - Breakable
   - RespawnPoint
+  - PollitionAir
   layers:
   - Default
   - TransparentFX

@@ -112,7 +112,7 @@ public class Walk : State<Main_Bird>
             }
             else if (Input.GetKey(KeyCode.Space) && ready_to_jump)
             {
-                Debug.Log("chargejump");
+                //Debug.Log("chargejump");
 
                 timer += Time.deltaTime;
                 if (timer >= bird.min_charge_jump_holding_time)
