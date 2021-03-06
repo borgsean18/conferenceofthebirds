@@ -87,7 +87,13 @@ public class Main_Bird : MonoBehaviour
             GetFSM().ChangeState(Death.Instance);
         }
     }
+    IEnumerator Wait(float t)
+    {
+        yield return new WaitForSeconds(t);//运行到这，暂停t秒
 
+        //t秒后，继续运行下面代码
+        print("Time over.");
+    }
     void grab_thing()
     {
         if(!is_grab_thing)
@@ -101,9 +107,13 @@ public class Main_Bird : MonoBehaviour
                 grabbed_thing = temp_result.transform;
                 grabbed_thing.GetComponent<FixedJoint2D>().enabled = true;
                 grabbed_thing.GetComponent<FixedJoint2D>().connectedBody = rb;
-                ground_checks[0].position = grabbed_thing.position;
-                ground_checks[1].position = grabbed_thing.position-new Vector3(0,0.1f,0);
-                ground_checks[2].position = grabbed_thing.position - new Vector3(0, 0.1f, 0);
+                Collider2D grabbed_thing_collider = grabbed_thing.GetComponent<Collider2D>();
+                print(grabbed_thing_collider.bounds.center);
+                print(transform.position);
+                print(transform.InverseTransformPoint(grabbed_thing_collider.bounds.center));
+                ground_checks[0].localPosition = transform.InverseTransformPoint(grabbed_thing_collider.bounds.center);
+                ground_checks[1].localPosition = ground_checks[0].localPosition - grabbed_thing_collider.bounds.extents;
+                ground_checks[2].localPosition = ground_checks[0].localPosition - grabbed_thing_collider.bounds.extents;
                 grabbed_thing.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 grabbed_thing.gameObject.layer = 0;
                 is_grab_thing = true;
@@ -117,7 +127,7 @@ public class Main_Bird : MonoBehaviour
             ground_checks[0].localPosition = new Vector3(0,0,0);
             ground_checks[1].localPosition = new Vector3(0, -0.1025f, 0);
             ground_checks[2].localPosition = new Vector3(0, -0.1025f, 0);
-            grabbed_thing.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            grabbed_thing.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 
             grabbed_thing.GetComponent<FixedJoint2D>().enabled=false;
             grabbed_thing = null;
