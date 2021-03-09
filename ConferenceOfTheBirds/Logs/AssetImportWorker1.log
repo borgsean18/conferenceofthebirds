@@ -15,11 +15,11 @@ D:/Games/conferenceofthebirds/ConferenceOfTheBirds
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-63358
+60520
 Successfully changed project path to: D:/Games/conferenceofthebirds/ConferenceOfTheBirds
 D:/Games/conferenceofthebirds/ConferenceOfTheBirds
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 116.24 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 108.28 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
@@ -42,17 +42,71 @@ Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.2.2f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Unity/2020.2.2f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: D:/Unity/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.108407 seconds.
+Registered in 0.002653 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 88.06 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 95.25 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.175 seconds
+- Completed reload, in  2.043 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.082586 seconds.
+Registered in 0.005275 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 88.64 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library D:/Unity/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library D:/Unity/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library D:/Unity/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library D:/Unity/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library D:/Unity/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library D:/Unity/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  4.655 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.35 seconds
+Refreshing native plugins compatible for Editor in 2.70 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3134 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 134.6 MB.
+System memory in use after: 134.8 MB.
+
+Unloading 53 unused Assets to reduce memory usage. Loaded Objects now: 3560.
+Total: 8.463200 ms (FindLiveObjects: 0.801800 ms CreateObjectMapping: 0.519800 ms MarkObjects: 6.883200 ms  DeleteObjects: 0.254700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Resources
+  artifactKey: Guid(bf24ba9190d0ae145a4a366ffad14369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources using Guid(bf24ba9190d0ae145a4a366ffad14369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c5d58d0a0332ec9db93b7368d12a5f4') in 0.131328 seconds
+  Import took 0.221945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001611 seconds.
+  path: Assets/Resources/Art/Background
+  artifactKey: Guid(e3f3f7293f69d184ab965cbfbf420fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Art/Background using Guid(e3f3f7293f69d184ab965cbfbf420fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5251c611cbc231ef897769a1bddfa315') in 0.049593 seconds
+  Import took 0.106434 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001546 seconds.
+  path: Assets/Resources/Art
+  artifactKey: Guid(1f2084a2fd63c41419021e06341494e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Art using Guid(1f2084a2fd63c41419021e06341494e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6496c3393c75ae0f406618ed7140b5f') in 0.051086 seconds
+  Import took 0.100424 seconds .
+
