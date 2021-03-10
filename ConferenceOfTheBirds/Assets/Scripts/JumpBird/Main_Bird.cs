@@ -65,17 +65,20 @@ public class Main_Bird : MonoBehaviour
         text.text = "hello";
         Slider[] slider_array = GetComponentsInChildren<Slider>();
         health_slider = slider_array[0];
+        print(health_slider.maxValue);
         health_slider.maxValue = health;
         health_slider.value = health_slider.maxValue;
         magic_to_save_slider = slider_array[1];
         magic_to_save_slider.maxValue = max_magic_to_save;
         magic_to_save_slider.value = magic_to_save;
+        print(magic_to_save_slider.value);
         save_point_position = transform.position;
         respawn_point = GameObject.FindGameObjectWithTag("RespawnPoint");
         respawn_point.transform.position = transform.position;
         gliding_time = gliding_time_max;
         stamina_meter = slider_array[2];
         stamina_meter.maxValue = gliding_time_max;
+        print(stamina_meter.maxValue);
     }
     public void get_hurt(float damage)
     {
@@ -90,7 +93,6 @@ public class Main_Bird : MonoBehaviour
     IEnumerator Wait(float t)
     {
         yield return new WaitForSeconds(t);//运行到这，暂停t秒
-
         //t秒后，继续运行下面代码
         print("Time over.");
     }
@@ -105,7 +107,10 @@ public class Main_Bird : MonoBehaviour
             if (temp_result)
             {
                 grabbed_thing = temp_result.transform;
+                grabbed_thing.GetComponent<Rigidbody2D>().mass = 0.1f;
                 grabbed_thing.GetComponent<FixedJoint2D>().enabled = true;
+                print("Time over213.");
+
                 grabbed_thing.GetComponent<FixedJoint2D>().connectedBody = rb;
                 Collider2D grabbed_thing_collider = grabbed_thing.GetComponent<Collider2D>();
                 print(grabbed_thing_collider.bounds.center);
@@ -124,6 +129,7 @@ public class Main_Bird : MonoBehaviour
             is_grab_thing = false;
 
             grabbed_thing.gameObject.layer = 9;
+            grabbed_thing.GetComponent<Rigidbody2D>().mass = 50;
             ground_checks[0].localPosition = new Vector3(0,0,0);
             ground_checks[1].localPosition = new Vector3(0, -0.1025f, 0);
             ground_checks[2].localPosition = new Vector3(0, -0.1025f, 0);
