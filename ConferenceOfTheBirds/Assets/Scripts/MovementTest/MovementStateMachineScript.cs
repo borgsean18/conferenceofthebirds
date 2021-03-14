@@ -64,11 +64,11 @@ public class MovementStateMachineScript : MonoBehaviour
         enteredFlying = false;
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position += Vector3.left * 10f * Time.deltaTime;
+            transform.position += Vector3.left * 20f * Time.deltaTime;
         }
         if(Input.GetKey(KeyCode.D))
         {
-            transform.position += Vector3.right * 10f * Time.deltaTime;
+            transform.position += Vector3.right * 20f * Time.deltaTime;
         }
         if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
         {
@@ -93,11 +93,11 @@ public class MovementStateMachineScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position += Vector3.left * 10f * Time.deltaTime;
+            transform.position += Vector3.left * 20f * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += Vector3.right * 10f * Time.deltaTime;
+            transform.position += Vector3.right * 20f * Time.deltaTime;
         }
         if (Input.GetKeyDown(KeyCode.W) && enteredFlying)
         {
