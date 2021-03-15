@@ -28,5 +28,12 @@ public class GameManagerScript : MonoBehaviour
         //do end level logic
         print("level Over");
         NotificationsCanvas.SetActive(true);
+        StartCoroutine(GoToNextScene(2f));
+    }
+
+    private IEnumerator GoToNextScene(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        //go to next scene
     }
 }
