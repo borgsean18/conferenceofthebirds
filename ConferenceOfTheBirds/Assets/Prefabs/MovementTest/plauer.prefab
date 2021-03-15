@@ -12,12 +12,10 @@ GameObject:
   - component: {fileID: 8811766577240144291}
   - component: {fileID: 2079407966}
   - component: {fileID: 2079407965}
-  - component: {fileID: 2079407963}
   - component: {fileID: 2079407967}
-  - component: {fileID: 2079407969}
   m_Layer: 0
   m_Name: plauer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -134,20 +132,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2079407963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4821869035525678181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 555eb2516e1b4db46963e31c99972822, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilitiesPanel: {fileID: 0}
-  abilitiesSelectionText: {fileID: 0}
 --- !u!114 &2079407967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,16 +148,3 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1024
---- !u!114 &2079407969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4821869035525678181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f4ead15be4304d4fb1647ca96e3323b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentAbility: 0

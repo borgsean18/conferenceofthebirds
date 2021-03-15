@@ -9,6 +9,7 @@ TagManager:
   - Breakable
   - RespawnPoint
   - PollitionAir
+  - LevelEnd
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - 
   - GrabbableObject
   - Ground
-  - 
+  - SceneObjects
   - 
   - 
   - 
@@ -45,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Infront
+    uniqueID: 2219446451
     locked: 0
