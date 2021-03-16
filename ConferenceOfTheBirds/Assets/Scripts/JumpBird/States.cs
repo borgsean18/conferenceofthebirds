@@ -57,6 +57,9 @@ public class Walk : State<Main_Bird>
                 if (Input.GetKey(KeyCode.D))
                 {
                     //bird.sprite.flipX = true;
+                    bird.Bird_Bone.localScale = new Vector3(1, 1, 1);
+
+                    bird.Bird_Bone.localScale = new Vector3(1, 1, 1);
                     bird.face_direction = 1;
                     bird.rb.velocity = new Vector2(bird.walk_speed, bird.rb.velocity.y);
                     timer += Time.deltaTime;
@@ -81,6 +84,10 @@ public class Walk : State<Main_Bird>
                 else if (Input.GetKey(KeyCode.A))
                 {
                     //bird.sprite.flipX = false;
+                    bird.Bird_Bone.localScale = new Vector3(1, -1, 1);
+
+                    bird.Bird_Bone.localScale = new Vector3(1, -1, 1);
+
                     bird.face_direction = -1;
 
                     bird.rb.velocity = new Vector2(-bird.walk_speed, bird.rb.velocity.y);
