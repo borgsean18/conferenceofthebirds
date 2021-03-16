@@ -54,6 +54,9 @@ public class Main_Bird : MonoBehaviour
     public float grab_decrease_gliding_time;
     public float grab_state_gravity;
 
+    Vector3[] RayCheckOffset;
+    Vector3[] RayOriginalOffsets;
+    bool is_grabbed;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,6 +84,14 @@ public class Main_Bird : MonoBehaviour
         stamina_meter = slider_array[2];
         stamina_meter.maxValue = gliding_time_max;
         print(stamina_meter.maxValue);
+        RayCheckOffset = new Vector3[3];
+        RayOriginalOffsets = new Vector3[3];
+
+        for (int i=0;i<3;i++)
+        {
+            RayCheckOffset[i] = transform.position - ground_checks[i].position;
+            RayOriginalOffsets[i] = RayCheckOffset[i];
+        }
     }
     public void get_hurt(float damage)
     {
@@ -117,10 +128,9 @@ public class Main_Bird : MonoBehaviour
                 Collider2D grabbed_thing_collider = grabbed_thing.GetComponent<Collider2D>();
                 print(grabbed_thing_collider.bounds.center);
                 print(transform.position);
-                print(transform.InverseTransformPoint(grabbed_thing_collider.bounds.center));
-                ground_checks[0].localPosition = transform.InverseTransformPoint(grabbed_thing_collider.bounds.center);
-                ground_checks[1].localPosition = ground_checks[0].localPosition - grabbed_thing_collider.bounds.extents;
-                ground_checks[2].localPosition = ground_checks[0].localPosition - grabbed_thing_collider.bounds.extents;
+                RayCheckOffset[0] =new Vector3(0,0,0);
+                RayCheckOffset[1] = grabbed_thing_collider.bounds.extents+new Vector3(0,0.5f,0);
+                RayCheckOffset[2] = grabbed_thing_collider.bounds.extents + new Vector3(0, 0.5f, 0);
                 grabbed_thing.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 grabbed_thing.gameObject.layer = 0;
                 is_grab_thing = true;
@@ -132,9 +142,10 @@ public class Main_Bird : MonoBehaviour
 
             grabbed_thing.gameObject.layer = 9;
             grabbed_thing.GetComponent<Rigidbody2D>().mass = 50;
-            ground_checks[0].localPosition = new Vector3(0,0,0);
-            ground_checks[1].localPosition = new Vector3(0, -0.1025f, 0);
-            ground_checks[2].localPosition = new Vector3(0, -0.1025f, 0);
+            for(int i=0;i<3;i++)
+            {
+                RayCheckOffset[i] = RayOriginalOffsets[i];
+            }
             grabbed_thing.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 
             grabbed_thing.GetComponent<FixedJoint2D>().enabled=false;
@@ -152,17 +163,40 @@ public class Main_Bird : MonoBehaviour
         return m_stateMachine;
     }
     // Update is called once per frame
+    void check_face_direction()
+    {
+        if (face_direction == -1)
+            Bird_Bone.localScale = new Vector3(1, -1, 1);
+        else
+            Bird_Bone.localScale = new Vector3(1, 1, 1);
+    }
+    void ray_check_transforms_follow()
+    {
+        if (!is_grab_thing)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                ground_checks[i].position = transform.position - RayCheckOffset[i];
+            }
+        }
+        else
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                ground_checks[i].position = grabbed_thing.position - RayCheckOffset[i];
+            }
+        }
+
+    }
     void Update()
     {
         text.text=GetFSM().CurrentState().ToString();
         m_stateMachine.StateMachineUpdate();
         Check_On_The_Ground();
-        if (face_direction == -1)
-            Bird_Bone.localScale = new Vector3(1, -1, 1);
-        else
-            Bird_Bone.localScale = new Vector3(1, 1, 1);
+        check_face_direction();
         stamina_meter.value = gliding_time;
-        if(Input.GetKeyDown(KeyCode.E))
+        ray_check_transforms_follow();
+        if (Input.GetKeyDown(KeyCode.E))
         {
             grab_thing();
         }
