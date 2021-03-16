@@ -12,8 +12,8 @@ public class Main_Bird : MonoBehaviour
     public float walk_speed;
     public float jump_speed;
     public float charge_jump_speed;
-    [HideInInspector]
-    public SpriteRenderer sprite;
+    //[HideInInspector]
+    //public SpriteRenderer sprite;
     [HideInInspector]
     public Rigidbody2D rb;
     public Transform[] ground_checks;
@@ -58,7 +58,7 @@ public class Main_Bird : MonoBehaviour
     {
         m_stateMachine = new StateMachine<Main_Bird>(this);// initial
         m_stateMachine.SetCurrentState(Walk.Instance);// set first state
-        sprite = GetComponent<SpriteRenderer>();
+        //sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         face_direction = -1;
         text = GetComponentInChildren<Text>();
@@ -155,10 +155,10 @@ public class Main_Bird : MonoBehaviour
         text.text=GetFSM().CurrentState().ToString();
         m_stateMachine.StateMachineUpdate();
         Check_On_The_Ground();
-        if (face_direction==-1)
-            sprite.flipX = false;
-        else
-            sprite.flipX = true;
+        //if (face_direction==-1)
+        //    sprite.flipX = false;
+        //else
+        //    sprite.flipX = true;
         stamina_meter.value = gliding_time;
         if(Input.GetKeyDown(KeyCode.E))
         {

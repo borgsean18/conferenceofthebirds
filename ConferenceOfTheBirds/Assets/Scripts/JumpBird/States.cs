@@ -56,7 +56,7 @@ public class Walk : State<Main_Bird>
             {
                 if (Input.GetKey(KeyCode.D))
                 {
-                    bird.sprite.flipX = true;
+                    //bird.sprite.flipX = true;
                     bird.face_direction = 1;
                     bird.rb.velocity = new Vector2(bird.walk_speed, bird.rb.velocity.y);
                     timer += Time.deltaTime;
@@ -68,7 +68,7 @@ public class Walk : State<Main_Bird>
                     }
                     else if (timer > 0.2 && is_down)
                     {
-                        bird.sprite.transform.position -= new Vector3(0, 0.05f, 0);
+                        //bird.sprite.transform.position -= new Vector3(0, 0.05f, 0);
                         timer = 0;
                         is_down = false;
                     }
@@ -80,7 +80,7 @@ public class Walk : State<Main_Bird>
                 }
                 else if (Input.GetKey(KeyCode.A))
                 {
-                    bird.sprite.flipX = false;
+                    //bird.sprite.flipX = false;
                     bird.face_direction = -1;
 
                     bird.rb.velocity = new Vector2(-bird.walk_speed, bird.rb.velocity.y);
@@ -93,7 +93,7 @@ public class Walk : State<Main_Bird>
                     }
                     else if (timer > 0.2 && is_down)
                     {
-                        bird.sprite.transform.position -= new Vector3(0, 0.05f, 0);
+                        //bird.sprite.transform.position -= new Vector3(0, 0.05f, 0);
                         timer = 0;
                         is_down = false;
                     }

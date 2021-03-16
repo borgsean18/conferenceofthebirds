@@ -123,6 +123,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &44492208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3843997474120107098, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
+  m_PrefabInstance: {fileID: 341233810}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &44492209
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44492208}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 20ea37dad1c508540ae67381504703b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &341233810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -152,7 +176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3843997474120107092, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3843997474120107092, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
       propertyPath: m_LocalPosition.z
@@ -189,6 +213,10 @@ PrefabInstance:
     - target: {fileID: 3843997474120107098, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
       propertyPath: m_Name
       value: Protagonist
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843997474120107099, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8148925423376260098, guid: 45cdb45a1d16b5a4fa2d9deef3d5bc52, type: 3}
       propertyPath: m_AnchorMax.x
@@ -818,7 +846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650191645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.17, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1806,7 +1834,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815398201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.17, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2144470801}
@@ -2119,6 +2147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrowingTree
       objectReference: {fileID: 0}
+    - target: {fileID: 3809135611057559071, guid: 1cbabdec4c5555547a4715caa387248d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5720899266533330555, guid: 1cbabdec4c5555547a4715caa387248d, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -2197,7 +2229,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2254,7 +2286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2036747298
 Transform:
   m_ObjectHideFlags: 0
