@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+
 public abstract class State<T>
 {
     /// <summary>
@@ -35,10 +37,22 @@ public class Walk : State<Main_Bird>
         ready_to_jump = false;
         is_down = false;
         bird.gliding_time = bird.gliding_time_max;
+        bird.ResetAllTriggers(bird.animator);
+        bird.animator.SetTrigger("Hop");
     }
 
     public override void Execute(Main_Bird bird)
     {
+        if (Mathf.Abs(bird.rb.velocity.x) > 0.5)
+        {
+            bird.ResetAllTriggers(bird.animator);
+            bird.animator.SetTrigger("Hop");
+        }
+        else
+        {
+            bird.ResetAllTriggers(bird.animator);
+            bird.animator.SetTrigger("Idle");
+        }
         if (!bird.is_on_ground)
         {
             bird.GetFSM().ChangeState(Fall.Instance);
@@ -57,9 +71,7 @@ public class Walk : State<Main_Bird>
                 if (Input.GetKey(KeyCode.D))
                 {
                     //bird.sprite.flipX = true;
-                    bird.Bird_Bone.localScale = new Vector3(1, 1, 1);
-
-                    bird.Bird_Bone.localScale = new Vector3(1, 1, 1);
+                    
                     bird.face_direction = 1;
                     bird.rb.velocity = new Vector2(bird.walk_speed, bird.rb.velocity.y);
                     timer += Time.deltaTime;
@@ -84,9 +96,6 @@ public class Walk : State<Main_Bird>
                 else if (Input.GetKey(KeyCode.A))
                 {
                     //bird.sprite.flipX = false;
-                    bird.Bird_Bone.localScale = new Vector3(1, -1, 1);
-
-                    bird.Bird_Bone.localScale = new Vector3(1, -1, 1);
 
                     bird.face_direction = -1;
 
@@ -136,9 +145,7 @@ public class Walk : State<Main_Bird>
                 }
                 else if (timer >= bird.min_charge_jump_holding_time && timer < bird.max_charge_jump_holding_time)
                 {
-
                     bird.rb.velocity += new Vector2(bird.face_direction * bird.walk_speed * timer * 2, bird.charge_jump_speed * timer * 2);
-
                     bird.GetFSM().ChangeState(Jump.Instance);
                 }
                 else if (timer >= bird.max_charge_jump_holding_time)
@@ -157,6 +164,7 @@ public class Walk : State<Main_Bird>
     public override void Exit(Main_Bird bird)
     {
         ready_to_jump = false;
+        bird.ResetAllTriggers(bird.animator);
         timer = 0;
     }
 }
@@ -175,6 +183,9 @@ public class Jump : State<Main_Bird>
     {
         height = 0;
         double_fly = false;
+        bird.ResetAllTriggers(bird.animator);
+        bird.animator.SetTrigger("Ground_Fly");
+        Debug.Log("ground_fly");
     }
 
     public override void Execute(Main_Bird bird)

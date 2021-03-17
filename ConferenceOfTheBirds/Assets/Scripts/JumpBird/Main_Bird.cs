@@ -56,16 +56,18 @@ public class Main_Bird : MonoBehaviour
 
     Vector3[] RayCheckOffset;
     Vector3[] RayOriginalOffsets;
-    bool is_grabbed;
+    [HideInInspector]
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         m_stateMachine = new StateMachine<Main_Bird>(this);// initial
+        animator = GetComponent<Animator>();
         m_stateMachine.SetCurrentState(Walk.Instance);// set first state
         //sprite = GetComponent<SpriteRenderer>();
         Bird_Bone = GameObject.Find("bone_1").transform;
         rb = GetComponent<Rigidbody2D>();
-        face_direction = -1;
+        face_direction = 1;
         text = GetComponentInChildren<Text>();
         text.text = "hello";
         Slider[] slider_array = GetComponentsInChildren<Slider>();
@@ -166,9 +168,9 @@ public class Main_Bird : MonoBehaviour
     void check_face_direction()
     {
         if (face_direction == -1)
-            Bird_Bone.localScale = new Vector3(1, -1, 1);
+            transform.localScale = new Vector3(-0.5f, 0.5f, 1);
         else
-            Bird_Bone.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(0.5f, 0.5f, 1);
     }
     void ray_check_transforms_follow()
     {
@@ -220,5 +222,22 @@ public class Main_Bird : MonoBehaviour
 
         }
 
+    }
+    public void ResetAllTriggers(Animator animator)
+    {
+        AnimatorControllerParameter[] aps = animator.parameters;
+        for (int i = 0; i < aps.Length; i++)
+        {
+            AnimatorControllerParameter paramItem = aps[i];
+            if (paramItem.type == AnimatorControllerParameterType.Trigger)
+            {
+                string triggerName = paramItem.name;
+                bool isActive = animator.GetBool(triggerName);
+                if (isActive)
+                {
+                    animator.ResetTrigger(triggerName);
+                }
+            }
+        }
     }
 }
