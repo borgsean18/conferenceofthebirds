@@ -95,7 +95,9 @@ public class Main_Bird : MonoBehaviour
         print(stamina_meter.maxValue);
         RayCheckOffset = new Vector3[3];
         RayOriginalOffsets = new Vector3[3];
-
+        collider = GetComponent<Collider2D>();
+        ground_checks[0].position = collider.bounds.center;
+        ground_checks[1].position = collider.bounds.min;
         for (int i=0;i<2;i++)
         {
             RayCheckOffset[i] = transform.position - ground_checks[i].position;
