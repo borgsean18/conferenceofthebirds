@@ -60,7 +60,7 @@ public class Main_Bird : MonoBehaviour
     public Animator animator;
 
     Collider2D collider;
-    [HideInInspector]
+    //[HideInInspector]
     public bool is_hit_wall;
     // Start is called before the first frame update
     void Start()
@@ -219,10 +219,6 @@ public class Main_Bird : MonoBehaviour
         if(GetFSM().CurrentState()==Walk.Instance)
         {
             is_hit_wall = false;
-        }
-        else
-        {
-            is_hit_wall = true;
         }
     }
     void Update()

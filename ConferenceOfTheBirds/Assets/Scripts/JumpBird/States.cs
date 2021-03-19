@@ -299,7 +299,7 @@ public class Gliding : State<Main_Bird>
             bird.height = 0;
             bird.GetFSM().ChangeState(Walk.Instance);
         }
-        else if(bird.rb.velocity.x<0.1)
+        else if(bird.is_hit_wall)
         {
             bird.GetFSM().ChangeState(Fall.Instance);
         }
