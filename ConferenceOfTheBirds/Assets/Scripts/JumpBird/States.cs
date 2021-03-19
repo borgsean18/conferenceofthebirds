@@ -299,6 +299,10 @@ public class Gliding : State<Main_Bird>
             bird.height = 0;
             bird.GetFSM().ChangeState(Walk.Instance);
         }
+        else if(bird.rb.velocity.x<0.1)
+        {
+            bird.GetFSM().ChangeState(Fall.Instance);
+        }
         else
         {
             bird.gliding_time-= Time.deltaTime;
@@ -377,25 +381,29 @@ public class Fall : State<Main_Bird>
         }
         else
         {
-            if (Input.GetKey(KeyCode.A))
+            if(!bird.is_hit_wall)
             {
-                bird.face_direction = -1;
-                bird.rb.velocity = new Vector2(-bird.fall_x_speed, bird.rb.velocity.y);
+                if (Input.GetKey(KeyCode.A))
+                {
+                    bird.face_direction = -1;
+                    bird.rb.velocity = new Vector2(-bird.fall_x_speed, bird.rb.velocity.y);
+                }
+                else if (Input.GetKey(KeyCode.D))
+                {
+                    bird.face_direction = 1;
+                    bird.rb.velocity = new Vector2(bird.fall_x_speed, bird.rb.velocity.y);
+                }
+                if (Input.GetKey(KeyCode.Space) && bird.gliding_time > 0)
+                {
+                    bird.rb.velocity = new Vector2(bird.face_direction * bird.gliding_speed, bird.rb.velocity.y);
+                    bird.GetFSM().ChangeState(Gliding.Instance);
+                }
+                else if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    //bird.rb.velocity = new Vector2(bird.face_direction * 8, 3);
+                }
             }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                bird.face_direction = 1;
-                bird.rb.velocity = new Vector2(bird.fall_x_speed, bird.rb.velocity.y);
-            }
-            if (Input.GetKey(KeyCode.Space)&&bird.gliding_time>0)
-            {
-                bird.rb.velocity = new Vector2(bird.face_direction * bird.gliding_speed, bird.rb.velocity.y);
-                bird.GetFSM().ChangeState(Gliding.Instance);
-            }
-            else if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                //bird.rb.velocity = new Vector2(bird.face_direction * 8, 3);
-            }
+            
         }
         
     }

@@ -58,6 +58,10 @@ public class Main_Bird : MonoBehaviour
     Vector3[] RayOriginalOffsets;
     [HideInInspector]
     public Animator animator;
+
+    Collider2D collider;
+    [HideInInspector]
+    public bool is_hit_wall;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,11 +75,14 @@ public class Main_Bird : MonoBehaviour
         text = GetComponentInChildren<Text>();
         text.text = "hello";
         Slider[] slider_array = GetComponentsInChildren<Slider>();
-        health_slider = slider_array[0];
+        GameObject BirdHealth_O= GameObject.Find("BirdHealthSlider");
+        health_slider = BirdHealth_O.GetComponent<Slider>();
         print(health_slider.maxValue);
         health_slider.maxValue = health;
         health_slider.value = health_slider.maxValue;
-        magic_to_save_slider = slider_array[1];
+        GameObject BirdMagic_O = GameObject.Find("BirdMagicSlider");
+        magic_to_save_slider = BirdMagic_O.GetComponent<Slider>();
+        //magic_to_save_slider = slider_array[1];
         magic_to_save_slider.maxValue = max_magic_to_save;
         magic_to_save_slider.value = magic_to_save;
         print(magic_to_save_slider.value);
@@ -83,13 +90,13 @@ public class Main_Bird : MonoBehaviour
         respawn_point = GameObject.FindGameObjectWithTag("RespawnPoint");
         respawn_point.transform.position = transform.position;
         gliding_time = gliding_time_max;
-        stamina_meter = slider_array[2];
+        stamina_meter = slider_array[0];
         stamina_meter.maxValue = gliding_time_max;
         print(stamina_meter.maxValue);
         RayCheckOffset = new Vector3[3];
         RayOriginalOffsets = new Vector3[3];
 
-        for (int i=0;i<3;i++)
+        for (int i=0;i<2;i++)
         {
             RayCheckOffset[i] = transform.position - ground_checks[i].position;
             RayOriginalOffsets[i] = RayCheckOffset[i];
@@ -160,6 +167,22 @@ public class Main_Bird : MonoBehaviour
         yield return new WaitForSeconds(1);    //注意等待时间的写法
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.layer==LayerMask.NameToLayer("Ground"))
+        {
+            is_hit_wall = true;
+            print("hit");
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            is_hit_wall = false;
+            print("not hit");
+        }
+    }
     public StateMachine<Main_Bird> GetFSM()
     {
         return m_stateMachine;
@@ -176,19 +199,31 @@ public class Main_Bird : MonoBehaviour
     {
         if (!is_grab_thing)
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 2; i++)
             {
                 ground_checks[i].position = transform.position - RayCheckOffset[i];
             }
         }
         else
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 2; i++)
             {
                 ground_checks[i].position = grabbed_thing.position - RayCheckOffset[i];
             }
         }
 
+    }
+
+    void hit_wall_check()
+    {
+        if(GetFSM().CurrentState()==Walk.Instance)
+        {
+            is_hit_wall = false;
+        }
+        else
+        {
+            is_hit_wall = true;
+        }
     }
     void Update()
     {
@@ -196,6 +231,7 @@ public class Main_Bird : MonoBehaviour
         m_stateMachine.StateMachineUpdate();
         Check_On_The_Ground();
         check_face_direction();
+        hit_wall_check();
         stamina_meter.value = gliding_time;
         ray_check_transforms_follow();
         if (Input.GetKeyDown(KeyCode.E))
@@ -205,7 +241,7 @@ public class Main_Bird : MonoBehaviour
     }
     private void Check_On_The_Ground()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < ground_checks.Length; i++)
         {
             RaycastHit2D checkResult = Physics2D.Linecast(transform.position,
                           ground_checks[i].position,
