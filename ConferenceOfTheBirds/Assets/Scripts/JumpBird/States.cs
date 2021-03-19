@@ -377,6 +377,7 @@ public class Fall : State<Main_Bird>
     {
         if(bird.is_on_ground)
         {
+            Debug.Log("hitground");
             bird.GetFSM().ChangeState(Walk.Instance);
         }
         else
