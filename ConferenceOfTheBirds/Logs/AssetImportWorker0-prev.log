@@ -1,0 +1,934 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19041.867; Version 2004; 64bit' Language: 'en' Physical Memory: 16239 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Users\seanb\Documents\Unity Games\2020.2.2f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/seanb/Documents/GitHub/conferenceofthebirds/ConferenceOfTheBirds
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+53286
+Successfully changed project path to: C:/Users/seanb/Documents/GitHub/conferenceofthebirds/ConferenceOfTheBirds
+C:/Users/seanb/Documents/GitHub/conferenceofthebirds/ConferenceOfTheBirds
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 77.08 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.2f1 (068178b99f32)
+[Subsystems] Discovering subsystems at path C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/seanb/Documents/GitHub/conferenceofthebirds/ConferenceOfTheBirds/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1050 (ID=0x1c8d)
+    Vendor:   
+    VRAM:     4021 MB
+    Driver:   26.21.14.4166
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56128
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002401 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 60.44 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.209 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003453 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 70.34 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.233 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.0 MB.
+System memory in use after: 135.2 MB.
+
+Unloading 53 unused Assets to reduce memory usage. Loaded Objects now: 3564.
+Total: 2.421600 ms (FindLiveObjects: 0.298700 ms CreateObjectMapping: 0.170500 ms MarkObjects: 1.880200 ms  DeleteObjects: 0.071400 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/SeanTasks.unity
+  artifactKey: Guid(709722ef5e155b644a78bdfb52408ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SeanTasks.unity using Guid(709722ef5e155b644a78bdfb52408ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30aa7235fe4cf7753a296c571be9b038') in 0.025166 seconds
+  Import took 0.031624 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.480363 seconds.
+  path: Assets/Scenes/Showcase1.unity
+  artifactKey: Guid(709722ef5e155b644a78bdfb52408ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Showcase1.unity using Guid(709722ef5e155b644a78bdfb52408ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b9ff840d01eb368c20151c87d71774e') in 0.008187 seconds
+  Import took 0.013774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.895955 seconds.
+  path: Assets/Scenes/ShowcaseScenes
+  artifactKey: Guid(5e3c34cc66f43524bad4ce7ef1c11a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/ShowcaseScenes using Guid(5e3c34cc66f43524bad4ce7ef1c11a8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c0e92dad019ed686b25f7889b810bbb') in 0.010290 seconds
+  Import took 0.016229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.187431 seconds.
+  path: Assets/Scenes/ArtTest.unity
+  artifactKey: Guid(a455c5460a44aad41aa8f99c8c8e9beb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/ArtTest.unity using Guid(a455c5460a44aad41aa8f99c8c8e9beb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59790182055bddea44b142c56ec7033c') in 0.010359 seconds
+  Import took 0.016133 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.996795 seconds.
+  path: Assets/Scenes/FlightControlPrototype.unity
+  artifactKey: Guid(52dbde4d0d3457844a51f36dc0f1f598) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/FlightControlPrototype.unity using Guid(52dbde4d0d3457844a51f36dc0f1f598) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58e0871b85b00fbf0008f1176f3f8ba9') in 0.009106 seconds
+  Import took 0.018216 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003918 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.164 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3019 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 129.1 MB.
+System memory in use after: 129.3 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3567.
+Total: 5.938000 ms (FindLiveObjects: 0.669400 ms CreateObjectMapping: 0.355700 ms MarkObjects: 4.859600 ms  DeleteObjects: 0.051000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 98.966253 seconds.
+  path: Assets/Scenes/Prototypes
+  artifactKey: Guid(a890bf88d3067164993c10b8fb857860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Prototypes using Guid(a890bf88d3067164993c10b8fb857860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '919a4590b024fb59d01fe6c4ad000b33') in 0.014097 seconds
+  Import took 0.019736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.157303 seconds.
+  path: Assets/Scenes/Prototypes/SeedScene.unity
+  artifactKey: Guid(6d504f87d174aef4cb4bbeb60b077344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Prototypes/SeedScene.unity using Guid(6d504f87d174aef4cb4bbeb60b077344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc1f8612f89d8a1a94a4cc13c6c446c8') in 0.017279 seconds
+  Import took 0.023603 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2262.488050 seconds.
+  path: Assets/Prefabs/Character/Protagonist.prefab
+  artifactKey: Guid(45cdb45a1d16b5a4fa2d9deef3d5bc52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Character/Protagonist.prefab using Guid(45cdb45a1d16b5a4fa2d9deef3d5bc52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8b574e9772a228e57342f9cef45b458') in 0.265685 seconds
+  Import took 0.272717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/Prefabs/Character/Scott the bird.prefab
+  artifactKey: Guid(ff81dff44881ad24587b29fda92a4a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Character/Scott the bird.prefab using Guid(ff81dff44881ad24587b29fda92a4a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c218369699d4e39e849e30101250609b') in 0.055340 seconds
+  Import took 0.060496 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003299 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.15 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.039 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3019 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.1 MB.
+System memory in use after: 135.4 MB.
+
+Unloading 43 unused Assets to reduce memory usage. Loaded Objects now: 3617.
+Total: 3.356200 ms (FindLiveObjects: 0.392600 ms CreateObjectMapping: 0.179800 ms MarkObjects: 2.739100 ms  DeleteObjects: 0.043600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003308 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.417 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3019 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.4 MB.
+System memory in use after: 135.6 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3620.
+Total: 2.986300 ms (FindLiveObjects: 0.474700 ms CreateObjectMapping: 0.208000 ms MarkObjects: 2.275500 ms  DeleteObjects: 0.026900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 838.525947 seconds.
+  path: Assets/Scripts/Lever
+  artifactKey: Guid(8ba5e38c67daa734d88b3ec1b6b30f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Lever using Guid(8ba5e38c67daa734d88b3ec1b6b30f49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ca0dd801d8a3095e851a1908ab2e63b') in 0.014901 seconds
+  Import took 0.020881 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.857961 seconds.
+  path: Assets/Scripts/Lever/LeverScript.cs
+  artifactKey: Guid(f345c0393abac694a9ae0d3d292eec87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Lever/LeverScript.cs using Guid(f345c0393abac694a9ae0d3d292eec87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8840796b0dfc371b7a0af1eae30b839c') in 0.034615 seconds
+  Import took 0.041531 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004244 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.142 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3020 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.4 MB.
+System memory in use after: 135.6 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3624.
+Total: 3.126100 ms (FindLiveObjects: 0.309600 ms CreateObjectMapping: 0.149500 ms MarkObjects: 2.633600 ms  DeleteObjects: 0.032500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004038 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.215 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3020 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.4 MB.
+System memory in use after: 135.7 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3627.
+Total: 2.802000 ms (FindLiveObjects: 0.278400 ms CreateObjectMapping: 0.159800 ms MarkObjects: 2.335300 ms  DeleteObjects: 0.027400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1808.713219 seconds.
+  path: Assets/Scripts/Lever/LeverScript.cs
+  artifactKey: Guid(f345c0393abac694a9ae0d3d292eec87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Lever/LeverScript.cs using Guid(f345c0393abac694a9ae0d3d292eec87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69b9b62feffce2ac9d1e071764985613') in 0.006364 seconds
+  Import took 0.011522 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003345 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.210 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.96 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3020 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.5 MB.
+System memory in use after: 135.7 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3630.
+Total: 2.780300 ms (FindLiveObjects: 0.309900 ms CreateObjectMapping: 0.186200 ms MarkObjects: 2.256300 ms  DeleteObjects: 0.026500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004318 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.169 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3020 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.2 MB.
+System memory in use after: 135.4 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3633.
+Total: 2.640200 ms (FindLiveObjects: 0.313700 ms CreateObjectMapping: 0.153400 ms MarkObjects: 2.147000 ms  DeleteObjects: 0.025100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004279 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.085 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3020 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.5 MB.
+System memory in use after: 135.7 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3636.
+Total: 2.822700 ms (FindLiveObjects: 0.395700 ms CreateObjectMapping: 0.177300 ms MarkObjects: 2.219800 ms  DeleteObjects: 0.028700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004052 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.070 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3020 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.4 MB.
+System memory in use after: 135.6 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3639.
+Total: 2.890900 ms (FindLiveObjects: 0.324900 ms CreateObjectMapping: 0.183600 ms MarkObjects: 2.358200 ms  DeleteObjects: 0.023200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 5066.111956 seconds.
+  path: Assets/Scenes/ShowcaseScenes/Showcase1.unity
+  artifactKey: Guid(709722ef5e155b644a78bdfb52408ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/ShowcaseScenes/Showcase1.unity using Guid(709722ef5e155b644a78bdfb52408ca4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'deec3aaaafbe90e1276d18737470cb84') in 0.071588 seconds
+  Import took 0.084988 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 121.625069 seconds.
+  path: Assets/Scenes/Prototypes/SeedScene.unity
+  artifactKey: Guid(6d504f87d174aef4cb4bbeb60b077344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Prototypes/SeedScene.unity using Guid(6d504f87d174aef4cb4bbeb60b077344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53643fa72561ffb193c222eb3aa1575e') in 0.005632 seconds
+  Import took 0.012402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001199 seconds.
+  path: Assets/Scenes/Prototypes/SeedScene.unity
+  artifactKey: Guid(6d504f87d174aef4cb4bbeb60b077344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Prototypes/SeedScene.unity using Guid(6d504f87d174aef4cb4bbeb60b077344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53643fa72561ffb193c222eb3aa1575e') in 0.005179 seconds
+  Import took 0.011513 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003611 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.253 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3020 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.5 MB.
+System memory in use after: 135.7 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3642.
+Total: 3.822900 ms (FindLiveObjects: 0.339100 ms CreateObjectMapping: 0.244300 ms MarkObjects: 3.202800 ms  DeleteObjects: 0.035200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006619 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.64 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.493 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3020 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.5 MB.
+System memory in use after: 135.7 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3645.
+Total: 3.785400 ms (FindLiveObjects: 0.308900 ms CreateObjectMapping: 0.175700 ms MarkObjects: 3.261000 ms  DeleteObjects: 0.038500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 9461.760520 seconds.
+  path: Assets/Scripts/Lever/LeverScript.cs
+  artifactKey: Guid(f345c0393abac694a9ae0d3d292eec87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Lever/LeverScript.cs using Guid(f345c0393abac694a9ae0d3d292eec87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7e2336f580e12d51e62e896a7c687c3') in 0.017382 seconds
+  Import took 0.024044 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004079 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.123 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3020 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.2 MB.
+System memory in use after: 135.4 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3648.
+Total: 3.240900 ms (FindLiveObjects: 0.320300 ms CreateObjectMapping: 0.147100 ms MarkObjects: 2.739400 ms  DeleteObjects: 0.032800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 82.191895 seconds.
+  path: Assets/Scripts/Lever/LeverScript.cs
+  artifactKey: Guid(f345c0393abac694a9ae0d3d292eec87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Lever/LeverScript.cs using Guid(f345c0393abac694a9ae0d3d292eec87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0511138ba6c14abfb934d1fab5ca3d3c') in 0.009862 seconds
+  Import took 0.014941 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006672 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.155 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3020 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.5 MB.
+System memory in use after: 135.8 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3651.
+Total: 3.094000 ms (FindLiveObjects: 0.434400 ms CreateObjectMapping: 0.182100 ms MarkObjects: 2.437800 ms  DeleteObjects: 0.037200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003346 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  0.956 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3020 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.4 MB.
+System memory in use after: 135.6 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3654.
+Total: 2.545800 ms (FindLiveObjects: 0.294600 ms CreateObjectMapping: 0.170500 ms MarkObjects: 2.051000 ms  DeleteObjects: 0.028900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004132 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.027 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3020 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.5 MB.
+System memory in use after: 135.8 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3657.
+Total: 3.123200 ms (FindLiveObjects: 0.342900 ms CreateObjectMapping: 0.213100 ms MarkObjects: 2.538400 ms  DeleteObjects: 0.027900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 388.953378 seconds.
+  path: Assets/Scripts/Lever/WaterPipe.cs
+  artifactKey: Guid(b4bf982eda3f4b949ba8dcf9c7fd5480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Lever/WaterPipe.cs using Guid(b4bf982eda3f4b949ba8dcf9c7fd5480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00bda3934eb25c8f08c53a2cae4b7962') in 0.030312 seconds
+  Import took 0.039233 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004717 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.422 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.90 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3021 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.6 MB.
+System memory in use after: 135.8 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3661.
+Total: 2.487200 ms (FindLiveObjects: 0.291100 ms CreateObjectMapping: 0.161400 ms MarkObjects: 1.993000 ms  DeleteObjects: 0.040800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.560486 seconds.
+  path: Assets/Scripts/Lever/WaterPipe.cs
+  artifactKey: Guid(b4bf982eda3f4b949ba8dcf9c7fd5480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Lever/WaterPipe.cs using Guid(b4bf982eda3f4b949ba8dcf9c7fd5480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a60157906bf14833fcf5ba0c5178d51a') in 0.008343 seconds
+  Import took 0.014975 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003837 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.086 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3021 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.2 MB.
+System memory in use after: 135.4 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3664.
+Total: 2.706500 ms (FindLiveObjects: 0.334200 ms CreateObjectMapping: 0.144500 ms MarkObjects: 2.194300 ms  DeleteObjects: 0.032600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004010 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.313 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3021 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.6 MB.
+System memory in use after: 135.8 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3667.
+Total: 2.509700 ms (FindLiveObjects: 0.330200 ms CreateObjectMapping: 0.141800 ms MarkObjects: 2.007800 ms  DeleteObjects: 0.028900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004160 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.046 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3021 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.4 MB.
+System memory in use after: 135.6 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3670.
+Total: 3.189100 ms (FindLiveObjects: 0.319400 ms CreateObjectMapping: 0.167200 ms MarkObjects: 2.671000 ms  DeleteObjects: 0.030200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2112.808157 seconds.
+  path: Assets/Scripts/Lever/WaterPipe.cs
+  artifactKey: Guid(b4bf982eda3f4b949ba8dcf9c7fd5480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Lever/WaterPipe.cs using Guid(b4bf982eda3f4b949ba8dcf9c7fd5480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad1fde92a09ddff1365f6402a08a3aca') in 0.008612 seconds
+  Import took 0.015389 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005836 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/seanb/Documents/Unity Games/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.357 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.36 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3021 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 135.6 MB.
+System memory in use after: 135.8 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3673.
+Total: 4.575900 ms (FindLiveObjects: 0.726000 ms CreateObjectMapping: 0.210700 ms MarkObjects: 3.584100 ms  DeleteObjects: 0.052800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 489.712483 seconds.
+  path: Assets/Scripts/Lever/WaterPipe.cs
+  artifactKey: Guid(b4bf982eda3f4b949ba8dcf9c7fd5480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Lever/WaterPipe.cs using Guid(b4bf982eda3f4b949ba8dcf9c7fd5480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5317a032033c8949db64e86027b47403') in 0.008137 seconds
+  Import took 0.014639 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

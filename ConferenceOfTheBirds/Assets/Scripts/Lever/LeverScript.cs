@@ -36,6 +36,10 @@ public class LeverScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             isActive = !isActive;
+            if (isActive)
+            {
+                waterPipe.GetComponent<WaterPipe>().isPipeActive = true;
+            }
         }
     }
 }
