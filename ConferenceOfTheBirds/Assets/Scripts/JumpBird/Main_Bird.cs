@@ -97,8 +97,9 @@ public class Main_Bird : MonoBehaviour
         RayOriginalOffsets = new Vector3[3];
         collider = GetComponent<Collider2D>();
         ground_checks[0].position = collider.bounds.center;
-        ground_checks[1].position = new Vector3(collider.bounds.center.x, collider.bounds.center.y- collider.bounds.extents.y-0.2f, ground_checks[1].position.z);
-        for (int i=0;i<2;i++)
+        ground_checks[1].position = collider.bounds.center - collider.bounds.extents+new Vector3(0,-0.2f,0);
+        ground_checks[2].position = collider.bounds.center - collider.bounds.extents+new Vector3(collider.bounds.size.x,0,0) + new Vector3(-0.2f, -0.2f, 0);
+        for (int i=0;i<3;i++)
         {
             RayCheckOffset[i] = transform.position - ground_checks[i].position;
             RayOriginalOffsets[i] = RayCheckOffset[i];
@@ -201,14 +202,14 @@ public class Main_Bird : MonoBehaviour
     {
         if (!is_grab_thing)
         {
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 3; i++)
             {
                 ground_checks[i].position = transform.position - RayCheckOffset[i];
             }
         }
         else
         {
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 3; i++)
             {
                 ground_checks[i].position = grabbed_thing.position - RayCheckOffset[i];
             }
@@ -257,10 +258,16 @@ public class Main_Bird : MonoBehaviour
         RaycastHit2D checkResult = Physics2D.Linecast(ground_checks[0].position,
                           ground_checks[1].position,
                           1 << LayerMask.NameToLayer("Ground"));
+        RaycastHit2D checkResult2 = Physics2D.Linecast(ground_checks[0].position,
+                          ground_checks[2].position,
+                          1 << LayerMask.NameToLayer("Ground"));
         RaycastHit2D temp_result = Physics2D.Linecast(ground_checks[0].position,
                       ground_checks[1].position,
                       1 << LayerMask.NameToLayer("GrabbableObject"));
-        is_on_ground = checkResult | temp_result;
+        RaycastHit2D temp_result2 = Physics2D.Linecast(ground_checks[0].position,
+                      ground_checks[2].position,
+                      1 << LayerMask.NameToLayer("GrabbableObject"));
+        is_on_ground = checkResult | temp_result | checkResult2 | temp_result2;
     }
     public void ResetAllTriggers(Animator animator)
     {
