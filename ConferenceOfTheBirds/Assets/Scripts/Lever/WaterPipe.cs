@@ -5,11 +5,11 @@ using UnityEngine;
 public class WaterPipe : MonoBehaviour
 {
     //Variables
-    [HideInInspector]
     public bool isPipeActive;
         
     //GameObjects
     public GameObject pipeWaterPoint;
+    public GameObject soilObject;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +28,9 @@ public class WaterPipe : MonoBehaviour
 
     private void FlowWater()
     {
+        //do water flow animation
+        //...
 
+        soilObject.GetComponent<SoilScript>().isWatered = true;
     }
 }

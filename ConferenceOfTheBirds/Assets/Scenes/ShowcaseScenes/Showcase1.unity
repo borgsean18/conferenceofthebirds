@@ -2536,6 +2536,7 @@ MonoBehaviour:
   ground_checks:
   - {fileID: 33480149}
   - {fileID: 1557732303}
+  - {fileID: 676242019}
   is_on_ground: 0
   height: 0
   face_direction: 0
