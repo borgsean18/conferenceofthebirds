@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class Main_Bird : MonoBehaviour
@@ -53,13 +51,14 @@ public class Main_Bird : MonoBehaviour
     public float grab_decrease_jump_speed;
     public float grab_decrease_gliding_time;
     public float grab_state_gravity;
+    Collider2D grabbed_thing_collider;
 
-    Vector3[] RayCheckOffset;
-    Vector3[] RayOriginalOffsets;
     [HideInInspector]
     public Animator animator;
 
+
     Collider2D collider;
+    float original_collider_offsety;
     //[HideInInspector]
     public bool is_hit_wall;
     // Start is called before the first frame update
@@ -75,7 +74,7 @@ public class Main_Bird : MonoBehaviour
         text = GetComponentInChildren<Text>();
         text.text = "hello";
         Slider[] slider_array = GetComponentsInChildren<Slider>();
-        GameObject BirdHealth_O= GameObject.Find("BirdHealthSlider");
+        GameObject BirdHealth_O = GameObject.Find("BirdHealthSlider");
         health_slider = BirdHealth_O.GetComponent<Slider>();
         print(health_slider.maxValue);
         health_slider.maxValue = health;
@@ -93,29 +92,26 @@ public class Main_Bird : MonoBehaviour
         stamina_meter = slider_array[0];
         stamina_meter.maxValue = gliding_time_max;
         print(stamina_meter.maxValue);
-        RayCheckOffset = new Vector3[3];
-        RayOriginalOffsets = new Vector3[3];
         collider = GetComponent<Collider2D>();
-        ground_checks[0].position = collider.bounds.center;
-        ground_checks[1].position = collider.bounds.center - collider.bounds.extents+new Vector3(0,-0.2f,0);
-        ground_checks[2].position = collider.bounds.center - collider.bounds.extents+new Vector3(collider.bounds.size.x,0,0) + new Vector3(-0.2f, -0.2f, 0);
-        for (int i=0;i<3;i++)
-        {
-            RayCheckOffset[i] = transform.position - ground_checks[i].position;
-            RayOriginalOffsets[i] = RayCheckOffset[i];
-        }
+        fix_ground_checks_positions(collider);
+        original_collider_offsety = collider.offset.y;
     }
     public void get_hurt(float damage)
     {
         GetFSM().ChangeState(Hurt.Instance);
         health -= damage;
         health_slider.value = health;
-        if(health<=0)
+        if (health <= 0)
         {
             GetFSM().ChangeState(Death.Instance);
         }
     }
-    IEnumerator Wait(float t)
+
+    public void test_co()
+    {
+        StartCoroutine(Wait(5));
+    }
+    public IEnumerator Wait(float t)
     {
         yield return new WaitForSeconds(t);//运行到这，暂停t秒
         //t秒后，继续运行下面代码
@@ -123,7 +119,7 @@ public class Main_Bird : MonoBehaviour
     }
     void grab_thing()
     {
-        if(!is_grab_thing)
+        if (!is_grab_thing)
         {
             RaycastHit2D temp_result = Physics2D.Linecast(transform.position,
                           ground_checks[1].position,
@@ -134,15 +130,8 @@ public class Main_Bird : MonoBehaviour
                 grabbed_thing = temp_result.transform;
                 grabbed_thing.GetComponent<Rigidbody2D>().mass = 0.1f;
                 grabbed_thing.GetComponent<FixedJoint2D>().enabled = true;
-                print("Time over213.");
-
                 grabbed_thing.GetComponent<FixedJoint2D>().connectedBody = rb;
-                Collider2D grabbed_thing_collider = grabbed_thing.GetComponent<Collider2D>();
-                print(grabbed_thing_collider.bounds.center);
-                print(transform.position);
-                RayCheckOffset[0] =new Vector3(0,0,0);
-                RayCheckOffset[1] = grabbed_thing_collider.bounds.extents+new Vector3(0,0.5f,0);
-                RayCheckOffset[2] = grabbed_thing_collider.bounds.extents + new Vector3(0, 0.5f, 0);
+                grabbed_thing_collider = grabbed_thing.GetComponent<Collider2D>();
                 grabbed_thing.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 grabbed_thing.gameObject.layer = 0;
                 is_grab_thing = true;
@@ -154,17 +143,28 @@ public class Main_Bird : MonoBehaviour
 
             grabbed_thing.gameObject.layer = 9;
             grabbed_thing.GetComponent<Rigidbody2D>().mass = 50;
-            for(int i=0;i<3;i++)
-            {
-                RayCheckOffset[i] = RayOriginalOffsets[i];
-            }
             grabbed_thing.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-
-            grabbed_thing.GetComponent<FixedJoint2D>().enabled=false;
+            grabbed_thing.GetComponent<FixedJoint2D>().enabled = false;
             grabbed_thing = null;
+            grabbed_thing_collider = null;
         }
     }
 
+    void fix_ground_checks_positions(Collider2D this_collider)
+    {
+        ground_checks[0].position = this_collider.bounds.center;
+        ground_checks[1].position = this_collider.bounds.center - this_collider.bounds.extents + new Vector3(0.2f, -0.2f, 0);
+        ground_checks[2].position = this_collider.bounds.center - this_collider.bounds.extents + new Vector3(this_collider.bounds.size.x, 0, 0) + new Vector3(-0.2f, -0.2f, 0);
+    }
+
+    public void Set_walk_collider_offset()
+    {
+       
+    }
+    public void Reset_walk_collider_offset()
+    {
+        
+    }
     IEnumerator wait3()
     {
         yield return new WaitForSeconds(1);    //注意等待时间的写法
@@ -172,7 +172,7 @@ public class Main_Bird : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.layer==LayerMask.NameToLayer("Ground"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             is_hit_wall = true;
             print("hit");
@@ -202,31 +202,27 @@ public class Main_Bird : MonoBehaviour
     {
         if (!is_grab_thing)
         {
-            for (int i = 0; i < 3; i++)
-            {
-                ground_checks[i].position = transform.position - RayCheckOffset[i];
-            }
+            fix_ground_checks_positions(collider);
         }
         else
         {
-            for (int i = 0; i < 3; i++)
-            {
-                ground_checks[i].position = grabbed_thing.position - RayCheckOffset[i];
-            }
+            fix_ground_checks_positions(grabbed_thing_collider);
         }
 
     }
 
     void hit_wall_check()
     {
-        if(GetFSM().CurrentState()==Walk.Instance)
+        if (GetFSM().CurrentState() == Walk.Instance)
         {
             is_hit_wall = false;
         }
     }
+
     void Update()
     {
-        text.text=GetFSM().CurrentState().ToString();
+        print(GetFSM().CurrentState());
+        text.text = GetFSM().CurrentState().ToString();
         m_stateMachine.StateMachineUpdate();
         Check_On_The_Ground();
         check_face_direction();

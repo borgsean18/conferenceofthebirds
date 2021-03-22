@@ -20,6 +20,103 @@ public abstract class State<T>
     /// </summary>
     public abstract void Exit(T entity);
 }
+
+public class Idle : State<Main_Bird>
+{
+    float timer;
+    bool ready_to_jump;
+    int jump_has_direction;
+    public static Idle Instance { get; private set; }
+    static Idle()
+    {
+        Instance = new Idle();
+    }
+
+    public override void Enter(Main_Bird bird)
+    {
+        bird.Reset_walk_collider_offset();
+        ready_to_jump = false;
+        jump_has_direction = 0;
+        bird.ResetAllTriggers(bird.animator);
+        bird.animator.SetTrigger("Idle");
+        bird.rb.velocity = new Vector2(0, 0);
+    }
+
+    public override void Execute(Main_Bird bird)
+    {
+        if(!bird.is_on_ground)
+        {
+            bird.GetFSM().ChangeState(Fall.Instance);
+        }
+        else if(!ready_to_jump)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                ready_to_jump = true;
+                timer = 0;
+            }
+            else if(Input.GetKeyDown(KeyCode.A))
+            {
+                bird.face_direction = -1;
+                bird.GetFSM().ChangeState(Walk.Instance);
+            }
+            else if (Input.GetKeyDown(KeyCode.D))
+            {
+                bird.face_direction = 1;
+                bird.GetFSM().ChangeState(Walk.Instance);
+            }
+        }
+        else
+        {
+            timer += Time.deltaTime;
+            if(Input.GetKeyDown(KeyCode.A))
+            {
+                bird.face_direction = -1;
+            }
+            else if(Input.GetKeyDown(KeyCode.D))
+            {
+                bird.face_direction = 1;
+            }
+            if(Input.GetKey(KeyCode.D)||Input.GetKey(KeyCode.A))
+            {
+                jump_has_direction = 1;
+            }
+            else
+            {
+                jump_has_direction = 0;
+
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                if (timer < bird.min_charge_jump_holding_time)
+                {
+                    bird.rb.velocity += new Vector2(jump_has_direction*bird.walk_speed/2, bird.jump_speed);
+                    bird.GetFSM().ChangeState(Jump.Instance);
+                }
+                else if (timer >= bird.min_charge_jump_holding_time && timer < bird.max_charge_jump_holding_time)
+                {
+                    float temp = timer / bird.max_charge_jump_holding_time;
+                    bird.rb.velocity += new Vector2(jump_has_direction*bird.face_direction * bird.walk_speed * temp * 2, bird.charge_jump_speed * temp * 2);
+                    bird.GetFSM().ChangeState(Jump.Instance);
+                }
+                else if (timer >= bird.max_charge_jump_holding_time)
+                {
+                    bird.rb.velocity += new Vector2(jump_has_direction*bird.face_direction * bird.walk_speed, bird.charge_jump_speed);
+                    bird.GetFSM().ChangeState(Jump.Instance);
+
+                }
+            }
+        }
+        
+
+    }
+
+    public override void Exit(Main_Bird bird)
+    {
+        ready_to_jump = false;
+        jump_has_direction = 0;
+    }
+}
 public class Walk : State<Main_Bird>
 {
     public static Walk Instance { get; private set; }
@@ -36,135 +133,48 @@ public class Walk : State<Main_Bird>
         timer = 0;
         ready_to_jump = false;
         is_down = false;
+        bird.Set_walk_collider_offset();
         bird.gliding_time = bird.gliding_time_max;
         bird.ResetAllTriggers(bird.animator);
-        bird.animator.SetTrigger("Hop");
+        bird.animator.SetTrigger("Ground_Fly");
     }
 
     public override void Execute(Main_Bird bird)
     {
-        if (Mathf.Abs(bird.rb.velocity.x) > 0.5)
-        {
-            bird.ResetAllTriggers(bird.animator);
-            bird.animator.SetTrigger("Hop");
-        }
-        else
-        {
-            bird.ResetAllTriggers(bird.animator);
-            bird.animator.SetTrigger("Idle");
-        }
-        if (!bird.is_on_ground)
+        
+        if(!bird.is_on_ground)
         {
             bird.GetFSM().ChangeState(Fall.Instance);
         }
-        else if(Input.GetKeyDown(KeyCode.F))
+        else if(Input.GetKey(KeyCode.D))
         {
-            if(bird.magic_to_save>=bird.magic_cost_to_save)
+            bird.face_direction = 1;
+            bird.rb.velocity = new Vector2(bird.walk_speed, bird.rb.velocity.y);
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                bird.GetFSM().ChangeState(Save_Game.Instance);
+                bird.rb.velocity += new Vector2(bird.walk_speed / 2, bird.jump_speed);
+            }
+        }
+        else if(Input.GetKey(KeyCode.A))
+        {
+            bird.face_direction = -1;
+            bird.rb.velocity = new Vector2(-bird.walk_speed, bird.rb.velocity.y);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                bird.rb.velocity += new Vector2(-bird.walk_speed / 2, bird.jump_speed);
             }
         }
         else
         {
-            if (!ready_to_jump)
-            {
-                if (Input.GetKey(KeyCode.D))
-                {
-                    //bird.sprite.flipX = true;
-                    
-                    bird.face_direction = 1;
-                    bird.rb.velocity = new Vector2(bird.walk_speed, bird.rb.velocity.y);
-                    timer += Time.deltaTime;
-                    if (timer > 0.2 && !is_down)
-                    {
-                        bird.transform.position += new Vector3(0, 0.05f, 0);
-                        timer = 0;
-                        is_down = true;
-                    }
-                    else if (timer > 0.2 && is_down)
-                    {
-                        //bird.sprite.transform.position -= new Vector3(0, 0.05f, 0);
-                        timer = 0;
-                        is_down = false;
-                    }
-                }
-                else if (Input.GetKeyUp(KeyCode.D))
-                {
-                    bird.rb.velocity = new Vector2(0, 0);
-                    timer = 0;
-                }
-                else if (Input.GetKey(KeyCode.A))
-                {
-                    //bird.sprite.flipX = false;
-
-                    bird.face_direction = -1;
-
-                    bird.rb.velocity = new Vector2(-bird.walk_speed, bird.rb.velocity.y);
-                    timer += Time.deltaTime;
-                    if (timer > 0.2 && !is_down)
-                    {
-                        bird.transform.position += new Vector3(0, 0.05f, 0);
-                        timer = 0;
-                        is_down = true;
-                    }
-                    else if (timer > 0.2 && is_down)
-                    {
-                        //bird.sprite.transform.position -= new Vector3(0, 0.05f, 0);
-                        timer = 0;
-                        is_down = false;
-                    }
-                }
-                else if (Input.GetKeyUp(KeyCode.A))
-                {
-                    bird.rb.velocity = new Vector2(0, 0);
-                    timer = 0;
-                }
-            }
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                ready_to_jump = true;
-                timer = 0;
-            }
-            else if (Input.GetKey(KeyCode.Space) && ready_to_jump)
-            {
-                //Debug.Log("chargejump");
-
-                timer += Time.deltaTime;
-                if (timer >= bird.min_charge_jump_holding_time)
-                {
-                    bird.rb.velocity = new Vector2(0, 0);
-                }
-            }
-            else if (Input.GetKeyUp(KeyCode.Space) && ready_to_jump)
-            {
-                if (timer < bird.min_charge_jump_holding_time)
-                {
-                    bird.rb.velocity += new Vector2(0, bird.jump_speed);
-                    bird.GetFSM().ChangeState(Jump.Instance);
-                }
-                else if (timer >= bird.min_charge_jump_holding_time && timer < bird.max_charge_jump_holding_time)
-                {
-                    bird.rb.velocity += new Vector2(bird.face_direction * bird.walk_speed * timer * 2, bird.charge_jump_speed * timer * 2);
-                    bird.GetFSM().ChangeState(Jump.Instance);
-                }
-                else if (timer >= bird.max_charge_jump_holding_time)
-                {
-
-                    bird.rb.velocity += new Vector2(bird.face_direction * bird.walk_speed, bird.charge_jump_speed);
-
-                    bird.GetFSM().ChangeState(Jump.Instance);
-
-                }
-            }
+            bird.GetFSM().ChangeState(Idle.Instance);
         }
-        
     }
 
     public override void Exit(Main_Bird bird)
     {
         ready_to_jump = false;
         bird.ResetAllTriggers(bird.animator);
+
         timer = 0;
     }
 }
@@ -242,6 +252,121 @@ public class Charging_Jump : State<Main_Bird>
         {
             bird.GetFSM().ChangeState(Fall.Instance);
         }
+        //if (Mathf.Abs(bird.rb.velocity.x) > 0.5)
+        //{
+        //    bird.ResetAllTriggers(bird.animator);
+        //    bird.animator.SetTrigger("Hop");
+        //}
+        //else
+        //{
+        //    bird.ResetAllTriggers(bird.animator);
+        //    bird.animator.SetTrigger("Idle");
+        //}
+        //if (!bird.is_on_ground)
+        //{
+        //    bird.GetFSM().ChangeState(Fall.Instance);
+        //}
+        //else if(Input.GetKeyDown(KeyCode.F))
+        //{
+        //    if(bird.magic_to_save>=bird.magic_cost_to_save)
+        //    {
+        //        bird.GetFSM().ChangeState(Save_Game.Instance);
+        //    }
+        //}
+        //else
+        //{
+        //    if (!ready_to_jump)
+        //    {
+        //        if (Input.GetKey(KeyCode.D))
+        //        {
+        //            //bird.sprite.flipX = true;
+
+        //            bird.face_direction = 1;
+        //            bird.rb.velocity = new Vector2(bird.walk_speed, bird.rb.velocity.y);
+        //            timer += Time.deltaTime;
+        //            if (timer > 0.2 && !is_down)
+        //            {
+        //                bird.transform.position += new Vector3(0, 0.05f, 0);
+        //                timer = 0;
+        //                is_down = true;
+        //            }
+        //            else if (timer > 0.2 && is_down)
+        //            {
+        //                //bird.sprite.transform.position -= new Vector3(0, 0.05f, 0);
+        //                timer = 0;
+        //                is_down = false;
+        //            }
+        //        }
+        //        else if (Input.GetKeyUp(KeyCode.D))
+        //        {
+        //            bird.rb.velocity = new Vector2(0, 0);
+        //            timer = 0;
+        //        }
+        //        else if (Input.GetKey(KeyCode.A))
+        //        {
+        //            //bird.sprite.flipX = false;
+
+        //            bird.face_direction = -1;
+
+        //            bird.rb.velocity = new Vector2(-bird.walk_speed, bird.rb.velocity.y);
+        //            timer += Time.deltaTime;
+        //            if (timer > 0.2 && !is_down)
+        //            {
+        //                bird.transform.position += new Vector3(0, 0.05f, 0);
+        //                timer = 0;
+        //                is_down = true;
+        //            }
+        //            else if (timer > 0.2 && is_down)
+        //            {
+        //                //bird.sprite.transform.position -= new Vector3(0, 0.05f, 0);
+        //                timer = 0;
+        //                is_down = false;
+        //            }
+        //        }
+        //        else if (Input.GetKeyUp(KeyCode.A))
+        //        {
+        //            bird.rb.velocity = new Vector2(0, 0);
+        //            timer = 0;
+        //        }
+        //    }
+
+        //    if (Input.GetKeyDown(KeyCode.Space))
+        //    {
+        //        ready_to_jump = true;
+        //        timer = 0;
+        //    }
+        //    else if (Input.GetKey(KeyCode.Space) && ready_to_jump)
+        //    {
+        //        //Debug.Log("chargejump");
+
+        //        timer += Time.deltaTime;
+        //        if (timer >= bird.min_charge_jump_holding_time)
+        //        {
+        //            bird.rb.velocity = new Vector2(0, 0);
+        //        }
+        //    }
+        //    else if (Input.GetKeyUp(KeyCode.Space) && ready_to_jump)
+        //    {
+        //        if (timer < bird.min_charge_jump_holding_time)
+        //        {
+        //            bird.rb.velocity += new Vector2(0, bird.jump_speed);
+        //            bird.GetFSM().ChangeState(Jump.Instance);
+        //        }
+        //        else if (timer >= bird.min_charge_jump_holding_time && timer < bird.max_charge_jump_holding_time)
+        //        {
+        //            bird.rb.velocity += new Vector2(bird.face_direction * bird.walk_speed * timer * 2, bird.charge_jump_speed * timer * 2);
+        //            bird.GetFSM().ChangeState(Jump.Instance);
+        //        }
+        //        else if (timer >= bird.max_charge_jump_holding_time)
+        //        {
+
+        //            bird.rb.velocity += new Vector2(bird.face_direction * bird.walk_speed, bird.charge_jump_speed);
+
+        //            bird.GetFSM().ChangeState(Jump.Instance);
+
+        //        }
+        //    }
+        //}
     }
 
     public override void Exit(Main_Bird bird)
@@ -370,7 +495,7 @@ public class Fall : State<Main_Bird>
 
     public override void Enter(Main_Bird bird)
     {
-
+        
     }
 
     public override void Execute(Main_Bird bird)
@@ -378,7 +503,15 @@ public class Fall : State<Main_Bird>
         if(bird.is_on_ground)
         {
             Debug.Log("hitground");
-            bird.GetFSM().ChangeState(Walk.Instance);
+            if(Input.GetKey(KeyCode.A)||Input.GetKey(KeyCode.D))
+            {
+                bird.GetFSM().ChangeState(Walk.Instance);
+            }
+            else
+            {
+                bird.GetFSM().ChangeState(Idle.Instance);
+
+            }
         }
         else
         {
@@ -411,7 +544,7 @@ public class Fall : State<Main_Bird>
 
     public override void Exit(Main_Bird bird)
     {
-
+        bird.ResetAllTriggers(bird.animator);
     }
 }
 
