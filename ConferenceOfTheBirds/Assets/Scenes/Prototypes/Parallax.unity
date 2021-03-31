@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d27d50fa03d48b4592f87cc2ba3aadc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.6, y: 0.3}
+  parallaxEffectMultiplier: {x: 0.1, y: 0.3}
   camera: {fileID: 1187154066}
 --- !u!212 &282229145
 SpriteRenderer:
@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 498668121}
   - component: {fileID: 498668120}
   m_Layer: 0
-  m_Name: factory
+  m_Name: city
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -425,8 +425,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498668118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.4, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -9.4, y: -22.6, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1441498715}
   m_RootOrder: 5
@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d27d50fa03d48b4592f87cc2ba3aadc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.63, y: 0.35}
+  parallaxEffectMultiplier: {x: 0.2, y: 0.35}
   camera: {fileID: 1187154066}
 --- !u!212 &498668121
 SpriteRenderer:
@@ -485,7 +485,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
-  m_Sprite: {fileID: 21300000, guid: e090efca7b78cef46808928850f71051, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92f24c76f75227b418df3f3ad43e6102, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -522,7 +522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120073269}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.1, y: 0.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1441498715}
@@ -582,7 +582,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0370c102405e5a74887be44d6fed5998, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3fc425b92106c646aacf74ee11155a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -803,7 +803,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187154066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.9, y: -11.5, z: -10}
+  m_LocalPosition: {x: -40.9, y: -12, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -885,7 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d27d50fa03d48b4592f87cc2ba3aadc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parallaxEffectMultiplier: {x: 0.6, y: 0.3}
+  parallaxEffectMultiplier: {x: 0.1, y: 0.3}
   camera: {fileID: 1187154066}
 --- !u!212 &1202865992
 SpriteRenderer:
