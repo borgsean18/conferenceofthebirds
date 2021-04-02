@@ -1727,6 +1727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWatered: 0
   isSeeded: 0
+  treePrefab: {fileID: 982139751134174105, guid: c4a55ce9821bf1a4894559795bc90ad8, type: 3}
 --- !u!4 &2107027542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5359247734085159674, guid: 088df469ac79e7f4c903e37917369aa9, type: 3}

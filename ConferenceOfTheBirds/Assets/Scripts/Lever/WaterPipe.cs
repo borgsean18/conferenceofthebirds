@@ -32,5 +32,6 @@ public class WaterPipe : MonoBehaviour
         //...
 
         soilObject.GetComponent<SoilScript>().isWatered = true;
+        soilObject.GetComponent<SoilScript>().GrowTree();
     }
 }
