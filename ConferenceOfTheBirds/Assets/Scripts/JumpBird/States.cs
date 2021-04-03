@@ -96,7 +96,7 @@ public class Idle : State<Main_Bird>
                 else if (timer >= bird.min_charge_jump_holding_time && timer < bird.max_charge_jump_holding_time)
                 {
                     float temp = timer / bird.max_charge_jump_holding_time;
-                    bird.rb.velocity += new Vector2(jump_has_direction*bird.face_direction * bird.walk_speed * temp * 2, bird.charge_jump_speed * temp * 2);
+                    bird.rb.velocity += new Vector2(jump_has_direction*bird.face_direction * bird.walk_speed * temp, bird.charge_jump_speed * temp);
                     bird.GetFSM().ChangeState(Jump.Instance);
                 }
                 else if (timer >= bird.max_charge_jump_holding_time)
