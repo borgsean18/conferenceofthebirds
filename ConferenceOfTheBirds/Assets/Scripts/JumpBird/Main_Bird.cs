@@ -74,17 +74,18 @@ public class Main_Bird : MonoBehaviour
         text = GetComponentInChildren<Text>();
         text.text = "hello";
         Slider[] slider_array = GetComponentsInChildren<Slider>();
-        GameObject BirdHealth_O = GameObject.Find("BirdHealthSlider");
+        GameObject BirdHealth_O = GameObject.FindGameObjectWithTag("BirdHealthSlider");
+        print(BirdHealth_O.name);
         health_slider = BirdHealth_O.GetComponent<Slider>();
         print(health_slider.maxValue);
         health_slider.maxValue = health;
-        health_slider.value = health_slider.maxValue;
+        health_slider.value = 0;
         GameObject BirdMagic_O = GameObject.Find("BirdMagicSlider");
         magic_to_save_slider = BirdMagic_O.GetComponent<Slider>();
         //magic_to_save_slider = slider_array[1];
         magic_to_save_slider.maxValue = max_magic_to_save;
         magic_to_save_slider.value = magic_to_save;
-        print(magic_to_save_slider.value);
+        //print(magic_to_save_slider.value);
         save_point_position = transform.position;
         respawn_point = GameObject.FindGameObjectWithTag("RespawnPoint");
         respawn_point.transform.position = transform.position;
@@ -228,6 +229,7 @@ public class Main_Bird : MonoBehaviour
         check_face_direction();
         hit_wall_check();
         stamina_meter.value = gliding_time;
+        health_slider.value = health;
         ray_check_transforms_follow();
         if (Input.GetKeyDown(KeyCode.E))
         {

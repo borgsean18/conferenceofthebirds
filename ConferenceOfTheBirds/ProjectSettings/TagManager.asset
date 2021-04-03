@@ -10,6 +10,7 @@ TagManager:
   - RespawnPoint
   - PollitionAir
   - LevelEnd
+  - BirdHealthSlider
   layers:
   - Default
   - TransparentFX

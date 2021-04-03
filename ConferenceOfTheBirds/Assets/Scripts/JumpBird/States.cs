@@ -639,8 +639,6 @@ public class Death : State<Main_Bird>
             bird.transform.position = bird.save_point_position;
             bird.health = 100;
             bird.health_slider.value = bird.health;
-            bird.magic_to_save = 0;
-            bird.magic_to_save_slider.value = 0;
             bird.GetFSM().ChangeState(Walk.Instance);
         }
     }
