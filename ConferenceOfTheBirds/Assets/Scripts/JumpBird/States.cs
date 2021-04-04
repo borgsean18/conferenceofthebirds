@@ -298,8 +298,8 @@ public class Gliding : State<Main_Bird>
                 }
                 if(Input.GetKey(KeyCode.W))
                 {
-                    bird.rb.velocity = new Vector2(bird.face_direction*bird.gliding_speed, bird.flying_up_speed);
-                    bird.gliding_time -= Time.deltaTime;
+                    bird.rb.velocity = new Vector2(bird.face_direction*bird.gliding_speed, bird.fly_up_speed);
+                    bird.gliding_time -= Time.deltaTime* bird.fly_up_extra_stamina_cost;
                     bird.ResetAllTriggers(bird.animator);
                     bird.animator.SetTrigger("Fly");
                 }
@@ -310,7 +310,10 @@ public class Gliding : State<Main_Bird>
                 if (Input.GetKey(KeyCode.S))
                 {
                     //bird.rb.velocity = new Vector2(bird.rb.velocity.x, -3);
-                    bird.rb.gravityScale = bird.gliding_gravity*2;
+                    //bird.rb.gravityScale = bird.gliding_gravity*2;
+                    bird.rb.velocity = new Vector2(bird.face_direction * bird.gliding_speed, -bird.fly_down_speed);
+                    bird.gliding_time += Time.deltaTime * bird.fly_down_extra_stamina_save;
+
                     bird.ResetAllTriggers(bird.animator);
                     bird.animator.SetTrigger("Glide");
 

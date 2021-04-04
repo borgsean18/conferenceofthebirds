@@ -29,7 +29,11 @@ public class Main_Bird : MonoBehaviour
     public float double_jump_x_speed;
     public float gliding_gravity;
     public float gliding_time_max;
-    public float flying_up_speed;
+    public float fly_up_speed;
+    public float fly_down_speed;
+    public float fly_up_extra_stamina_cost;
+    public float fly_down_extra_stamina_save;
+
     [HideInInspector]
     public float gliding_time;
     public float fall_x_speed;
