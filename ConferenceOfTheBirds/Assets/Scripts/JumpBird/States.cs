@@ -164,6 +164,10 @@ public class Walk : State<Main_Bird>
                 bird.rb.velocity += new Vector2(-bird.walk_speed / 2, bird.jump_speed);
             }
         }
+        else if(Input.GetKeyDown(KeyCode.Space))
+        {
+            bird.GetFSM().ChangeState(Jump.Instance);
+        }
         else
         {
             bird.GetFSM().ChangeState(Idle.Instance);
@@ -173,7 +177,6 @@ public class Walk : State<Main_Bird>
     public override void Exit(Main_Bird bird)
     {
         ready_to_jump = false;
-        bird.ResetAllTriggers(bird.animator);
 
         timer = 0;
     }
