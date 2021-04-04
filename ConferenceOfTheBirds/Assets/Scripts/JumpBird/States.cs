@@ -146,6 +146,11 @@ public class Walk : State<Main_Bird>
         {
             bird.GetFSM().ChangeState(Fall.Instance);
         }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            bird.rb.velocity += new Vector2(bird.face_direction * bird.walk_speed/2, bird.jump_speed);
+            bird.GetFSM().ChangeState(Jump.Instance);
+        }
         else if(Input.GetKey(KeyCode.D))
         {
             bird.face_direction = 1;
@@ -164,10 +169,7 @@ public class Walk : State<Main_Bird>
                 bird.rb.velocity += new Vector2(-bird.walk_speed / 2, bird.jump_speed);
             }
         }
-        else if(Input.GetKeyDown(KeyCode.Space))
-        {
-            bird.GetFSM().ChangeState(Jump.Instance);
-        }
+        
         else
         {
             bird.GetFSM().ChangeState(Idle.Instance);
