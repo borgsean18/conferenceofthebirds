@@ -2733,6 +2733,7 @@ MonoBehaviour:
   double_jump_x_speed: 2
   gliding_gravity: 0.1
   gliding_time_max: 3
+  flying_up_speed: 0
   gliding_time: 0
   fall_x_speed: 2
   health: 100
@@ -4162,6 +4163,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 603711842, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
+      propertyPath: flying_up_speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 769753461, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 769753461, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609999029, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 339527870733652193, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -4472,7 +4489,7 @@ GameObject:
   - component: {fileID: 1000410779}
   m_Layer: 11
   m_Name: BirdHealthSlider
-  m_TagString: Untagged
+  m_TagString: BirdHealthSlider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16693,7 +16710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985244098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -79.02374, y: -23.019978, z: -10}
+  m_LocalPosition: {x: -78.17759, y: -23.019978, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17202,7 +17219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117406806}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -79.02374, y: -23.019978, z: -10}
+  m_LocalPosition: {x: -78.17759, y: -23.019978, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 780560666}

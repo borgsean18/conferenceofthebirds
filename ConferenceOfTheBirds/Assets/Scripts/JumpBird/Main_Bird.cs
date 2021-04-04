@@ -29,16 +29,22 @@ public class Main_Bird : MonoBehaviour
     public float double_jump_x_speed;
     public float gliding_gravity;
     public float gliding_time_max;
+    public float flying_up_speed;
     [HideInInspector]
     public float gliding_time;
     public float fall_x_speed;
     public float health;
     [HideInInspector]
     public Slider health_slider;
+    [HideInInspector]
     public float max_magic_to_save;
+    [HideInInspector]
     public float magic_to_save;
+    [HideInInspector]
     public float magic_cost_to_save;
+    [HideInInspector]
     public float hold_to_save_time;
+
     [HideInInspector]
     public Slider magic_to_save_slider;
     [HideInInspector]
@@ -47,9 +53,13 @@ public class Main_Bird : MonoBehaviour
     public GameObject respawn_point;
     bool is_grab_thing;
     Transform grabbed_thing;
+    [HideInInspector]
     public float grab_decrease_gliding_speed;
+    [HideInInspector]
     public float grab_decrease_jump_speed;
+    [HideInInspector]
     public float grab_decrease_gliding_time;
+    [HideInInspector]
     public float grab_state_gravity;
     Collider2D grabbed_thing_collider;
 
@@ -60,6 +70,7 @@ public class Main_Bird : MonoBehaviour
     Collider2D collider;
     float original_collider_offsety;
     //[HideInInspector]
+    [HideInInspector]
     public bool is_hit_wall;
     // Start is called before the first frame update
     void Start()
