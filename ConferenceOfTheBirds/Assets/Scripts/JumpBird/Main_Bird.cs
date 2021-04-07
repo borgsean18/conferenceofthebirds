@@ -72,7 +72,6 @@ public class Main_Bird : MonoBehaviour
 
 
     Collider2D collider;
-    float original_collider_offsety;
     //[HideInInspector]
     [HideInInspector]
     public bool is_hit_wall;
@@ -81,7 +80,7 @@ public class Main_Bird : MonoBehaviour
     {
         m_stateMachine = new StateMachine<Main_Bird>(this);// initial
         animator = GetComponent<Animator>();
-        m_stateMachine.SetCurrentState(Walk.Instance);// set first state
+        m_stateMachine.SetCurrentState(Idle.Instance);// set first state
         //sprite = GetComponent<SpriteRenderer>();
         Bird_Bone = GameObject.Find("bone_1").transform;
         rb = GetComponent<Rigidbody2D>();
@@ -90,7 +89,7 @@ public class Main_Bird : MonoBehaviour
         text.text = "hello";
         Slider[] slider_array = GetComponentsInChildren<Slider>();
         GameObject BirdHealth_O = GameObject.FindGameObjectWithTag("BirdHealthSlider");
-        print(BirdHealth_O.name);
+        //print(BirdHealth_O.name);
         health_slider = BirdHealth_O.GetComponent<Slider>();
         print(health_slider.maxValue);
         health_slider.maxValue = health;
@@ -110,7 +109,6 @@ public class Main_Bird : MonoBehaviour
         print(stamina_meter.maxValue);
         collider = GetComponent<Collider2D>();
         fix_ground_checks_positions(collider);
-        original_collider_offsety = collider.offset.y;
     }
     public void get_hurt(float damage)
     {

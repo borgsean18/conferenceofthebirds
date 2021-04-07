@@ -106,6 +106,11 @@ public class Idle : State<Main_Bird>
 
                 }
             }
+            else if(timer >= bird.max_charge_jump_holding_time)
+            {
+                bird.rb.velocity += new Vector2(jump_has_direction * bird.face_direction * bird.walk_speed, bird.charge_jump_speed);
+                bird.GetFSM().ChangeState(Jump.Instance);
+            }
         }
         
 
@@ -329,7 +334,7 @@ public class Gliding : State<Main_Bird>
                     bird.rb.gravityScale = bird.gliding_gravity;
 
                 }
-                else if (Input.GetKeyUp(KeyCode.Space))
+                if (Input.GetKeyUp(KeyCode.Space))
                 {
                     bird.GetFSM().ChangeState(Fall.Instance);
                 }
@@ -501,7 +506,7 @@ public class Death : State<Main_Bird>
             bird.transform.position = bird.save_point_position;
             bird.health = 100;
             bird.health_slider.value = bird.health;
-            bird.GetFSM().ChangeState(Walk.Instance);
+            bird.GetFSM().ChangeState(Idle.Instance);
         }
     }
 
