@@ -171,14 +171,7 @@ public class Main_Bird : MonoBehaviour
         ground_checks[2].position = this_collider.bounds.center - this_collider.bounds.extents + new Vector3(this_collider.bounds.size.x, 0, 0) + new Vector3(-0.2f, -0.2f, 0);
     }
 
-    public void Set_walk_collider_offset()
-    {
-       
-    }
-    public void Reset_walk_collider_offset()
-    {
-        
-    }
+
     IEnumerator wait3()
     {
         yield return new WaitForSeconds(1);    //注意等待时间的写法
@@ -227,7 +220,7 @@ public class Main_Bird : MonoBehaviour
 
     void hit_wall_check()
     {
-        if (GetFSM().CurrentState() == Walk.Instance)
+        if (GetFSM().CurrentState() == Walk.Instance|| (GetFSM().CurrentState() == Idle.Instance))
         {
             is_hit_wall = false;
         }
@@ -235,7 +228,7 @@ public class Main_Bird : MonoBehaviour
 
     void Update()
     {
-        print(GetFSM().CurrentState());
+        //print(GetFSM().CurrentState());
         text.text = GetFSM().CurrentState().ToString();
         m_stateMachine.StateMachineUpdate();
         Check_On_The_Ground();
@@ -251,21 +244,7 @@ public class Main_Bird : MonoBehaviour
     }
     private void Check_On_The_Ground()
     {
-        //for (int i = 0; i < ground_checks.Length; i++)
-        //{
-        //    RaycastHit2D checkResult = Physics2D.Linecast(transform.position,
-        //                  ground_checks[i].position,
-        //                  1 << LayerMask.NameToLayer("Ground"));
-        //    RaycastHit2D temp_result = Physics2D.Linecast(transform.position,
-        //                  ground_checks[i].position,
-        //                  1 << LayerMask.NameToLayer("GrabbableObject"));
-        //    is_on_ground = checkResult| temp_result;
-        //    if (is_on_ground)
-        //    {
-        //        //print("onground");
-        //        break;
-        //    }
-        //}
+
         RaycastHit2D checkResult = Physics2D.Linecast(ground_checks[0].position,
                           ground_checks[1].position,
                           1 << LayerMask.NameToLayer("Ground"));

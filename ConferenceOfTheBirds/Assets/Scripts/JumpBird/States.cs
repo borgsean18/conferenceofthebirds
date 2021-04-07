@@ -34,7 +34,6 @@ public class Idle : State<Main_Bird>
 
     public override void Enter(Main_Bird bird)
     {
-        bird.Reset_walk_collider_offset();
         ready_to_jump = false;
         jump_has_direction = 0;
         bird.ResetAllTriggers(bird.animator);
@@ -138,7 +137,6 @@ public class Walk : State<Main_Bird>
         timer = 0;
         ready_to_jump = false;
         is_down = false;
-        bird.Set_walk_collider_offset();
         bird.gliding_time = bird.gliding_time_max;
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Hop");
@@ -205,7 +203,7 @@ public class Jump : State<Main_Bird>
         double_fly = false;
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Ground_Fly");
-        Debug.Log("ground_fly");
+        //Debug.Log("ground_fly");
     }
 
     public override void Execute(Main_Bird bird)
@@ -377,19 +375,18 @@ public class Fall : State<Main_Bird>
             else
             {
                 bird.GetFSM().ChangeState(Idle.Instance);
-
             }
         }
         else
         {
             if(!bird.is_hit_wall)
             {
-                if (Input.GetKey(KeyCode.A))
+                if (Input.GetKeyDown(KeyCode.A))
                 {
                     bird.face_direction = -1;
                     bird.rb.velocity = new Vector2(-bird.fall_x_speed, bird.rb.velocity.y);
                 }
-                else if (Input.GetKey(KeyCode.D))
+                else if (Input.GetKeyDown(KeyCode.D))
                 {
                     bird.face_direction = 1;
                     bird.rb.velocity = new Vector2(bird.fall_x_speed, bird.rb.velocity.y);
@@ -398,10 +395,6 @@ public class Fall : State<Main_Bird>
                 {
                     bird.rb.velocity = new Vector2(bird.face_direction * bird.gliding_speed, bird.rb.velocity.y);
                     bird.GetFSM().ChangeState(Gliding.Instance);
-                }
-                else if (Input.GetKeyDown(KeyCode.Mouse0))
-                {
-                    //bird.rb.velocity = new Vector2(bird.face_direction * 8, 3);
                 }
             }
             
