@@ -23,9 +23,7 @@ public abstract class State<T>
 
 public class Idle : State<Main_Bird>
 {
-    float timer;
-    bool ready_to_jump;
-    int jump_has_direction;
+    
     public static Idle Instance { get; private set; }
     static Idle()
     {
@@ -34,8 +32,6 @@ public class Idle : State<Main_Bird>
 
     public override void Enter(Main_Bird bird)
     {
-        ready_to_jump = false;
-        jump_has_direction = 0;
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Idle");
         bird.rb.velocity = new Vector2(0, 0);
@@ -48,14 +44,11 @@ public class Idle : State<Main_Bird>
         {
             bird.GetFSM().ChangeState(Fall.Instance);
         }
-        else if(!ready_to_jump)
+        else
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                ready_to_jump = true;
-                timer = 0;
-            }
-            else if(Input.GetKeyDown(KeyCode.A))
+            if(Input.GetKeyDown(KeyCode.Space))
+                bird.GetFSM().ChangeState(Jump.Instance);
+            else if (Input.GetKeyDown(KeyCode.A))
             {
                 bird.face_direction = -1;
                 bird.GetFSM().ChangeState(Walk.Instance);
@@ -66,60 +59,12 @@ public class Idle : State<Main_Bird>
                 bird.GetFSM().ChangeState(Walk.Instance);
             }
         }
-        else
-        {
-            timer += Time.deltaTime;
-            if(Input.GetKeyDown(KeyCode.A))
-            {
-                bird.face_direction = -1;
-            }
-            else if(Input.GetKeyDown(KeyCode.D))
-            {
-                bird.face_direction = 1;
-            }
-            if(Input.GetKey(KeyCode.D)||Input.GetKey(KeyCode.A))
-            {
-                jump_has_direction = 1;
-            }
-            else
-            {
-                jump_has_direction = 0;
-
-            }
-            if (Input.GetKeyUp(KeyCode.Space))
-            {
-                if (timer < bird.min_charge_jump_holding_time)
-                {
-                    bird.rb.velocity += new Vector2(jump_has_direction*bird.walk_speed/2, bird.jump_speed);
-                    bird.GetFSM().ChangeState(Jump.Instance);
-                }
-                else if (timer >= bird.min_charge_jump_holding_time && timer < bird.max_charge_jump_holding_time)
-                {
-                    float temp = timer / bird.max_charge_jump_holding_time;
-                    bird.rb.velocity += new Vector2(jump_has_direction*bird.face_direction * bird.walk_speed * temp, bird.charge_jump_speed * temp);
-                    bird.GetFSM().ChangeState(Jump.Instance);
-                }
-                else if (timer >= bird.max_charge_jump_holding_time)
-                {
-                    bird.rb.velocity += new Vector2(jump_has_direction*bird.face_direction * bird.walk_speed, bird.charge_jump_speed);
-                    bird.GetFSM().ChangeState(Jump.Instance);
-
-                }
-            }
-            else if(timer >= bird.max_charge_jump_holding_time)
-            {
-                bird.rb.velocity += new Vector2(jump_has_direction * bird.face_direction * bird.walk_speed, bird.charge_jump_speed);
-                bird.GetFSM().ChangeState(Jump.Instance);
-            }
-        }
         
 
     }
 
     public override void Exit(Main_Bird bird)
     {
-        ready_to_jump = false;
-        jump_has_direction = 0;
     }
 }
 public class Walk : State<Main_Bird>
@@ -152,26 +97,19 @@ public class Walk : State<Main_Bird>
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
-            bird.rb.velocity += new Vector2(bird.face_direction * bird.walk_speed/2, bird.jump_speed);
+            //bird.rb.velocity = new Vector2(bird.face_direction * bird.walk_speed/2, bird.jump_speed);
             bird.GetFSM().ChangeState(Jump.Instance);
         }
         else if(Input.GetKey(KeyCode.D))
         {
             bird.face_direction = 1;
             bird.rb.velocity = new Vector2(bird.walk_speed, bird.rb.velocity.y);
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                bird.rb.velocity += new Vector2(bird.walk_speed / 2, bird.jump_speed);
-            }
+            
         }
         else if(Input.GetKey(KeyCode.A))
         {
             bird.face_direction = -1;
             bird.rb.velocity = new Vector2(-bird.walk_speed, bird.rb.velocity.y);
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                bird.rb.velocity += new Vector2(-bird.walk_speed / 2, bird.jump_speed);
-            }
         }
         
         else
@@ -193,6 +131,9 @@ public class Jump : State<Main_Bird>
     public static Jump Instance { get; private set; }
     float height;
     bool double_fly;
+    int jump_has_direction;
+    float timer;
+    bool is_press_space;
     static Jump()
     {
         Instance = new Jump();
@@ -200,28 +141,71 @@ public class Jump : State<Main_Bird>
 
     public override void Enter(Main_Bird bird)
     {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            bird.face_direction = -1;
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            bird.face_direction = 1;
+        }
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+        {
+            jump_has_direction = 1;
+        }
+        else
+        {
+            jump_has_direction = 0;
+        }
+        bird.rb.velocity += new Vector2(jump_has_direction * bird.walk_speed / 2, bird.jump_speed);
         height = 0;
         double_fly = false;
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Ground_Fly");
-        //Debug.Log("ground_fly");
+        timer = 0;
+        is_press_space = true;
     }
 
     public override void Execute(Main_Bird bird)
     {
         if(bird.rb.velocity.y>0)
         {
-            height += bird.rb.velocity.y;
-            if (Input.GetKeyDown(KeyCode.Space)&&!double_fly)
+            if(Input.GetKeyUp(KeyCode.Space))
             {
-                double_fly = true;
-                bird.height = height;
-                bird.rb.velocity = new Vector2(bird.face_direction * (Mathf.Abs(bird.rb.velocity.x) + bird.double_jump_x_speed), bird.rb.velocity.y + bird.double_jump_y_speed);
+                is_press_space = false;
+            }
+            else
+            {
+                if(Input.GetKey(KeyCode.Space))
+                {
+                    timer += Time.deltaTime;
+                    if(timer<bird.max_charge_jump_holding_time)
+                    {
+                        bird.rb.velocity = new Vector2(bird.rb.velocity.x, bird.jump_speed);
+                    }
+                }
+                
             }
         }
         else
         {
             bird.GetFSM().ChangeState(Fall.Instance);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            bird.face_direction = 1;
+            bird.rb.velocity = new Vector2(bird.walk_speed/2, bird.rb.velocity.y);
+
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            bird.face_direction = -1;
+            bird.rb.velocity = new Vector2(-bird.walk_speed/2, bird.rb.velocity.y);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            bird.GetFSM().ChangeState(Air_Dash.Instance);
+
         }
     }
 
@@ -303,8 +287,6 @@ public class Air_Dash : State<Main_Bird>
 public class Gliding : State<Main_Bird>
 {
     public static Gliding Instance { get; private set; }
-    float timer;
-    float current_height;
     static Gliding()
     {
         Instance = new Gliding();
@@ -312,8 +294,6 @@ public class Gliding : State<Main_Bird>
 
     public override void Enter(Main_Bird bird)
     {
-        timer = 0;
-        current_height = bird.height;
         bird.rb.velocity = new Vector2(bird.rb.velocity.x, bird.rb.velocity.y);
         bird.rb.gravityScale = bird.gliding_gravity;
         bird.ResetAllTriggers(bird.animator);
@@ -343,23 +323,29 @@ public class Gliding : State<Main_Bird>
                 if (Input.GetKey(KeyCode.A))
                 {
                     bird.face_direction = -1;
+                    //bird.start_acc(new Vector2(-bird.gliding_speed, 0));
                     bird.rb.velocity = new Vector2(-bird.gliding_speed, bird.rb.velocity.y);
                 }
                 else if (Input.GetKey(KeyCode.D))
                 {
                     bird.face_direction = 1;
+                    //bird.start_acc(new Vector2(bird.gliding_speed, 0));
                     bird.rb.velocity = new Vector2(bird.gliding_speed, bird.rb.velocity.y);
                 }
                 if(Input.GetKey(KeyCode.W))
                 {
                     bird.rb.velocity = new Vector2(bird.face_direction*bird.gliding_speed, bird.fly_up_speed);
+                    if(!(Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.D)))
+                    {
+                        bird.rb.velocity = new Vector2(0, bird.fly_up_speed*1.5f);
+                    }
                     bird.gliding_time -= Time.deltaTime* bird.fly_up_extra_stamina_cost;
                     bird.ResetAllTriggers(bird.animator);
                     bird.animator.SetTrigger("Fly");
                 }
                 if(Input.GetKeyUp(KeyCode.W))
                 {
-                    //bird.rb.velocity -= new Vector2(0, bird.flying_up_speed);
+                    bird.rb.velocity = new Vector2(bird.face_direction * bird.gliding_speed, 0);
                 }
                 if (Input.GetKey(KeyCode.S))
                 {
@@ -390,13 +376,11 @@ public class Gliding : State<Main_Bird>
             }
             
         }
-        current_height += bird.rb.velocity.y;
     }
 
     public override void Exit(Main_Bird bird)
     {
         bird.rb.gravityScale = 1f;
-        timer = 0;
     }
 }
 
@@ -412,6 +396,7 @@ public class Fall : State<Main_Bird>
     {
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Fall");
+        bird.rb.gravityScale = 2;
     }
 
     public override void Execute(Main_Bird bird)
@@ -479,6 +464,8 @@ public class Fall : State<Main_Bird>
     public override void Exit(Main_Bird bird)
     {
         bird.ResetAllTriggers(bird.animator);
+        bird.rb.gravityScale = 1;
+
     }
 }
 

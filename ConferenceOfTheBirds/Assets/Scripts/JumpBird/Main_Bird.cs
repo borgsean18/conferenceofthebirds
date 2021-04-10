@@ -124,10 +124,25 @@ public class Main_Bird : MonoBehaviour
     {
         StartCoroutine(Wait(5));
     }
+    public void start_acc(Vector2 v)
+    {
+        //StopCoroutine("VeclocityTrans");
+        //StartCoroutine("VeclocityTrans", v);
+        StartCoroutine(VeclocityTrans(v));
+    }
     public IEnumerator Wait(float t)
     {
         yield return new WaitForSeconds(t);
         print("Time over.");
+    }
+    public IEnumerator VeclocityTrans(Vector2 new_v)
+    {
+        Vector2 ori_v = rb.velocity;
+        for(float timer = 0;timer<0.05f;timer+=Time.deltaTime)
+        {
+            rb.velocity = Vector2.Lerp(ori_v, new_v, timer);
+            yield return 0;
+        }
     }
     void grab_thing()
     {

@@ -10763,6 +10763,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 263345539, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
+      propertyPath: m_LinearDrag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 603711842, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
       propertyPath: Dash_Speed
       value: 30
@@ -10805,7 +10809,7 @@ PrefabInstance:
       objectReference: {fileID: 1367537366}
     - target: {fileID: 603711842, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
       propertyPath: max_charge_jump_holding_time
-      value: 0.4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 769753461, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
       propertyPath: m_AnchorMax.x
@@ -11696,7 +11700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187154066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -118.20051, y: 18.20143, z: -10}
+  m_LocalPosition: {x: -117.679665, y: 18.20143, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14055,7 +14059,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895118585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -118.20051, y: 18.20143, z: -10}
+  m_LocalPosition: {x: -117.679665, y: 18.20143, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 150981489}

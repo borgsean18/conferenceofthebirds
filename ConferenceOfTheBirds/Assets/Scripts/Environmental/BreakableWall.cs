@@ -17,7 +17,7 @@ public class BreakableWall : MonoBehaviour
             Main_Bird temp = collision.GetComponent<Main_Bird>();
             if (temp.GetFSM().CurrentState() == Air_Dash.Instance)
             {
-                Destroy(this.gameObject);
+                Destroy(this.transform.parent.gameObject);
             }
         }
     }
