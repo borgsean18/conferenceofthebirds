@@ -39,6 +39,7 @@ public class Idle : State<Main_Bird>
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Idle");
         bird.rb.velocity = new Vector2(0, 0);
+        bird.gliding_time = bird.gliding_time_max;
     }
 
     public override void Execute(Main_Bird bird)
@@ -233,8 +234,7 @@ public class Jump : State<Main_Bird>
 public class Air_Dash : State<Main_Bird>
 {
     public static Air_Dash Instance { get; private set; }
-    float timer;
-    float height;
+    float distance_flied;
 
     static Air_Dash()
     {
@@ -243,16 +243,37 @@ public class Air_Dash : State<Main_Bird>
 
     public override void Enter(Main_Bird bird)
     {
-        timer = 0;
+        if(Input.GetKey(KeyCode.A))
+        {
+            bird.face_direction = -1;
+        }
+        else if(Input.GetKey(KeyCode.D))
+        {
+            bird.face_direction = 1;
+        }
+        bird.rb.velocity = new Vector2(bird.Dash_Speed*bird.face_direction, 0);
+        distance_flied = 0;
+        if (bird.gliding_time > bird.Dash_Stamina_Cost)
+            bird.gliding_time -= bird.Dash_Stamina_Cost;
+        else
+            bird.gliding_time = 0;
+        bird.ResetAllTriggers(bird.animator);
+        bird.animator.SetTrigger("Glide");
     }
 
     public override void Execute(Main_Bird bird)
     {
-        
+        distance_flied += bird.Dash_Speed * Time.deltaTime;
+        if(distance_flied>bird.Dash_Distance)
+        {
+            bird.GetFSM().ChangeState(Fall.Instance);
+        }
     }
 
     public override void Exit(Main_Bird bird)
     {
+        distance_flied = 0;
+
     }
 }
 public class Gliding : State<Main_Bird>
@@ -271,7 +292,8 @@ public class Gliding : State<Main_Bird>
         current_height = bird.height;
         bird.rb.velocity = new Vector2(bird.rb.velocity.x, bird.rb.velocity.y);
         bird.rb.gravityScale = bird.gliding_gravity;
-
+        bird.ResetAllTriggers(bird.animator);
+        bird.animator.SetTrigger("Fly");
     }
 
     public override void Execute(Main_Bird bird)
@@ -336,6 +358,11 @@ public class Gliding : State<Main_Bird>
                 {
                     bird.GetFSM().ChangeState(Fall.Instance);
                 }
+                if(Input.GetKeyDown(KeyCode.LeftShift))
+                {
+                    bird.GetFSM().ChangeState(Air_Dash.Instance);
+
+                }
             }
             
         }
@@ -395,6 +422,11 @@ public class Fall : State<Main_Bird>
                 {
                     bird.rb.velocity = new Vector2(bird.face_direction * bird.gliding_speed, bird.rb.velocity.y);
                     bird.GetFSM().ChangeState(Gliding.Instance);
+                }
+                if(bird.gliding_time>0&&Input.GetKeyDown(KeyCode.LeftShift))
+                {
+                    bird.GetFSM().ChangeState(Air_Dash.Instance);
+
                 }
             }
             
@@ -507,3 +539,4 @@ public class Death : State<Main_Bird>
     {
     }
 }
+

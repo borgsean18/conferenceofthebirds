@@ -4,7 +4,8 @@ using UnityEngine.UI;
 public class Main_Bird : MonoBehaviour
 {
     private StateMachine<Main_Bird> m_stateMachine;
-    Slider stamina_meter;
+    [HideInInspector]
+    public Slider stamina_meter;
     [HideInInspector]
     public Text text;
     public float walk_speed;
@@ -37,17 +38,13 @@ public class Main_Bird : MonoBehaviour
     [HideInInspector]
     public float gliding_time;
     public float fall_x_speed;
+
+    public float max_health;
+
+    [HideInInspector]
     public float health;
     [HideInInspector]
     public Slider health_slider;
-    [HideInInspector]
-    public float max_magic_to_save;
-    [HideInInspector]
-    public float magic_to_save;
-    [HideInInspector]
-    public float magic_cost_to_save;
-    [HideInInspector]
-    public float hold_to_save_time;
 
     [HideInInspector]
     public Slider magic_to_save_slider;
@@ -76,12 +73,14 @@ public class Main_Bird : MonoBehaviour
     [HideInInspector]
     public bool is_hit_wall;
     // Start is called before the first frame update
+    public float Dash_Speed;
+    public float Dash_Distance;
+    public float Dash_Stamina_Cost;
     void Start()
     {
         m_stateMachine = new StateMachine<Main_Bird>(this);// initial
         animator = GetComponent<Animator>();
         m_stateMachine.SetCurrentState(Idle.Instance);// set first state
-        //sprite = GetComponent<SpriteRenderer>();
         Bird_Bone = GameObject.Find("bone_1").transform;
         rb = GetComponent<Rigidbody2D>();
         face_direction = 1;
@@ -92,14 +91,11 @@ public class Main_Bird : MonoBehaviour
         //print(BirdHealth_O.name);
         health_slider = BirdHealth_O.GetComponent<Slider>();
         print(health_slider.maxValue);
+        health = max_health;
         health_slider.maxValue = health;
         health_slider.value = 0;
         GameObject BirdMagic_O = GameObject.Find("BirdMagicSlider");
         magic_to_save_slider = BirdMagic_O.GetComponent<Slider>();
-        //magic_to_save_slider = slider_array[1];
-        magic_to_save_slider.maxValue = max_magic_to_save;
-        magic_to_save_slider.value = magic_to_save;
-        //print(magic_to_save_slider.value);
         save_point_position = transform.position;
         respawn_point = GameObject.FindGameObjectWithTag("RespawnPoint");
         respawn_point.transform.position = transform.position;
@@ -127,8 +123,7 @@ public class Main_Bird : MonoBehaviour
     }
     public IEnumerator Wait(float t)
     {
-        yield return new WaitForSeconds(t);//运行到这，暂停t秒
-        //t秒后，继续运行下面代码
+        yield return new WaitForSeconds(t);
         print("Time over.");
     }
     void grab_thing()
@@ -172,10 +167,6 @@ public class Main_Bird : MonoBehaviour
     }
 
 
-    IEnumerator wait3()
-    {
-        yield return new WaitForSeconds(1);    //注意等待时间的写法
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

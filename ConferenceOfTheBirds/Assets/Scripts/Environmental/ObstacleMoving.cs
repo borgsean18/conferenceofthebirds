@@ -11,10 +11,14 @@ public class ObstacleMoving : MonoBehaviour
     Vector3 direction;
     bool to_end;
     bool is_moving;
+    Vector3 distance;
     // Start is called before the first frame update
     void Start()
     {
         direction = (End_Point.position - Start_Point.position).normalized;
+        distance = End_Point.position - Start_Point.position;
+        Start_Point.position = transform.position;
+        End_Point.position = transform.position + distance;
         to_end = true;
         is_moving = true;
     }
