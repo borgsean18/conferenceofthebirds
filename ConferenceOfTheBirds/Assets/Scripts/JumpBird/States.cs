@@ -235,7 +235,9 @@ public class Air_Dash : State<Main_Bird>
 {
     public static Air_Dash Instance { get; private set; }
     float distance_flied;
-
+    int horizontal_direction;
+    float temp_x_dash_speed;
+    Vector2 dash_V;
     static Air_Dash()
     {
         Instance = new Air_Dash();
@@ -251,7 +253,27 @@ public class Air_Dash : State<Main_Bird>
         {
             bird.face_direction = 1;
         }
-        bird.rb.velocity = new Vector2(bird.Dash_Speed*bird.face_direction, 0);
+        if(Input.GetKey(KeyCode.W))
+        {
+            horizontal_direction = 1;
+        }
+        else if(Input.GetKey(KeyCode.S))
+        {
+            horizontal_direction = -1;
+        }
+        else
+        {
+            horizontal_direction = 0;
+        }
+        if(horizontal_direction!=0)
+        {
+            temp_x_dash_speed = bird.Dash_Speed;
+        }
+        else
+        {
+            temp_x_dash_speed = bird.Dash_Speed * 1.4f;
+        }
+        bird.rb.velocity = new Vector2(temp_x_dash_speed * bird.face_direction, horizontal_direction*bird.Dash_Speed);
         distance_flied = 0;
         if (bird.gliding_time > bird.Dash_Stamina_Cost)
             bird.gliding_time -= bird.Dash_Stamina_Cost;
@@ -259,11 +281,13 @@ public class Air_Dash : State<Main_Bird>
             bird.gliding_time = 0;
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Glide");
+        dash_V = new Vector2(0, 0);
     }
 
     public override void Execute(Main_Bird bird)
     {
-        distance_flied += bird.Dash_Speed * Time.deltaTime;
+        dash_V += bird.rb.velocity * Time.deltaTime;
+        distance_flied = dash_V.magnitude;
         if(distance_flied>bird.Dash_Distance)
         {
             bird.GetFSM().ChangeState(Fall.Instance);
@@ -429,7 +453,25 @@ public class Fall : State<Main_Bird>
 
                 }
             }
-            
+            else
+            {
+                if(bird.hit_point_is_right==1)
+                {
+                    if (Input.GetKeyDown(KeyCode.A))
+                    {
+                        bird.face_direction = -1;
+                        bird.rb.velocity = new Vector2(-bird.fall_x_speed, bird.rb.velocity.y);
+                    }
+                }
+                else
+                {
+                    if (Input.GetKeyDown(KeyCode.D))
+                    {
+                        bird.face_direction = 1;
+                        bird.rb.velocity = new Vector2(bird.fall_x_speed, bird.rb.velocity.y);
+                    }
+                }
+            }
         }
         
     }

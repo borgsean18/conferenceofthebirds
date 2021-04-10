@@ -72,8 +72,11 @@ public class Main_Bird : MonoBehaviour
     //[HideInInspector]
     [HideInInspector]
     public bool is_hit_wall;
+    [HideInInspector]
+    public int hit_point_is_right;
     // Start is called before the first frame update
     public float Dash_Speed;
+
     public float Dash_Distance;
     public float Dash_Stamina_Cost;
     void Start()
@@ -173,6 +176,14 @@ public class Main_Bird : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             is_hit_wall = true;
+            if(collision.GetContact(0).point.x>collider.bounds.center.x)
+            {
+                hit_point_is_right = 1;
+            }
+            else
+            {
+                hit_point_is_right = -1;
+            }
             print("hit");
         }
     }
