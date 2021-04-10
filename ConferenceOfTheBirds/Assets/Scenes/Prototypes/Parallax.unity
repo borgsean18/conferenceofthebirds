@@ -2392,7 +2392,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.10251045, y: 0.00085422397}
+  m_Offset: {x: -0.11307144, y: 0.00085425377}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2403,7 +2403,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.717556, y: 1.0187931}
+  m_Size: {x: 2.1487198, y: 1.0187931}
   m_EdgeRadius: 0
 --- !u!4 &384978040 stripped
 Transform:
@@ -6128,6 +6128,14 @@ PrefabInstance:
     - target: {fileID: 603711842, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
       propertyPath: max_health
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 603711842, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
+      propertyPath: Dash_X_Speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 603711842, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
+      propertyPath: Dash_Y_Speed
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 603711842, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
       propertyPath: Dash_Distance
