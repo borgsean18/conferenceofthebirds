@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 50136950052901686}
   - component: {fileID: 114815093173730838}
   - component: {fileID: 96420874952216904}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: WaterDrop
   m_TagString: Metaball_liquid
   m_Icon: {fileID: 0}
