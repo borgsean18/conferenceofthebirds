@@ -1357,7 +1357,7 @@
     },
     "m_Name": "TargetRenderTex",
     "m_DefaultReferenceName": "Texture2D_83E218BE",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_TargetRenderTex",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
