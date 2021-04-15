@@ -11,7 +11,7 @@ public class SeedScript : MonoBehaviour
             GetComponent<CircleCollider2D>().isTrigger = true;
             collision.gameObject.GetComponent<SoilScript>().isSeeded = true;
             collision.gameObject.GetComponent<SoilScript>().GrowTree();
-            Destroy(gameObject, 1.5f);
+            Destroy(gameObject, 0.5f);
         }
     }
 }
