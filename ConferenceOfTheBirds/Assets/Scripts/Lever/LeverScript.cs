@@ -33,7 +33,7 @@ public class LeverScript : MonoBehaviour
 
     private void ToggleLever()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             isActive = !isActive;
             if (isActive)

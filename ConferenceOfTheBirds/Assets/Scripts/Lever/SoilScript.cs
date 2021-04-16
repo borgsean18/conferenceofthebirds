@@ -7,6 +7,7 @@ public class SoilScript : MonoBehaviour
     //Variables
     public bool isWatered = false;
     public bool isSeeded = false;
+    public float treeSpawnPosition = 5f;
     private bool hasTree = false;
 
     //GameObjects
@@ -24,7 +25,7 @@ public class SoilScript : MonoBehaviour
             if (isWatered && isSeeded)
             {
                 hasTree = true;
-                Instantiate(treePrefab, new Vector2(transform.position.x, transform.position.y + 5), Quaternion.identity);
+                Instantiate(treePrefab, new Vector2(transform.position.x, transform.position.y + treeSpawnPosition), Quaternion.identity);
             }
         }
     }

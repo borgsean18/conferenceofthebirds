@@ -1115,6 +1115,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Seed
       objectReference: {fileID: 0}
+    - target: {fileID: 1440850783177971821, guid: 328b541705751e0489eb8ba49d2291d8, type: 3}
+      propertyPath: m_Radius
+      value: 2.3338556
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440850783177971821, guid: 328b541705751e0489eb8ba49d2291d8, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.12225747
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 328b541705751e0489eb8ba49d2291d8, type: 3}
 --- !u!1001 &5173110628726140509
