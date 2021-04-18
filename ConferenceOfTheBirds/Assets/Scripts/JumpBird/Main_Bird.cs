@@ -4,7 +4,8 @@ using UnityEngine.UI;
 public class Main_Bird : MonoBehaviour
 {
     private StateMachine<Main_Bird> m_stateMachine;
-    Slider stamina_meter;
+    [HideInInspector]
+    public Slider stamina_meter;
     [HideInInspector]
     public Text text;
     public float walk_speed;
@@ -29,16 +30,22 @@ public class Main_Bird : MonoBehaviour
     public float double_jump_x_speed;
     public float gliding_gravity;
     public float gliding_time_max;
+    public float fly_up_speed;
+    public float fly_down_speed;
+    public float fly_up_extra_stamina_cost;
+    public float fly_down_extra_stamina_save;
+
     [HideInInspector]
     public float gliding_time;
     public float fall_x_speed;
+
+    public float max_health;
+
+    [HideInInspector]
     public float health;
     [HideInInspector]
     public Slider health_slider;
-    public float max_magic_to_save;
-    public float magic_to_save;
-    public float magic_cost_to_save;
-    public float hold_to_save_time;
+
     [HideInInspector]
     public Slider magic_to_save_slider;
     [HideInInspector]
@@ -47,9 +54,13 @@ public class Main_Bird : MonoBehaviour
     public GameObject respawn_point;
     bool is_grab_thing;
     Transform grabbed_thing;
+    [HideInInspector]
     public float grab_decrease_gliding_speed;
+    [HideInInspector]
     public float grab_decrease_jump_speed;
+    [HideInInspector]
     public float grab_decrease_gliding_time;
+    [HideInInspector]
     public float grab_state_gravity;
     Collider2D grabbed_thing_collider;
 
@@ -58,16 +69,21 @@ public class Main_Bird : MonoBehaviour
 
 
     Collider2D collider;
-    float original_collider_offsety;
     //[HideInInspector]
+    [HideInInspector]
     public bool is_hit_wall;
+    [HideInInspector]
+    public int hit_point_is_right;
     // Start is called before the first frame update
+    public float Dash_Speed;
+
+    public float Dash_Distance;
+    public float Dash_Stamina_Cost;
     void Start()
     {
         m_stateMachine = new StateMachine<Main_Bird>(this);// initial
         animator = GetComponent<Animator>();
-        m_stateMachine.SetCurrentState(Walk.Instance);// set first state
-        //sprite = GetComponent<SpriteRenderer>();
+        m_stateMachine.SetCurrentState(Idle.Instance);// set first state
         Bird_Bone = GameObject.Find("bone_1").transform;
         rb = GetComponent<Rigidbody2D>();
         face_direction = 1;
@@ -75,17 +91,14 @@ public class Main_Bird : MonoBehaviour
         text.text = "hello";
         Slider[] slider_array = GetComponentsInChildren<Slider>();
         GameObject BirdHealth_O = GameObject.FindGameObjectWithTag("BirdHealthSlider");
-        print(BirdHealth_O.name);
+        //print(BirdHealth_O.name);
         health_slider = BirdHealth_O.GetComponent<Slider>();
         print(health_slider.maxValue);
+        health = max_health;
         health_slider.maxValue = health;
         health_slider.value = 0;
         GameObject BirdMagic_O = GameObject.Find("BirdMagicSlider");
         magic_to_save_slider = BirdMagic_O.GetComponent<Slider>();
-        //magic_to_save_slider = slider_array[1];
-        magic_to_save_slider.maxValue = max_magic_to_save;
-        magic_to_save_slider.value = magic_to_save;
-        //print(magic_to_save_slider.value);
         save_point_position = transform.position;
         respawn_point = GameObject.FindGameObjectWithTag("RespawnPoint");
         respawn_point.transform.position = transform.position;
@@ -95,7 +108,6 @@ public class Main_Bird : MonoBehaviour
         print(stamina_meter.maxValue);
         collider = GetComponent<Collider2D>();
         fix_ground_checks_positions(collider);
-        original_collider_offsety = collider.offset.y;
     }
     public void get_hurt(float damage)
     {
@@ -112,11 +124,25 @@ public class Main_Bird : MonoBehaviour
     {
         StartCoroutine(Wait(5));
     }
+    public void start_acc(Vector2 v)
+    {
+        //StopCoroutine("VeclocityTrans");
+        //StartCoroutine("VeclocityTrans", v);
+        StartCoroutine(VeclocityTrans(v));
+    }
     public IEnumerator Wait(float t)
     {
-        yield return new WaitForSeconds(t);//运行到这，暂停t秒
-        //t秒后，继续运行下面代码
+        yield return new WaitForSeconds(t);
         print("Time over.");
+    }
+    public IEnumerator VeclocityTrans(Vector2 new_v)
+    {
+        Vector2 ori_v = rb.velocity;
+        for(float timer = 0;timer<0.05f;timer+=Time.deltaTime)
+        {
+            rb.velocity = Vector2.Lerp(ori_v, new_v, timer);
+            yield return 0;
+        }
     }
     void grab_thing()
     {
@@ -158,24 +184,21 @@ public class Main_Bird : MonoBehaviour
         ground_checks[2].position = this_collider.bounds.center - this_collider.bounds.extents + new Vector3(this_collider.bounds.size.x, 0, 0) + new Vector3(-0.2f, -0.2f, 0);
     }
 
-    public void Set_walk_collider_offset()
-    {
-       
-    }
-    public void Reset_walk_collider_offset()
-    {
-        
-    }
-    IEnumerator wait3()
-    {
-        yield return new WaitForSeconds(1);    //注意等待时间的写法
-    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
             is_hit_wall = true;
+            if(collision.GetContact(0).point.x>collider.bounds.center.x)
+            {
+                hit_point_is_right = 1;
+            }
+            else
+            {
+                hit_point_is_right = -1;
+            }
             print("hit");
         }
     }
@@ -214,7 +237,7 @@ public class Main_Bird : MonoBehaviour
 
     void hit_wall_check()
     {
-        if (GetFSM().CurrentState() == Walk.Instance)
+        if (GetFSM().CurrentState() == Walk.Instance|| (GetFSM().CurrentState() == Idle.Instance))
         {
             is_hit_wall = false;
         }
@@ -222,7 +245,7 @@ public class Main_Bird : MonoBehaviour
 
     void Update()
     {
-        print(GetFSM().CurrentState());
+        //print(GetFSM().CurrentState());
         text.text = GetFSM().CurrentState().ToString();
         m_stateMachine.StateMachineUpdate();
         Check_On_The_Ground();
@@ -238,21 +261,7 @@ public class Main_Bird : MonoBehaviour
     }
     private void Check_On_The_Ground()
     {
-        //for (int i = 0; i < ground_checks.Length; i++)
-        //{
-        //    RaycastHit2D checkResult = Physics2D.Linecast(transform.position,
-        //                  ground_checks[i].position,
-        //                  1 << LayerMask.NameToLayer("Ground"));
-        //    RaycastHit2D temp_result = Physics2D.Linecast(transform.position,
-        //                  ground_checks[i].position,
-        //                  1 << LayerMask.NameToLayer("GrabbableObject"));
-        //    is_on_ground = checkResult| temp_result;
-        //    if (is_on_ground)
-        //    {
-        //        //print("onground");
-        //        break;
-        //    }
-        //}
+
         RaycastHit2D checkResult = Physics2D.Linecast(ground_checks[0].position,
                           ground_checks[1].position,
                           1 << LayerMask.NameToLayer("Ground"));
