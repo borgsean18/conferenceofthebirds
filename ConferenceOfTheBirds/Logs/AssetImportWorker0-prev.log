@@ -1,314 +1,323 @@
 Using pre-set license
 Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home China; OS build 19042.867; Version 2009; 64bit' Language: 'zh' Physical Memory: 16270 MB
+OS: 'Windows 10 Home; OS build 19041.928; Version 2004; 64bit' Language: 'en' Physical Memory: 8013 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Editor\Unity.exe
+C:\Users\danie\OneDrive\Documents\2020.2.2f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/nietzstl/Documents/git_505/conferenceofthebirds/ConferenceOfTheBirds
+C:/Users/danie/OneDrive/Documents/GitHub/conferenceofthebirds/ConferenceOfTheBirds
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58189
-Successfully changed project path to: C:/Users/nietzstl/Documents/git_505/conferenceofthebirds/ConferenceOfTheBirds
-C:/Users/nietzstl/Documents/git_505/conferenceofthebirds/ConferenceOfTheBirds
+53299
+Successfully changed project path to: C:/Users/danie/OneDrive/Documents/GitHub/conferenceofthebirds/ConferenceOfTheBirds
+C:/Users/danie/OneDrive/Documents/GitHub/conferenceofthebirds/ConferenceOfTheBirds
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 61.28 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 75.90 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/nietzstl/Documents/git_505/conferenceofthebirds/ConferenceOfTheBirds/Assets
+[Subsystems] Discovering subsystems at path C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/danie/OneDrive/Documents/GitHub/conferenceofthebirds/ConferenceOfTheBirds/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2484)
+    Renderer: Intel(R) UHD Graphics 620 (ID=0x3ea0)
     Vendor:   
-    VRAM:     8043 MB
-    Driver:   27.21.14.6192
+    VRAM:     4006 MB
+    Driver:   27.20.100.8984
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56976
+Mono path[0] = 'C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56308
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001831 seconds.
+Register platform support module: C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002095 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 55.86 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 96.40 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.868 seconds
+- Completed reload, in  1.850 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002818 seconds.
+Registered in 0.004447 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 55.33 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 68.01 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.940 seconds
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.349 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.73 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 0.89 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3141 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 136.1 MB.
+System memory in use before: 136.0 MB.
 System memory in use after: 136.3 MB.
 
 Unloading 52 unused Assets to reduce memory usage. Loaded Objects now: 3570.
-Total: 2.176600 ms (FindLiveObjects: 0.332900 ms CreateObjectMapping: 0.078000 ms MarkObjects: 1.739100 ms  DeleteObjects: 0.025800 ms)
+Total: 7.164100 ms (FindLiveObjects: 1.092400 ms CreateObjectMapping: 0.586100 ms MarkObjects: 5.385600 ms  DeleteObjects: 0.096500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Animations/Protag-Animations/Scott the bird 2.controller
-  artifactKey: Guid(20ea37dad1c508540ae67381504703b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Protag-Animations/Scott the bird 2.controller using Guid(20ea37dad1c508540ae67381504703b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The file 'Assets/Animations/Protag-Animations/Ground-Hoping.anim' seems to have merge conflicts. Please open it in a text editor and fix the merge.
-
- -> (artifact id: '2fc18def8e4277fe31f41ac0b24a23cb') in 0.048170 seconds
-  Import took 0.054204 seconds .
+  path: Assets/Art/Characters/Peacock-2.psb
+  artifactKey: Guid(a7e8b10eec9260e489ab255c113e1422) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Characters/Peacock-2.psb using Guid(a7e8b10eec9260e489ab255c113e1422) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd77232dfea2391c12d2e60d14045cd09') in 0.378090 seconds
+  Import took 0.390218 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1512.005443 seconds.
-  path: Assets/Animations/Test_Protag_anim
-  artifactKey: Guid(ffff6b72db9a46a41965c6a0924f8b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Test_Protag_anim using Guid(ffff6b72db9a46a41965c6a0924f8b83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78e00d06ad501d1a018aa32fea51e4d0') in 0.006378 seconds
-  Import took 0.011321 seconds .
+  Time since last request: 179.666362 seconds.
+  path: Assets/Art/Characters/Peacock-2.psb
+  artifactKey: Guid(a7e8b10eec9260e489ab255c113e1422) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Characters/Peacock-2.psb using Guid(a7e8b10eec9260e489ab255c113e1422) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5240840830ce640f39facfb4af6f321') in 0.075625 seconds
+  Import took 0.083960 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.054945 seconds.
-  path: Assets/Animations/Test_Protag_anim/Protag-Animations
-  artifactKey: Guid(867a359009bc42a479348483ae77865d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Test_Protag_anim/Protag-Animations using Guid(867a359009bc42a479348483ae77865d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62fe95c3f4104f1a7fe8afecbfb83a85') in 0.006337 seconds
-  Import took 0.013432 seconds .
+  Time since last request: 955.184417 seconds.
+  path: Assets/Art/Characters/Andean Condor.psb
+  artifactKey: Guid(a393f3780fa9b8e45bb40d56e2a2df74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Characters/Andean Condor.psb using Guid(a393f3780fa9b8e45bb40d56e2a2df74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd8fdc6f5f44efe117f8ae244adecb07') in 0.151791 seconds
+  Import took 0.159438 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.056057 seconds.
-  path: Assets/Animations/Test_Protag_anim/Protag-Animations/Scott the bird.prefab
-  artifactKey: Guid(0fb331b6ba4e90b4ba331d15e13ada66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Test_Protag_anim/Protag-Animations/Scott the bird.prefab using Guid(0fb331b6ba4e90b4ba331d15e13ada66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bd128f4b3d76cf42bad60b2cef4f550') in 0.185401 seconds
-  Import took 0.190603 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002669 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.87 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.853 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3023 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.4 MB.
-System memory in use after: 135.7 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3618.
-Total: 2.150900 ms (FindLiveObjects: 0.324400 ms CreateObjectMapping: 0.076600 ms MarkObjects: 1.728700 ms  DeleteObjects: 0.020400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002829 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.866 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3023 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 136.2 MB.
-System memory in use after: 136.5 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3621.
-Total: 2.217600 ms (FindLiveObjects: 0.306600 ms CreateObjectMapping: 0.075700 ms MarkObjects: 1.762400 ms  DeleteObjects: 0.071400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002746 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.853 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3023 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 136.5 MB.
-System memory in use after: 136.7 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3624.
-Total: 2.919100 ms (FindLiveObjects: 0.497000 ms CreateObjectMapping: 0.100000 ms MarkObjects: 2.288000 ms  DeleteObjects: 0.033000 ms)
+  Time since last request: 6.125848 seconds.
+  path: Assets/Art/Characters/Andean Condor-2.psb
+  artifactKey: Guid(467a021b1fb95a14dba1c70edc450731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Characters/Andean Condor-2.psb using Guid(467a021b1fb95a14dba1c70edc450731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60ae78e50e95df89732ba0779022e51c') in 0.068853 seconds
+  Import took 0.079222 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 579.504115 seconds.
-  path: Assets/Animations/Test_Protag_anim/Protag-Animations/Ground-Hoping.anim
-  artifactKey: Guid(38ccf8a3bcd44e5479edd24919b5fc14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Test_Protag_anim/Protag-Animations/Ground-Hoping.anim using Guid(38ccf8a3bcd44e5479edd24919b5fc14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0560958792a44e632a1d6cf4338887a') in 0.019419 seconds
-  Import took 0.026013 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002669 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.821 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.76 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3023 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 136.5 MB.
-System memory in use after: 136.7 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3627.
-Total: 2.421400 ms (FindLiveObjects: 0.352300 ms CreateObjectMapping: 0.077000 ms MarkObjects: 1.962800 ms  DeleteObjects: 0.028500 ms)
+  Time since last request: 7366.269164 seconds.
+  path: Assets/Art/Characters/Andean Condor-2.psb
+  artifactKey: Guid(467a021b1fb95a14dba1c70edc450731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Characters/Andean Condor-2.psb using Guid(467a021b1fb95a14dba1c70edc450731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a6a2ba8e57efd16b0c7ab92868a142') in 0.095056 seconds
+  Import took 0.146897 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 93.037306 seconds.
-  path: Assets/Animations/Test_Protag_anim/Protag-Animations/Moving-Dashing.anim
-  artifactKey: Guid(75fc8e184b18a624eb7e3132664bf69b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Test_Protag_anim/Protag-Animations/Moving-Dashing.anim using Guid(75fc8e184b18a624eb7e3132664bf69b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baf8bcb766c9e91ab99a390e0331f608') in 0.027571 seconds
-  Import took 0.032332 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003181 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.838 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.76 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3023 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 136.5 MB.
-System memory in use after: 136.8 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3630.
-Total: 2.582900 ms (FindLiveObjects: 0.333300 ms CreateObjectMapping: 0.089000 ms MarkObjects: 2.135000 ms  DeleteObjects: 0.024100 ms)
+  Time since last request: 180.660973 seconds.
+  path: Assets/Art/Characters/Andean Condor-2.psb
+  artifactKey: Guid(467a021b1fb95a14dba1c70edc450731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Characters/Andean Condor-2.psb using Guid(467a021b1fb95a14dba1c70edc450731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62d8e9067a63bf60029303888e75867b') in 0.066075 seconds
+  Import took 0.075452 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 651.453529 seconds.
-  path: Assets/Animations/Protag-Animations/Scott the bird.prefab
-  artifactKey: Guid(98461542b6dab7b4b8a01e5a4befa3a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Protag-Animations/Scott the bird.prefab using Guid(98461542b6dab7b4b8a01e5a4befa3a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf3f366973e3bef048b756ed121bec14') in 0.207382 seconds
-  Import took 0.213317 seconds .
+  Time since last request: 78.276235 seconds.
+  path: Assets/Art/Characters/Andean Condor-2.psb
+  artifactKey: Guid(467a021b1fb95a14dba1c70edc450731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Characters/Andean Condor-2.psb using Guid(467a021b1fb95a14dba1c70edc450731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14330bd5d8d8cb96d911931dc5d6437b') in 0.115246 seconds
+  Import took 0.130155 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.004096 seconds.
-  path: Assets/Animations/Protag-Animations/Scott the bird.prefab
-  artifactKey: Guid(98461542b6dab7b4b8a01e5a4befa3a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Protag-Animations/Scott the bird.prefab using Guid(98461542b6dab7b4b8a01e5a4befa3a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf3f366973e3bef048b756ed121bec14') in 0.042370 seconds
-  Import took 0.047331 seconds .
+  Time since last request: 388.327913 seconds.
+  path: Assets/Animations/Bird-Animations
+  artifactKey: Guid(2c19e9f9f0f661f4da71dd17beef0663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations using Guid(2c19e9f9f0f661f4da71dd17beef0663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f123ff8404ba221c37999da42a30fc0') in 0.004565 seconds
+  Import took 0.012704 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.893391 seconds.
+  path: Assets/Animations/Bird-Animations/Andean Condor-2.controller
+  artifactKey: Guid(381a13d7862101e41818237d7dae74ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Andean Condor-2.controller using Guid(381a13d7862101e41818237d7dae74ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48209b12d11640d60e8273aaef797b27') in 0.167185 seconds
+  Import took 0.175045 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.672401 seconds.
+  path: Assets/Animations/Bird-Animations/Condor-Idle2.anim
+  artifactKey: Guid(89f5ebd95fdfe464b9fb27d796baada5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Condor-Idle2.anim using Guid(89f5ebd95fdfe464b9fb27d796baada5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c88202236fad0d54cbed7984235abab6') in 0.006776 seconds
+  Import took 0.014944 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009607 seconds.
+  path: Assets/Animations/Bird-Animations/Condor-Idle2.anim
+  artifactKey: Guid(89f5ebd95fdfe464b9fb27d796baada5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Condor-Idle2.anim using Guid(89f5ebd95fdfe464b9fb27d796baada5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c88202236fad0d54cbed7984235abab6') in 0.003855 seconds
+  Import took 0.010558 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.620152 seconds.
+  path: Assets/Animations/Bird-Animations/Grey Jay-2.controller
+  artifactKey: Guid(03165c9de0cc06f49b473ddccd7cb138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Grey Jay-2.controller using Guid(03165c9de0cc06f49b473ddccd7cb138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47ac7a21b31860c9e020a2939975f2e0') in 0.014428 seconds
+  Import took 0.021959 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.703168 seconds.
+  path: Assets/Animations/Bird-Animations/Condor-Idle.anim
+  artifactKey: Guid(d883653f7a34fa546a67708872974470) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Condor-Idle.anim using Guid(d883653f7a34fa546a67708872974470) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23d44b97aeed50492a3dbadd36097e76') in 0.003388 seconds
+  Import took 0.012303 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 99.594650 seconds.
+  path: Assets/Animations/Bird-Animations/Andean Condor-2 1.controller
+  artifactKey: Guid(6a97547b3d268cf4d82c928972b3112a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Andean Condor-2 1.controller using Guid(6a97547b3d268cf4d82c928972b3112a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd66b51c373e9844ec07976d0f07fda93') in 0.008718 seconds
+  Import took 0.018228 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001191 seconds.
+  path: Assets/Animations/Bird-Animations/Andean Condor-2 1.controller
+  artifactKey: Guid(6a97547b3d268cf4d82c928972b3112a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Andean Condor-2 1.controller using Guid(6a97547b3d268cf4d82c928972b3112a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd66b51c373e9844ec07976d0f07fda93') in 0.002753 seconds
+  Import took 0.011786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.798956 seconds.
+  path: Assets/Animations/Bird-Animations/Peacock-2 1.controller
+  artifactKey: Guid(7b8703d452ed93847abc9aca34d3f552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Peacock-2 1.controller using Guid(7b8703d452ed93847abc9aca34d3f552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caeb9d8f3ee3d8edfbe4cacc37d6334b') in 0.008984 seconds
+  Import took 0.019653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000992 seconds.
+  path: Assets/Animations/Bird-Animations/Peacock-2 1.controller
+  artifactKey: Guid(7b8703d452ed93847abc9aca34d3f552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Peacock-2 1.controller using Guid(7b8703d452ed93847abc9aca34d3f552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caeb9d8f3ee3d8edfbe4cacc37d6334b') in 0.003322 seconds
+  Import took 0.013083 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.471662 seconds.
+  path: Assets/Animations/Bird-Animations/Peacock-2.controller
+  artifactKey: Guid(7538c37610081cc44920ad46bbaf9aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Peacock-2.controller using Guid(7538c37610081cc44920ad46bbaf9aaa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '481c827ada7eb451ecb947212625fd0f') in 0.004272 seconds
+  Import took 0.011835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.398729 seconds.
+  path: Assets/Animations/Bird-Animations/Peacock-2 2.controller
+  artifactKey: Guid(82faaeaf2db481744964f37d96978dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Peacock-2 2.controller using Guid(82faaeaf2db481744964f37d96978dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6ddef2c97d8703f4e80b69c48c256bb') in 0.005189 seconds
+  Import took 0.012715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002765 seconds.
+  path: Assets/Animations/Bird-Animations/Peacock-2 2.controller
+  artifactKey: Guid(82faaeaf2db481744964f37d96978dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Peacock-2 2.controller using Guid(82faaeaf2db481744964f37d96978dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6ddef2c97d8703f4e80b69c48c256bb') in 0.004038 seconds
+  Import took 0.012670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.122510 seconds.
+  path: Assets/Animations/Bird-Animations/Peacock.controller
+  artifactKey: Guid(82faaeaf2db481744964f37d96978dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Peacock.controller using Guid(82faaeaf2db481744964f37d96978dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9d5183c26a2e73d455e70d43657fc51') in 0.005981 seconds
+  Import took 0.015372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.128896 seconds.
+  path: Assets/Animations/Bird-Animations/Peacock-Idle2.anim
+  artifactKey: Guid(b56639243d26d864ea5adf1e9f906255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Peacock-Idle2.anim using Guid(b56639243d26d864ea5adf1e9f906255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d5d291fc6ff7faa4bcbeda6bd8ef170') in 0.036587 seconds
+  Import took 0.042485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.687123 seconds.
+  path: Assets/Animations/Bird-Animations/Peacock-Idle.anim
+  artifactKey: Guid(b56639243d26d864ea5adf1e9f906255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Peacock-Idle.anim using Guid(b56639243d26d864ea5adf1e9f906255) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb3e0f85b054abe87e427aca71d978b7') in 0.007100 seconds
+  Import took 0.015326 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.032527 seconds.
+  path: Assets/Animations/Bird-Animations/Magpie-Idle.anim
+  artifactKey: Guid(8dc3cfff37a61ae429972dab23291d21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Magpie-Idle.anim using Guid(8dc3cfff37a61ae429972dab23291d21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5380f3bcc44d6a80d843847b68becbbd') in 0.006504 seconds
+  Import took 0.013372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.230027 seconds.
+  path: Assets/Animations/Bird-Animations/Magpie Robin-2.controller
+  artifactKey: Guid(3db8f266ff464964e90c3240427df744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Magpie Robin-2.controller using Guid(3db8f266ff464964e90c3240427df744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb28ce1cbe861817382879d7542e2826') in 0.004849 seconds
+  Import took 0.012123 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.466291 seconds.
+  path: Assets/Animations/Bird-Animations/Magpie Robin-2 1.controller
+  artifactKey: Guid(c98b5401b34965a40b45b4f9cdcf5f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Magpie Robin-2 1.controller using Guid(c98b5401b34965a40b45b4f9cdcf5f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c169559f08f76266e057dbe1653e9a93') in 0.009293 seconds
+  Import took 0.019208 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001952 seconds.
+  path: Assets/Animations/Bird-Animations/Magpie Robin-2 1.controller
+  artifactKey: Guid(c98b5401b34965a40b45b4f9cdcf5f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Magpie Robin-2 1.controller using Guid(c98b5401b34965a40b45b4f9cdcf5f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c169559f08f76266e057dbe1653e9a93') in 0.004335 seconds
+  Import took 0.012695 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.904431 seconds.
+  path: Assets/Animations/Bird-Animations/Magpie Robin-2.controller
+  artifactKey: Guid(c98b5401b34965a40b45b4f9cdcf5f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Magpie Robin-2.controller using Guid(c98b5401b34965a40b45b4f9cdcf5f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcd87e023b8437f13bdae8eac66cc2a2') in 0.004064 seconds
+  Import took 0.013023 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.511383 seconds.
+  path: Assets/Animations/Bird-Animations/Peacock-2.controller
+  artifactKey: Guid(82faaeaf2db481744964f37d96978dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Bird-Animations/Peacock-2.controller using Guid(82faaeaf2db481744964f37d96978dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9b1e1218442c627f8b377cdadcacadd') in 0.005331 seconds
+  Import took 0.013096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.771803 seconds.
+  path: Assets/Art/Characters/Aguila Rapax-2.psb
+  artifactKey: Guid(38e849bb19146b94f9ebfc1ef7f58ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Characters/Aguila Rapax-2.psb using Guid(38e849bb19146b94f9ebfc1ef7f58ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd576c8d46aef3a8ffbdfafbeb9c64353') in 0.107571 seconds
+  Import took 0.114554 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
