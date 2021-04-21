@@ -229,6 +229,7 @@ public class Air_Dash : State<Main_Bird>
 
     public override void Enter(Main_Bird bird)
     {
+        
         if(Input.GetKey(KeyCode.A))
         {
             bird.face_direction = -1;
@@ -270,12 +271,20 @@ public class Air_Dash : State<Main_Bird>
 
     public override void Execute(Main_Bird bird)
     {
-        dash_V += bird.rb.velocity * Time.deltaTime;
-        distance_flied = dash_V.magnitude;
-        if(distance_flied>bird.Dash_Distance)
+        if (bird.is_hit_wall)
         {
             bird.GetFSM().ChangeState(Fall.Instance);
         }
+        else
+        {
+            dash_V += bird.rb.velocity * Time.deltaTime;
+            distance_flied = dash_V.magnitude;
+            if (distance_flied > bird.Dash_Distance)
+            {
+                bird.GetFSM().ChangeState(Fall.Instance);
+            }
+        }
+        
     }
 
     public override void Exit(Main_Bird bird)
