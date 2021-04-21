@@ -320,13 +320,13 @@ public class Gliding : State<Main_Bird>
             }
             else
             {
-                if (Input.GetKey(KeyCode.A))
+                if (Input.GetKeyDown(KeyCode.A))
                 {
                     bird.face_direction = -1;
                     //bird.start_acc(new Vector2(-bird.gliding_speed, 0));
                     bird.rb.velocity = new Vector2(-bird.gliding_speed, bird.rb.velocity.y);
                 }
-                else if (Input.GetKey(KeyCode.D))
+                else if (Input.GetKeyDown(KeyCode.D))
                 {
                     bird.face_direction = 1;
                     //bird.start_acc(new Vector2(bird.gliding_speed, 0));

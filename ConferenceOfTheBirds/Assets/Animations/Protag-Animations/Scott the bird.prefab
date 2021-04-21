@@ -979,7 +979,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 98
+  m_SortingOrder: 100
   m_Sprite: {fileID: 8471917386641806472, guid: 3e41ff1b1cd612641b248aa8816b9ada, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1009,7 +1009,7 @@ MonoBehaviour:
   - {fileID: 2860681799431709760}
   - {fileID: 2853003205446346014}
   m_Bounds:
-    m_Center: {x: 1.6511612, y: -0.24437332, z: 0}
+    m_Center: {x: 1.6511459, y: -0.24437332, z: 0}
     m_Extent: {x: 0.8064818, y: 2.430645, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1326,7 +1326,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 98
   m_Sprite: {fileID: 8682608953136941333, guid: 3e41ff1b1cd612641b248aa8816b9ada, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1356,8 +1356,8 @@ MonoBehaviour:
   - {fileID: 6500679192969459448}
   - {fileID: 6785997663384917516}
   m_Bounds:
-    m_Center: {x: -1.4750581, y: -4.4226155, z: 0}
-    m_Extent: {x: 1.742526, y: 1.9950953, z: 0}
+    m_Center: {x: -1.475039, y: -4.4226155, z: 0}
+    m_Extent: {x: 1.7425299, y: 1.9950953, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5192680036760944699
@@ -1492,8 +1492,8 @@ MonoBehaviour:
   - {fileID: 2482278210307221459}
   - {fileID: 8374992379979438840}
   m_Bounds:
-    m_Center: {x: 0.59461117, y: -0.78580093, z: 0}
-    m_Extent: {x: 2.463407, y: 2.3470035, z: 0}
+    m_Center: {x: 0.5946169, y: -0.78580093, z: 0}
+    m_Extent: {x: 2.463409, y: 2.3470035, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5290424940484625328
@@ -2126,6 +2126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46704e5f0d0d3a84ba80c35507285011, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stamina_meter: {fileID: 0}
   text: {fileID: 1576539142}
   walk_speed: 10
   jump_speed: 7
@@ -2140,7 +2141,7 @@ MonoBehaviour:
   height: 0
   face_direction: -1
   gliding_speed: 10
-  max_charge_jump_holding_time: 0.5
+  max_charge_jump_holding_time: 0.3
   min_charge_jump_holding_time: 0.2
   double_jump_y_speed: 5
   double_jump_x_speed: 2
@@ -2152,12 +2153,9 @@ MonoBehaviour:
   fly_down_extra_stamina_save: 0.5
   gliding_time: 5
   fall_x_speed: 7
+  max_health: 100
   health: 80
   health_slider: {fileID: 0}
-  max_magic_to_save: 100
-  magic_to_save: 100
-  magic_cost_to_save: 50
-  hold_to_save_time: 1
   magic_to_save_slider: {fileID: 0}
   save_point_position: {x: -23.1, y: -24.9, z: 0}
   respawn_point: {fileID: 0}
@@ -2167,6 +2165,10 @@ MonoBehaviour:
   grab_state_gravity: 0
   animator: {fileID: 5304210199949299000}
   is_hit_wall: 0
+  hit_point_is_right: 0
+  Dash_Speed: 30
+  Dash_Distance: 10
+  Dash_Stamina_Cost: 1.5
 --- !u!50 &263345539
 Rigidbody2D:
   serializedVersion: 4
@@ -2180,7 +2182,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
