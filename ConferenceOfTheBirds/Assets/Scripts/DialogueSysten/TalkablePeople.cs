@@ -9,7 +9,7 @@ public class TalkablePeople : MonoBehaviour
     public List<string> DialogeWithThisPerson;
     public bool canTalk = true;
     public bool convoEnded = false;
-    private bool inProximity = false;
+    public bool inProximity = false;
     public bool CanTalkToThisPerson = true;
 
     //GameObject
@@ -17,9 +17,7 @@ public class TalkablePeople : MonoBehaviour
     public GameObject personTextObject;
     public GameObject PlayerDialogueBox;
     public GameObject PlayerTextObject;
-
-    public GameObject PersonB;
-    public Text PersonBText;
+    private GameObject Player;
 
     //Components
     private Text CharacterTextObjText;
@@ -32,25 +30,28 @@ public class TalkablePeople : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Game Objects
+        Player = GameObject.FindGameObjectWithTag("Player");
+
         //Components
         CharacterTextObjText = personTextObject.GetComponent<Text>();
         PlayerTextObjText = PlayerTextObject.GetComponent<Text>();
         personDialogueBoxRT = personDialogueBox.GetComponent<RectTransform>();
         playerDialogueBoxRT = PlayerDialogueBox.GetComponent<RectTransform>();
         personDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(transform.position.x, transform.position.y + 1.5f));
-        //playerDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(CharacterControllingScript.current.transform.position.x, transform.position.y + 1.5f));
+        playerDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(Player.transform.position.x, transform.position.y + 1.5f));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (inProximity && Input.GetKeyDown(KeyCode.Space) && canTalk && CanTalkToThisPerson)
+        if (inProximity && Input.GetKeyDown(KeyCode.I) && canTalk && CanTalkToThisPerson)
         {
             StartCoroutine(HaveConversationMethod());
         }
 
         personDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(transform.position.x, transform.position.y + personOffset));
-        //playerDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(CharacterControllingScript.current.transform.position.x, CharacterControllingScript.current.transform.position.y + playerOffset));
+        playerDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(Player.transform.position.x, Player.transform.position.y + playerOffset));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -58,9 +59,6 @@ public class TalkablePeople : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inProximity = true;
-
-            //if (canTalk)
-            //    UIManagerScript.current.ActivateInteractableObjNotification(1);
         }
     }
 
@@ -69,9 +67,6 @@ public class TalkablePeople : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inProximity = false;
-
-            //if (UIManagerScript.current.InteractableObjNotification.activeSelf)
-            //    UIManagerScript.current.DeActivateInteractableObjNotification();
         }
     }
 
@@ -104,20 +99,9 @@ public class TalkablePeople : MonoBehaviour
                 PlayerDialogueBox.SetActive(false);
             }
 
-            if (DialogeWithThisPerson[dialogueCounter].StartsWith("S"))
-            {
-                PersonB.SetActive(true);
-                PersonBText.text = DialogeWithThisPerson[dialogueCounter].Substring(2);
-            }
-            else if (PersonB != null)
-            {
-                PersonB.SetActive(false);
-            }
-
-            yield return waitForKeyPress(KeyCode.Space);
+            yield return waitForKeyPress(KeyCode.I);
         }
 
-        //UIManagerScript.current.DeActivateInteractableObjNotification();
         StartCoroutine(TurnOffDialogueBoxesTimer());
         //CharacterControllingScript.current.canWalk = true;
         convoEnded = true;
