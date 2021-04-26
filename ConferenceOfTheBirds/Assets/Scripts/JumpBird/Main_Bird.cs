@@ -79,6 +79,8 @@ public class Main_Bird : MonoBehaviour
 
     public float Dash_Distance;
     public float Dash_Stamina_Cost;
+
+    public bool CanMove;
     void Start()
     {
         m_stateMachine = new StateMachine<Main_Bird>(this);// initial
@@ -108,6 +110,7 @@ public class Main_Bird : MonoBehaviour
         print(stamina_meter.maxValue);
         collider = GetComponent<Collider2D>();
         fix_ground_checks_positions(collider);
+        CanMove = true;
     }
     public void get_hurt(float damage)
     {
@@ -247,7 +250,10 @@ public class Main_Bird : MonoBehaviour
     {
         //print(GetFSM().CurrentState());
         text.text = GetFSM().CurrentState().ToString();
-        m_stateMachine.StateMachineUpdate();
+        if(CanMove)
+        {
+            m_stateMachine.StateMachineUpdate();
+        }
         Check_On_The_Ground();
         check_face_direction();
         hit_wall_check();
