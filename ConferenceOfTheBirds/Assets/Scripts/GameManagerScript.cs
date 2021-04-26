@@ -20,7 +20,7 @@ public class GameManagerScript : MonoBehaviour
 
     private void Start()
     {
-        NotificationsCanvas.SetActive(false);
+        //NotificationsCanvas.SetActive(false);
     }
 
     public void EndLevel()
