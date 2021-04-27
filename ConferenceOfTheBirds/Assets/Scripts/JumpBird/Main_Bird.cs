@@ -66,7 +66,8 @@ public class Main_Bird : MonoBehaviour
 
     [HideInInspector]
     public Animator animator;
-
+    [HideInInspector]
+    public Cinemachine.CinemachineCollisionImpulseSource MyInpulse;
 
     Collider2D collider;
     //[HideInInspector]
@@ -108,18 +109,23 @@ public class Main_Bird : MonoBehaviour
         collider = GetComponent<Collider2D>();
         fix_ground_checks_positions(collider);
         CanMove = true;
-        test_co();
+
+        MyInpulse = GetComponent<Cinemachine.CinemachineCollisionImpulseSource>();
     }
     public void get_hurt(float damage)
     {
-        GetFSM().ChangeState(Hurt.Instance);
-        health -= damage;
-        float temp = health / max_health;
-        health_slider.fillAmount = temp;
-        if (health <= 0)
+        if(!m_stateMachine.IsInState(Fall.Instance))
         {
-            GetFSM().ChangeState(Death.Instance);
+            GetFSM().ChangeState(Hurt.Instance);
+            health -= damage;
+            float temp = health / max_health;
+            health_slider.fillAmount = temp;
+            if (health <= 0)
+            {
+                GetFSM().ChangeState(Death.Instance);
+            }
         }
+            
     }
 
     public void test_co()
@@ -202,6 +208,19 @@ public class Main_Bird : MonoBehaviour
                 hit_point_is_right = -1;
             }
             print("hit");
+        }
+        if(collision.gameObject.tag=="Spike")
+        {
+            Vector2 temp;
+            if (collision.GetContact(0).point.x - collider.bounds.center.x>0)
+            {
+                temp = new Vector2(-8, -6*(collision.GetContact(0).point.y - collider.bounds.center.y));
+            }
+            else
+            {
+                temp = new Vector2(8, -6 * (collision.GetContact(0).point.y - collider.bounds.center.y));
+            }
+            rb.AddForce(temp, ForceMode2D.Impulse);
         }
     }
     private void OnCollisionExit2D(Collision2D collision)

@@ -12,6 +12,7 @@ TagManager:
   - LevelEnd
   - BirdHealthSlider
   - BirdStaminaSlider
+  - Spike
   layers:
   - Default
   - TransparentFX

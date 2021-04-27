@@ -82,7 +82,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &584671568
 RectTransform:
   m_ObjectHideFlags: 0
@@ -218,7 +218,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1009,8 +1009,8 @@ MonoBehaviour:
   - {fileID: 2860681799431709760}
   - {fileID: 2853003205446346014}
   m_Bounds:
-    m_Center: {x: 1.6511459, y: -0.24437332, z: 0}
-    m_Extent: {x: 0.8064818, y: 2.430645, z: 0}
+    m_Center: {x: 1.651329, y: -0.2443676, z: 0}
+    m_Extent: {x: 0.8064818, y: 2.430666, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3309304738931041437
@@ -1356,8 +1356,8 @@ MonoBehaviour:
   - {fileID: 6500679192969459448}
   - {fileID: 6785997663384917516}
   m_Bounds:
-    m_Center: {x: -1.475039, y: -4.4226155, z: 0}
-    m_Extent: {x: 1.7425299, y: 1.9950953, z: 0}
+    m_Center: {x: -1.4751611, y: -4.4226027, z: 0}
+    m_Extent: {x: 1.7425299, y: 1.9950969, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5192680036760944699
@@ -1492,8 +1492,8 @@ MonoBehaviour:
   - {fileID: 2482278210307221459}
   - {fileID: 8374992379979438840}
   m_Bounds:
-    m_Center: {x: 0.5946169, y: -0.78580093, z: 0}
-    m_Extent: {x: 2.463409, y: 2.3470035, z: 0}
+    m_Center: {x: 0.59473896, y: -0.7857971, z: 0}
+    m_Extent: {x: 2.463348, y: 2.3469996, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5290424940484625328
@@ -2151,6 +2151,7 @@ MonoBehaviour:
   fly_down_speed: 5
   fly_up_extra_stamina_cost: 1
   fly_down_extra_stamina_save: 0.5
+  fall_stamina_recovery: 1
   gliding_time: 5
   fall_x_speed: 7
   max_health: 100
@@ -2169,6 +2170,7 @@ MonoBehaviour:
   Dash_Speed: 30
   Dash_Distance: 10
   Dash_Stamina_Cost: 1.5
+  CanMove: 0
 --- !u!50 &263345539
 Rigidbody2D:
   serializedVersion: 4

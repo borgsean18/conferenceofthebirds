@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 37441405340797615}
   m_Layer: 0
   m_Name: MovingSpike
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,22 +63,6 @@ Transform:
   m_Father: {fileID: 37441405340797615}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &37441405949272900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8576826030003550116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f85c8d78f8e68b443afbae6dc3db5d2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  wait_time: 0.2
-  Start_Point: {fileID: 37441405638592393}
-  End_Point: {fileID: 37441406106332638}
 --- !u!1 &37441406106332637
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +93,22 @@ Transform:
   m_Father: {fileID: 37441405340797615}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &37441405949272900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8576826030003550116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f85c8d78f8e68b443afbae6dc3db5d2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  wait_time: 0.2
+  Start_Point: {fileID: 37441405638592393}
+  End_Point: {fileID: 37441406106332638}
 --- !u!1001 &37441405395217495
 PrefabInstance:
   m_ObjectHideFlags: 0

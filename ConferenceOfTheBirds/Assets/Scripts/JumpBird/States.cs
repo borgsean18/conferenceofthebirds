@@ -267,6 +267,7 @@ public class Air_Dash : State<Main_Bird>
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Glide");
         dash_V = new Vector2(0, 0);
+        bird.MyInpulse.GenerateImpulse();
     }
 
     public override void Execute(Main_Bird bird)
@@ -493,20 +494,33 @@ public class Hurt : State<Main_Bird>
     {
         Instance = new Hurt();
     }
-
+    float time_cool_down;
+    float timer;
     public override void Enter(Main_Bird bird)
     {
         bird.rb.gravityScale = 1f;
+        bird.ResetAllTriggers(bird.animator);
+        bird.animator.SetTrigger("Idle");
+        time_cool_down = 0.5f;
+        timer = 0;
+        bird.MyInpulse.GenerateImpulse();
     }
 
     public override void Execute(Main_Bird bird)
     {
-       bird.GetFSM().ChangeState(Fall.Instance);
+        if(timer<time_cool_down)
+        {
+            timer += Time.deltaTime;
+        }
+        else
+        {
+            bird.GetFSM().ChangeState(Fall.Instance);
+        }
     }
 
     public override void Exit(Main_Bird bird)
     {
-
+        timer = 0;
     }
 }
 
