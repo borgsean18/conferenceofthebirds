@@ -11,6 +11,7 @@ TagManager:
   - PollitionAir
   - LevelEnd
   - BirdHealthSlider
+  - BirdStaminaSlider
   layers:
   - Default
   - TransparentFX

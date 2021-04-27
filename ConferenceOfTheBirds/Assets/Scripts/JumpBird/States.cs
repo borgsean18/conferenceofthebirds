@@ -303,10 +303,11 @@ public class Gliding : State<Main_Bird>
 
     public override void Enter(Main_Bird bird)
     {
-        bird.rb.velocity = new Vector2(bird.rb.velocity.x, bird.rb.velocity.y);
+        //bird.rb.velocity = new Vector2(bird.rb.velocity.x, bird.rb.velocity.y);
         bird.rb.gravityScale = bird.gliding_gravity;
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Fly");
+        Debug.Log("here");
     }
 
     public override void Execute(Main_Bird bird)
@@ -332,16 +333,18 @@ public class Gliding : State<Main_Bird>
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     bird.face_direction = -1;
-                    //bird.start_acc(new Vector2(-bird.gliding_speed, 0));
-                    bird.rb.velocity = new Vector2(-bird.gliding_speed, bird.rb.velocity.y);
+
                 }
                 else if (Input.GetKeyDown(KeyCode.D))
                 {
                     bird.face_direction = 1;
-                    //bird.start_acc(new Vector2(bird.gliding_speed, 0));
-                    bird.rb.velocity = new Vector2(bird.gliding_speed, bird.rb.velocity.y);
+                    
                 }
-                if(Input.GetKey(KeyCode.W))
+                if(Mathf.Abs(bird.rb.velocity.x)<= bird.gliding_speed)
+                {
+                    bird.rb.velocity = new Vector2(bird.face_direction * bird.gliding_speed, bird.rb.velocity.y);
+                }
+                if (Input.GetKey(KeyCode.W))
                 {
                     bird.rb.velocity = new Vector2(bird.face_direction*bird.gliding_speed, bird.fly_up_speed);
                     if(!(Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.D)))
@@ -355,6 +358,8 @@ public class Gliding : State<Main_Bird>
                 if(Input.GetKeyUp(KeyCode.W))
                 {
                     bird.rb.velocity = new Vector2(bird.face_direction * bird.gliding_speed, 0);
+                    Debug.Log("here2");
+
                 }
                 if (Input.GetKey(KeyCode.S))
                 {
@@ -410,6 +415,10 @@ public class Fall : State<Main_Bird>
 
     public override void Execute(Main_Bird bird)
     {
+        if(bird.gliding_time<bird.gliding_time_max)
+        {
+            bird.gliding_time += bird.fall_stamina_recovery * Time.deltaTime;
+        }
         if(bird.is_on_ground)
         {
             Debug.Log("hitground");
@@ -436,9 +445,8 @@ public class Fall : State<Main_Bird>
                     bird.face_direction = 1;
                     bird.rb.velocity = new Vector2(bird.fall_x_speed, bird.rb.velocity.y);
                 }
-                if (Input.GetKey(KeyCode.Space) && bird.gliding_time > 0)
+                if (Input.GetKey(KeyCode.Space) && bird.gliding_time > 0.5f)
                 {
-                    bird.rb.velocity = new Vector2(bird.face_direction * bird.gliding_speed, bird.rb.velocity.y);
                     bird.GetFSM().ChangeState(Gliding.Instance);
                 }
                 if(bird.gliding_time>0&&Input.GetKeyDown(KeyCode.LeftShift))
@@ -568,7 +576,7 @@ public class Death : State<Main_Bird>
         {
             bird.transform.position = bird.save_point_position;
             bird.health = 100;
-            bird.health_slider.value = bird.health;
+            bird.health_slider.fillAmount = bird.health/bird.max_health;
             bird.GetFSM().ChangeState(Idle.Instance);
         }
     }

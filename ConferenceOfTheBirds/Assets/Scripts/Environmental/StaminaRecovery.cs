@@ -15,7 +15,6 @@ public class StaminaRecovery : MonoBehaviour
         if (collision.tag == "Player")
         {
             collision.GetComponent<Main_Bird>().gliding_time += stamina_recovered;
-            collision.GetComponent<Main_Bird>().stamina_meter.value = collision.GetComponent<Main_Bird>().gliding_time;
             if (collision.GetComponent<Main_Bird>().gliding_time > collision.GetComponent<Main_Bird>().gliding_time_max)
                 collision.GetComponent<Main_Bird>().gliding_time = collision.GetComponent<Main_Bird>().gliding_time_max;
             Destroy(this.gameObject);

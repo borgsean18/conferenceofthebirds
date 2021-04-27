@@ -5,7 +5,7 @@ public class Main_Bird : MonoBehaviour
 {
     private StateMachine<Main_Bird> m_stateMachine;
     [HideInInspector]
-    public Slider stamina_meter;
+    public Image stamina_meter;
     [HideInInspector]
     public Text text;
     public float walk_speed;
@@ -34,7 +34,7 @@ public class Main_Bird : MonoBehaviour
     public float fly_down_speed;
     public float fly_up_extra_stamina_cost;
     public float fly_down_extra_stamina_save;
-
+    public float fall_stamina_recovery;
     [HideInInspector]
     public float gliding_time;
     public float fall_x_speed;
@@ -44,7 +44,7 @@ public class Main_Bird : MonoBehaviour
     [HideInInspector]
     public float health;
     [HideInInspector]
-    public Slider health_slider;
+    public Image health_slider;
 
     [HideInInspector]
     public Slider magic_to_save_slider;
@@ -91,32 +91,31 @@ public class Main_Bird : MonoBehaviour
         face_direction = 1;
         text = GetComponentInChildren<Text>();
         text.text = "hello";
-        Slider[] slider_array = GetComponentsInChildren<Slider>();
         GameObject BirdHealth_O = GameObject.FindGameObjectWithTag("BirdHealthSlider");
         //print(BirdHealth_O.name);
-        health_slider = BirdHealth_O.GetComponent<Slider>();
-        print(health_slider.maxValue);
+        health_slider = BirdHealth_O.GetComponent<Image>();
+        //print(health_slider.maxValue);
         health = max_health;
-        health_slider.maxValue = health;
-        health_slider.value = 0;
-        GameObject BirdMagic_O = GameObject.Find("BirdMagicSlider");
-        magic_to_save_slider = BirdMagic_O.GetComponent<Slider>();
+        health_slider.fillAmount = 1;
+        //magic_to_save_slider = BirdMagic_O.GetComponent<Slider>();
         save_point_position = transform.position;
         respawn_point = GameObject.FindGameObjectWithTag("RespawnPoint");
         respawn_point.transform.position = transform.position;
         gliding_time = gliding_time_max;
-        stamina_meter = slider_array[0];
-        stamina_meter.maxValue = gliding_time_max;
-        print(stamina_meter.maxValue);
+        GameObject BirdStamina_O = GameObject.FindGameObjectWithTag("BirdStaminaSlider");
+        stamina_meter= BirdStamina_O.GetComponent<Image>();
+        stamina_meter.fillAmount = 1;
         collider = GetComponent<Collider2D>();
         fix_ground_checks_positions(collider);
         CanMove = true;
+        test_co();
     }
     public void get_hurt(float damage)
     {
         GetFSM().ChangeState(Hurt.Instance);
         health -= damage;
-        health_slider.value = health;
+        float temp = health / max_health;
+        health_slider.fillAmount = temp;
         if (health <= 0)
         {
             GetFSM().ChangeState(Death.Instance);
@@ -125,7 +124,7 @@ public class Main_Bird : MonoBehaviour
 
     public void test_co()
     {
-        StartCoroutine(Wait(5));
+        StartCoroutine(Wait(0.1f));
     }
     public void start_acc(Vector2 v)
     {
@@ -257,8 +256,8 @@ public class Main_Bird : MonoBehaviour
         Check_On_The_Ground();
         check_face_direction();
         hit_wall_check();
-        stamina_meter.value = gliding_time;
-        health_slider.value = health;
+        stamina_meter.fillAmount = gliding_time / gliding_time_max;
+        health_slider.fillAmount = health/max_health;
         ray_check_transforms_follow();
         if (Input.GetKeyDown(KeyCode.E))
         {

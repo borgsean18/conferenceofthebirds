@@ -15,7 +15,6 @@ public class HealthRecovery : MonoBehaviour
         if(collision.tag=="Player")
         {
             collision.GetComponent<Main_Bird>().health += health_recovered;
-            collision.GetComponent<Main_Bird>().health_slider.value = collision.GetComponent<Main_Bird>().health;
             if(collision.GetComponent<Main_Bird>().health> collision.GetComponent<Main_Bird>().max_health)
                 collision.GetComponent<Main_Bird>().health = collision.GetComponent<Main_Bird>().max_health;
             Destroy(this.gameObject);
