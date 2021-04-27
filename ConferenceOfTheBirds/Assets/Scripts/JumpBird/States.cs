@@ -276,16 +276,13 @@ public class Air_Dash : State<Main_Bird>
         {
             bird.GetFSM().ChangeState(Fall.Instance);
         }
-        else
+        dash_V += bird.rb.velocity * Time.deltaTime;
+        distance_flied = dash_V.magnitude;
+        if (distance_flied > bird.Dash_Distance)
         {
-            dash_V += bird.rb.velocity * Time.deltaTime;
-            distance_flied = dash_V.magnitude;
-            if (distance_flied > bird.Dash_Distance)
-            {
-                bird.GetFSM().ChangeState(Fall.Instance);
-            }
+            bird.GetFSM().ChangeState(Fall.Instance);
         }
-        
+
     }
 
     public override void Exit(Main_Bird bird)
