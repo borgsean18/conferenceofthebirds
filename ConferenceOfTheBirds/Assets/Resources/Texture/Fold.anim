@@ -132,15 +132,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.5
         value: {x: -235.5, y: -1.5, z: 5}
-        inSlope: {x: -204.98001, y: 0, z: 0}
-        outSlope: {x: -204.98001, y: 0, z: 0}
+        inSlope: {x: -183.28, y: 0, z: 0}
+        outSlope: {x: -183.28, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 1
-        value: {x: -329.7, y: -1.5, z: 5}
+        value: {x: -308, y: -1.5, z: 5}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -226,15 +226,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.5
         value: -235.5
-        inSlope: -204.98001
-        outSlope: -204.98001
+        inSlope: -183.28
+        outSlope: -183.28
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: -329.7
+        value: -308
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -748,4 +748,11 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 1
+    functionName: Start_UI_Anim
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

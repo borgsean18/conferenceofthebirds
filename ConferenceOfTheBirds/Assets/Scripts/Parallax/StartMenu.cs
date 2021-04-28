@@ -7,6 +7,7 @@ public class StartMenu : MonoBehaviour
     bool is_menu;
     public Animator animator1;
     public Animator animator2;
+    public Animator animator3;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,4 +49,6 @@ public class StartMenu : MonoBehaviour
         
         
     }
+
+    
 }
