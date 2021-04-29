@@ -38,8 +38,8 @@ public class TalkablePeople : MonoBehaviour
         PlayerTextObjText = PlayerTextObject.GetComponent<Text>();
         personDialogueBoxRT = personDialogueBox.GetComponent<RectTransform>();
         playerDialogueBoxRT = PlayerDialogueBox.GetComponent<RectTransform>();
-        personDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(transform.position.x, transform.position.y + 1.5f));
-        playerDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(Player.transform.position.x, transform.position.y + 1.5f));
+        personDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(transform.position.x + 1f, transform.position.y + 1.5f));
+        playerDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(Player.transform.position.x - 1f, transform.position.y + 1.5f));
     }
 
     // Update is called once per frame
@@ -50,8 +50,8 @@ public class TalkablePeople : MonoBehaviour
             StartCoroutine(HaveConversationMethod());
         }
 
-        personDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(transform.position.x, transform.position.y + personOffset));
-        playerDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(Player.transform.position.x, Player.transform.position.y + playerOffset));
+        personDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(transform.position.x + 1f, transform.position.y + personOffset));
+        playerDialogueBoxRT.position = Camera.main.WorldToScreenPoint(new Vector2(Player.transform.position.x - 1f, Player.transform.position.y + playerOffset));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -74,6 +74,7 @@ public class TalkablePeople : MonoBehaviour
     {
         CanTalkToThisPerson = false;
         canTalk = false;
+        Player.GetComponent<Main_Bird>().CanMove = false;
         //CharacterControllingScript.current.canWalk = false;
         //CharacterControllingScript.current.IdleState();
 
@@ -105,6 +106,7 @@ public class TalkablePeople : MonoBehaviour
         StartCoroutine(TurnOffDialogueBoxesTimer());
         //CharacterControllingScript.current.canWalk = true;
         convoEnded = true;
+        Player.GetComponent<Main_Bird>().CanMove = true;
     }
 
     private IEnumerator waitForKeyPress(KeyCode key)
