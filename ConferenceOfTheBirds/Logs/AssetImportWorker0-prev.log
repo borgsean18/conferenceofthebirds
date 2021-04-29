@@ -1,771 +1,525 @@
 Using pre-set license
 Built from '2020.2/release' branch; Version is '2020.2.2f1 (068178b99f32) revision 426360'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home China; OS build 19042.928; Version 2009; 64bit' Language: 'zh' Physical Memory: 16270 MB
+OS: 'Windows 10 Home; OS build 19041.928; Version 2004; 64bit' Language: 'en' Physical Memory: 8013 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Editor\Unity.exe
+C:\Users\danie\OneDrive\Documents\2020.2.2f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/nietzstl/Documents/git_505/conferenceofthebirds/ConferenceOfTheBirds
+C:/Users/danie/OneDrive/Documents/GitHub/conferenceofthebirds/ConferenceOfTheBirds
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50532
-Successfully changed project path to: C:/Users/nietzstl/Documents/git_505/conferenceofthebirds/ConferenceOfTheBirds
-C:/Users/nietzstl/Documents/git_505/conferenceofthebirds/ConferenceOfTheBirds
+50326
+Successfully changed project path to: C:/Users/danie/OneDrive/Documents/GitHub/conferenceofthebirds/ConferenceOfTheBirds
+C:/Users/danie/OneDrive/Documents/GitHub/conferenceofthebirds/ConferenceOfTheBirds
 Using Asset Import Pipeline V2.
 Default GameObject BitMask: Water already registered
 
-Refreshing native plugins compatible for Editor in 59.21 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 89.95 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.2f1 (068178b99f32)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/nietzstl/Documents/git_505/conferenceofthebirds/ConferenceOfTheBirds/Assets
+[Subsystems] Discovering subsystems at path C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/danie/OneDrive/Documents/GitHub/conferenceofthebirds/ConferenceOfTheBirds/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2484)
+    Renderer: Intel(R) UHD Graphics 620 (ID=0x3ea0)
     Vendor:   
-    VRAM:     8043 MB
-    Driver:   27.21.14.6192
+    VRAM:     4006 MB
+    Driver:   27.20.100.8984
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56780
+Mono path[0] = 'C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56860
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001467 seconds.
+Register platform support module: C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003355 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 53.68 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 78.00 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.817 seconds
+- Completed reload, in  3.268 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002474 seconds.
+Registered in 0.012142 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 54.77 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 91.23 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.896 seconds
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.742 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Default GameObject BitMask: Water already registered
 
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.73 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.18 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3167 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 140.5 MB.
-System memory in use after: 140.7 MB.
+Unloading 3164 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 139.3 MB.
+System memory in use after: 139.5 MB.
 
-Unloading 52 unused Assets to reduce memory usage. Loaded Objects now: 3599.
-Total: 2.149800 ms (FindLiveObjects: 0.315900 ms CreateObjectMapping: 0.087800 ms MarkObjects: 1.722400 ms  DeleteObjects: 0.023000 ms)
+Unloading 52 unused Assets to reduce memory usage. Loaded Objects now: 3595.
+Total: 4.193500 ms (FindLiveObjects: 0.560500 ms CreateObjectMapping: 0.380300 ms MarkObjects: 3.197100 ms  DeleteObjects: 0.053600 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Resources/Texture/camera anim back.anim
-  artifactKey: Guid(e384711a09121f743bf4afa847abc8df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Texture/camera anim back.anim using Guid(e384711a09121f743bf4afa847abc8df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6faa20f1498b3513eb32d272f60dd243') in 0.032416 seconds
-  Import took 0.037026 seconds .
+  path: Assets/Art/New Art/Environment/New Tilemap/MAP 1.png
+  artifactKey: Guid(4e8266d361cd2ce4e8ffe4f3a3240fc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/New Art/Environment/New Tilemap/MAP 1.png using Guid(4e8266d361cd2ce4e8ffe4f3a3240fc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '052a26aea996c38ca72ca93f89ccbc8c') in 0.136492 seconds
+  Import took 0.142763 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.036290 seconds.
-  path: Assets/Resources/Texture/camera anim.anim
-  artifactKey: Guid(ae22b0f5e739d464783e86536c8b3779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Texture/camera anim.anim using Guid(ae22b0f5e739d464783e86536c8b3779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2915f9fd26b0d931788bc9f9fd8bb65') in 0.005774 seconds
-  Import took 0.010429 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000259 seconds.
-  path: Assets/Resources/Texture/camera anim.anim
-  artifactKey: Guid(ae22b0f5e739d464783e86536c8b3779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Texture/camera anim.anim using Guid(ae22b0f5e739d464783e86536c8b3779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2915f9fd26b0d931788bc9f9fd8bb65') in 0.002257 seconds
-  Import took 0.006184 seconds .
-
-========================================================================
-Received Prepare
-Default GameObject BitMask: Water already registered
-
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 8.49 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 38 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.5 MB.
-System memory in use after: 73.7 MB.
-
-Unloading 38 unused Assets to reduce memory usage. Loaded Objects now: 3599.
-Total: 2.336800 ms (FindLiveObjects: 0.299700 ms CreateObjectMapping: 0.075700 ms MarkObjects: 1.940600 ms  DeleteObjects: 0.020300 ms)
+  Time since last request: 172.702443 seconds.
+  path: Assets/Art/New Art/Environment/New Tilemap/MAP 11.png
+  artifactKey: Guid(fbe50ba4529c3594cb4faa12449c99c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/New Art/Environment/New Tilemap/MAP 11.png using Guid(fbe50ba4529c3594cb4faa12449c99c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78211fb12de3e18bb8fe13ba35423ad3') in 0.233824 seconds
+  Import took 0.425973 seconds .
 
 ========================================================================
 Received Prepare
 Default GameObject BitMask: Water already registered
 
 Registering precompiled user dll's ...
-Registered in 0.002637 seconds.
+Registered in 0.009065 seconds.
 Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.45 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.777 seconds
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.687 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.50 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.0 MB.
-System memory in use after: 135.3 MB.
+System memory in use before: 136.1 MB.
+System memory in use after: 136.3 MB.
 
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3602.
-Total: 2.090000 ms (FindLiveObjects: 0.306700 ms CreateObjectMapping: 0.076500 ms MarkObjects: 1.689200 ms  DeleteObjects: 0.016300 ms)
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3604.
+Total: 9.880400 ms (FindLiveObjects: 2.939900 ms CreateObjectMapping: 0.978900 ms MarkObjects: 5.908000 ms  DeleteObjects: 0.041000 ms)
 
 ========================================================================
 Received Prepare
 Default GameObject BitMask: Water already registered
 
 Registering precompiled user dll's ...
-Registered in 0.002546 seconds.
+Registered in 0.004623 seconds.
 Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.18 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.768 seconds
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.457 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.00 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.1 MB.
-System memory in use after: 135.3 MB.
+System memory in use before: 136.9 MB.
+System memory in use after: 137.2 MB.
 
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3605.
-Total: 2.929000 ms (FindLiveObjects: 0.336800 ms CreateObjectMapping: 0.091700 ms MarkObjects: 2.472000 ms  DeleteObjects: 0.027300 ms)
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3607.
+Total: 3.575800 ms (FindLiveObjects: 0.369900 ms CreateObjectMapping: 0.261800 ms MarkObjects: 2.902600 ms  DeleteObjects: 0.035200 ms)
 
 ========================================================================
 Received Prepare
 Default GameObject BitMask: Water already registered
 
 Registering precompiled user dll's ...
-Registered in 0.002705 seconds.
+Registered in 0.003927 seconds.
 Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.06 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.766 seconds
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.490 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.98 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.1 MB.
-System memory in use after: 135.4 MB.
+System memory in use before: 137.2 MB.
+System memory in use after: 137.4 MB.
 
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3608.
-Total: 2.114700 ms (FindLiveObjects: 0.273400 ms CreateObjectMapping: 0.090400 ms MarkObjects: 1.733500 ms  DeleteObjects: 0.016400 ms)
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3610.
+Total: 3.581800 ms (FindLiveObjects: 0.560400 ms CreateObjectMapping: 0.249000 ms MarkObjects: 2.732100 ms  DeleteObjects: 0.038000 ms)
 
 ========================================================================
 Received Prepare
 Default GameObject BitMask: Water already registered
 
 Registering precompiled user dll's ...
-Registered in 0.002545 seconds.
+Registered in 0.003655 seconds.
 Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.49 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.768 seconds
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.157 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 137.2 MB.
+System memory in use after: 137.4 MB.
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3613.
+Total: 3.443900 ms (FindLiveObjects: 0.400300 ms CreateObjectMapping: 0.223600 ms MarkObjects: 2.787900 ms  DeleteObjects: 0.030100 ms)
+
+========================================================================
+Received Prepare
+Default GameObject BitMask: Water already registered
+
+Registering precompiled user dll's ...
+Registered in 0.021479 seconds.
+Begin MonoManager ReloadAssembly
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.70 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  2.170 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 0.88 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.1 MB.
-System memory in use after: 135.3 MB.
+System memory in use before: 137.2 MB.
+System memory in use after: 137.4 MB.
 
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3611.
-Total: 2.597700 ms (FindLiveObjects: 0.481400 ms CreateObjectMapping: 0.099400 ms MarkObjects: 1.992900 ms  DeleteObjects: 0.022600 ms)
-
-========================================================================
-Received Prepare
-Default GameObject BitMask: Water already registered
-
-Registering precompiled user dll's ...
-Registered in 0.002534 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.769 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.2 MB.
-System memory in use after: 135.4 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3614.
-Total: 2.116100 ms (FindLiveObjects: 0.293900 ms CreateObjectMapping: 0.092400 ms MarkObjects: 1.711600 ms  DeleteObjects: 0.017400 ms)
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3616.
+Total: 5.338300 ms (FindLiveObjects: 0.630800 ms CreateObjectMapping: 0.310300 ms MarkObjects: 4.295300 ms  DeleteObjects: 0.098000 ms)
 
 ========================================================================
 Received Prepare
 Default GameObject BitMask: Water already registered
 
 Registering precompiled user dll's ...
-Registered in 0.002551 seconds.
+Registered in 0.003765 seconds.
 Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.98 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.773 seconds
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.409 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.02 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.2 MB.
-System memory in use after: 135.4 MB.
+System memory in use before: 137.2 MB.
+System memory in use after: 137.5 MB.
 
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3617.
-Total: 2.313300 ms (FindLiveObjects: 0.433000 ms CreateObjectMapping: 0.082700 ms MarkObjects: 1.778200 ms  DeleteObjects: 0.018400 ms)
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3619.
+Total: 3.924800 ms (FindLiveObjects: 0.490400 ms CreateObjectMapping: 0.214900 ms MarkObjects: 3.175500 ms  DeleteObjects: 0.042300 ms)
 
 ========================================================================
 Received Prepare
 Default GameObject BitMask: Water already registered
 
 Registering precompiled user dll's ...
-Registered in 0.002540 seconds.
+Registered in 0.003962 seconds.
 Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.06 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.762 seconds
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.558 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.98 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.1 MB.
-System memory in use after: 135.3 MB.
+System memory in use before: 137.0 MB.
+System memory in use after: 137.2 MB.
 
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3620.
-Total: 2.355400 ms (FindLiveObjects: 0.301200 ms CreateObjectMapping: 0.082200 ms MarkObjects: 1.946300 ms  DeleteObjects: 0.025000 ms)
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3622.
+Total: 3.243300 ms (FindLiveObjects: 0.382200 ms CreateObjectMapping: 0.198100 ms MarkObjects: 2.627700 ms  DeleteObjects: 0.033400 ms)
 
 ========================================================================
 Received Prepare
 Default GameObject BitMask: Water already registered
 
 Registering precompiled user dll's ...
-Registered in 0.002515 seconds.
+Registered in 0.016535 seconds.
 Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.89 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.771 seconds
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.351 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.89 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.2 MB.
-System memory in use after: 135.4 MB.
+System memory in use before: 137.2 MB.
+System memory in use after: 137.5 MB.
 
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3623.
-Total: 2.151200 ms (FindLiveObjects: 0.300200 ms CreateObjectMapping: 0.078800 ms MarkObjects: 1.752800 ms  DeleteObjects: 0.018500 ms)
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3625.
+Total: 3.664100 ms (FindLiveObjects: 0.599300 ms CreateObjectMapping: 0.411200 ms MarkObjects: 2.587700 ms  DeleteObjects: 0.062900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1335.422916 seconds.
+  path: Assets/Art/New Art/Environment/New Tilemap/background_base.png
+  artifactKey: Guid(a152853eae0892b4ea63374d020c8160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/New Art/Environment/New Tilemap/background_base.png using Guid(a152853eae0892b4ea63374d020c8160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '087d2548dca71ff333a0a2d14d51df8b') in 0.103726 seconds
+  Import took 0.116792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001355 seconds.
+  path: Assets/Art/New Art/Environment/New Tilemap/background_sky.png
+  artifactKey: Guid(ea4ae814efbd8014fa399a3f52af14d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/New Art/Environment/New Tilemap/background_sky.png using Guid(ea4ae814efbd8014fa399a3f52af14d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7e99edf4abfa7c49adb28dfcb6fca04') in 0.021357 seconds
+  Import took 0.030787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000492 seconds.
+  path: Assets/Art/New Art/Environment/New Tilemap/background_tree_02.png
+  artifactKey: Guid(23eaa437b1349d14f90eff523f9b0a53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/New Art/Environment/New Tilemap/background_tree_02.png using Guid(23eaa437b1349d14f90eff523f9b0a53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c821df4d2259ff11c27a9fa362ed972') in 0.055408 seconds
+  Import took 0.063534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000317 seconds.
+  path: Assets/Art/New Art/Environment/New Tilemap/background_mountain_layer2a.png
+  artifactKey: Guid(592cd6baa69262642ab33a643b57a0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/New Art/Environment/New Tilemap/background_mountain_layer2a.png using Guid(592cd6baa69262642ab33a643b57a0fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe6cd397f262bf1dc6510bcde0f2fb33') in 0.016508 seconds
+  Import took 0.025345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000385 seconds.
+  path: Assets/Art/New Art/Environment/New Tilemap/background_tree_01.png
+  artifactKey: Guid(c200cd39de10a7947943340322b5e9c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/New Art/Environment/New Tilemap/background_tree_01.png using Guid(c200cd39de10a7947943340322b5e9c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5af8e2a0256c2b33aa8622461c32794f') in 0.034929 seconds
+  Import took 0.044436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000752 seconds.
+  path: Assets/Art/New Art/Environment/New Tilemap/background_mountain_layer1a.png
+  artifactKey: Guid(197f1baa93d2d80478cc3eb3aa32b954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/New Art/Environment/New Tilemap/background_mountain_layer1a.png using Guid(197f1baa93d2d80478cc3eb3aa32b954) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2549fe0e874845892bf530f9c8e1ec1b') in 0.014988 seconds
+  Import took 0.022937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000494 seconds.
+  path: Assets/Art/New Art/Environment/New Tilemap/background_mountain_layer2b.png
+  artifactKey: Guid(d3d5baeb5d85fb945b415f88f9d0f6c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/New Art/Environment/New Tilemap/background_mountain_layer2b.png using Guid(d3d5baeb5d85fb945b415f88f9d0f6c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31c7a1f19d8e56ca03f1555cec977525') in 0.022308 seconds
+  Import took 0.032463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000440 seconds.
+  path: Assets/Art/New Art/Environment/New Tilemap/background_mountain_layer1b.png
+  artifactKey: Guid(04eccf8463b11f041bbd8fd4dfb14ab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/New Art/Environment/New Tilemap/background_mountain_layer1b.png using Guid(04eccf8463b11f041bbd8fd4dfb14ab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0895d664d5e532cd49a057974b3ea952') in 0.016984 seconds
+  Import took 0.026038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000411 seconds.
+  path: Assets/Art/New Art/Environment/New Tilemap/background_mountain_layer3.png
+  artifactKey: Guid(311cbb409bbff914da51b1eb3a68865c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/New Art/Environment/New Tilemap/background_mountain_layer3.png using Guid(311cbb409bbff914da51b1eb3a68865c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9658a04c7b1ca2d86e6efed6a812726') in 0.021404 seconds
+  Import took 0.032459 seconds .
 
 ========================================================================
 Received Prepare
 Default GameObject BitMask: Water already registered
 
 Registering precompiled user dll's ...
-Registered in 0.002643 seconds.
+Registered in 0.003520 seconds.
 Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.94 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.762 seconds
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.242 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.98 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.2 MB.
-System memory in use after: 135.4 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3626.
-Total: 2.221800 ms (FindLiveObjects: 0.282200 ms CreateObjectMapping: 0.090000 ms MarkObjects: 1.832000 ms  DeleteObjects: 0.016800 ms)
-
-========================================================================
-Received Prepare
-Default GameObject BitMask: Water already registered
-
-Registering precompiled user dll's ...
-Registered in 0.002548 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.762 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.0 MB.
-System memory in use after: 135.3 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3629.
-Total: 2.613400 ms (FindLiveObjects: 0.426500 ms CreateObjectMapping: 0.096200 ms MarkObjects: 2.063200 ms  DeleteObjects: 0.026400 ms)
-
-========================================================================
-Received Prepare
-Default GameObject BitMask: Water already registered
-
-Registering precompiled user dll's ...
-Registered in 0.002540 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.763 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.2 MB.
-System memory in use after: 135.5 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3632.
-Total: 2.148300 ms (FindLiveObjects: 0.313500 ms CreateObjectMapping: 0.092400 ms MarkObjects: 1.721300 ms  DeleteObjects: 0.020300 ms)
-
-========================================================================
-Received Prepare
-Default GameObject BitMask: Water already registered
-
-Registering precompiled user dll's ...
-Registered in 0.002520 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.766 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.2 MB.
-System memory in use after: 135.5 MB.
+System memory in use before: 137.2 MB.
+System memory in use after: 137.4 MB.
 
 Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3635.
-Total: 2.591000 ms (FindLiveObjects: 0.478400 ms CreateObjectMapping: 0.117300 ms MarkObjects: 1.969500 ms  DeleteObjects: 0.025100 ms)
+Total: 3.105700 ms (FindLiveObjects: 0.513500 ms CreateObjectMapping: 0.209900 ms MarkObjects: 2.345800 ms  DeleteObjects: 0.035100 ms)
 
 ========================================================================
 Received Prepare
 Default GameObject BitMask: Water already registered
 
 Registering precompiled user dll's ...
-Registered in 0.002699 seconds.
+Registered in 0.003612 seconds.
 Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.89 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.751 seconds
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl.dll
+Fallback handler could not load library C:/Users/danie/OneDrive/Documents/2020.2.2f1/Editor/Data/Mono/lib/libdl
+- Completed reload, in  1.169 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.11 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.0 MB.
-System memory in use after: 135.3 MB.
+System memory in use before: 137.3 MB.
+System memory in use after: 137.5 MB.
 
 Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3638.
-Total: 2.097600 ms (FindLiveObjects: 0.267600 ms CreateObjectMapping: 0.078700 ms MarkObjects: 1.733300 ms  DeleteObjects: 0.017200 ms)
-
-========================================================================
-Received Prepare
-Default GameObject BitMask: Water already registered
-
-Registering precompiled user dll's ...
-Registered in 0.002675 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.791 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.2 MB.
-System memory in use after: 135.5 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3641.
-Total: 2.442900 ms (FindLiveObjects: 0.423100 ms CreateObjectMapping: 0.080200 ms MarkObjects: 1.913300 ms  DeleteObjects: 0.025500 ms)
-
-========================================================================
-Received Prepare
-Default GameObject BitMask: Water already registered
-
-Registering precompiled user dll's ...
-Registered in 0.002876 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.792 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.3 MB.
-System memory in use after: 135.5 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3644.
-Total: 2.235600 ms (FindLiveObjects: 0.305600 ms CreateObjectMapping: 0.079100 ms MarkObjects: 1.831500 ms  DeleteObjects: 0.018500 ms)
-
-========================================================================
-Received Prepare
-Default GameObject BitMask: Water already registered
-
-Registering precompiled user dll's ...
-Registered in 0.002711 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.772 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.0 MB.
-System memory in use after: 135.2 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3647.
-Total: 2.356100 ms (FindLiveObjects: 0.328600 ms CreateObjectMapping: 0.080100 ms MarkObjects: 1.825400 ms  DeleteObjects: 0.121100 ms)
-
-========================================================================
-Received Prepare
-Default GameObject BitMask: Water already registered
-
-Registering precompiled user dll's ...
-Registered in 0.002576 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.777 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.3 MB.
-System memory in use after: 135.5 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3650.
-Total: 2.678900 ms (FindLiveObjects: 0.445200 ms CreateObjectMapping: 0.098500 ms MarkObjects: 2.108600 ms  DeleteObjects: 0.025500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 3264.035918 seconds.
-  path: Assets/Resources/Texture/camera anim.anim
-  artifactKey: Guid(ae22b0f5e739d464783e86536c8b3779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Texture/camera anim.anim using Guid(ae22b0f5e739d464783e86536c8b3779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab5919d9b09b58a48d928196c6dbc91c') in 0.011828 seconds
-  Import took 0.018152 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.015849 seconds.
-  path: Assets/Resources/Texture/camera anim.anim
-  artifactKey: Guid(ae22b0f5e739d464783e86536c8b3779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Texture/camera anim.anim using Guid(ae22b0f5e739d464783e86536c8b3779) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab5919d9b09b58a48d928196c6dbc91c') in 0.002307 seconds
-  Import took 0.006621 seconds .
-
-========================================================================
-Received Prepare
-Default GameObject BitMask: Water already registered
-
-Registering precompiled user dll's ...
-Registered in 0.002722 seconds.
-Begin MonoManager ReloadAssembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl.dll
-Fallback handler could not load library C:/Program Files/Unity/Editor/Data/Mono/lib/libdl
-- Completed reload, in  0.766 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3044 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 135.3 MB.
-System memory in use after: 135.5 MB.
-
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 3653.
-Total: 2.145500 ms (FindLiveObjects: 0.310200 ms CreateObjectMapping: 0.088500 ms MarkObjects: 1.723300 ms  DeleteObjects: 0.022600 ms)
+Total: 4.662200 ms (FindLiveObjects: 0.743600 ms CreateObjectMapping: 0.313700 ms MarkObjects: 3.564200 ms  DeleteObjects: 0.038400 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
