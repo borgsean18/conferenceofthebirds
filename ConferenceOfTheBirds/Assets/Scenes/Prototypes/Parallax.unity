@@ -54952,24 +54952,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3742210629332298600, guid: 084b2b0955ab3704aac5b55e2ca44b09, type: 3}
   m_PrefabInstance: {fileID: 788580755}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1408316327 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8518726292309508139, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
-  m_PrefabInstance: {fileID: 1091750523}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1408316333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408316327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5310a8d3ea6fc6418d88560606dbc1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinsOwned: 0
 --- !u!1 &1415006435
 GameObject:
   m_ObjectHideFlags: 0

@@ -2047,6 +2047,7 @@ GameObject:
   - component: {fileID: 603711842}
   - component: {fileID: 263345539}
   - component: {fileID: 420630329}
+  - component: {fileID: 7373278889470815790}
   m_Layer: 0
   m_Name: Scott the bird
   m_TagString: Player
@@ -2279,6 +2280,19 @@ MonoBehaviour:
   m_UseImpactDirection: 0
   m_ScaleImpactWithMass: 0
   m_ScaleImpactWithSpeed: 0
+--- !u!114 &7373278889470815790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8518726292309508139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5310a8d3ea6fc6418d88560606dbc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsOwned: 0
 --- !u!1 &8728960747308585978
 GameObject:
   m_ObjectHideFlags: 0
