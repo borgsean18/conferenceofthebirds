@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1532272667587207493}
   m_Layer: 0
   m_Name: Generic Pickup
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
