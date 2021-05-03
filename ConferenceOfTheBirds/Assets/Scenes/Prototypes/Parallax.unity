@@ -80357,6 +80357,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 283975784, guid: f3d17b8f96fbf634db6b1a91a0f969bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347511509, guid: f3d17b8f96fbf634db6b1a91a0f969bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604121859, guid: f3d17b8f96fbf634db6b1a91a0f969bf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604121859, guid: f3d17b8f96fbf634db6b1a91a0f969bf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630091561, guid: f3d17b8f96fbf634db6b1a91a0f969bf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630091561, guid: f3d17b8f96fbf634db6b1a91a0f969bf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025489446, guid: f3d17b8f96fbf634db6b1a91a0f969bf, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025489446, guid: f3d17b8f96fbf634db6b1a91a0f969bf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025489446, guid: f3d17b8f96fbf634db6b1a91a0f969bf, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2175874646881847454, guid: f3d17b8f96fbf634db6b1a91a0f969bf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4442933813721296274, guid: f3d17b8f96fbf634db6b1a91a0f969bf, type: 3}
       propertyPath: m_Name
       value: BirdUICanvas
