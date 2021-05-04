@@ -2842,7 +2842,7 @@
     },
     "m_Name": "Edge",
     "m_DefaultReferenceName": "Vector1_f50df504d56a437d865fded164607659",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_Edge",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
