@@ -82,6 +82,8 @@ public class Main_Bird : MonoBehaviour
     public float Dash_Stamina_Cost;
 
     public bool CanMove;
+    [HideInInspector]
+    public TrailRenderer[] trails;
     void Start()
     {
         m_stateMachine = new StateMachine<Main_Bird>(this);// initial
@@ -109,8 +111,12 @@ public class Main_Bird : MonoBehaviour
         collider = GetComponent<Collider2D>();
         fix_ground_checks_positions(collider);
         CanMove = true;
-
         MyInpulse = GetComponent<Cinemachine.CinemachineCollisionImpulseSource>();
+        trails = GetComponentsInChildren<TrailRenderer>();
+        for(int i=0;i<trails.Length;i++)
+        {
+            trails[i].enabled = false;
+        }
     }
     public void get_hurt(float damage)
     {
@@ -131,6 +137,13 @@ public class Main_Bird : MonoBehaviour
     public void test_co()
     {
         StartCoroutine(Wait(0.1f));
+    }
+    public void set_trail(bool on)
+    {
+        for (int i = 0; i < trails.Length; i++)
+        {
+            trails[i].enabled = on;
+        }
     }
     public void start_acc(Vector2 v)
     {
@@ -282,6 +295,7 @@ public class Main_Bird : MonoBehaviour
         {
             grab_thing();
         }
+        
     }
     private void Check_On_The_Ground()
     {

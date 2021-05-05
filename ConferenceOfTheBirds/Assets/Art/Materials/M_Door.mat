@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: M_Door
   m_Shader: {fileID: -6465566751694194690, guid: 65750fb48548f144e8aff631e5f47849, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -59,7 +59,8 @@ Material:
     - Vector1_0ba185c88f6f48af89e4df8a8c905653: 2
     - Vector1_92dd1d5a53984193b33d9244d5d99844: 10
     - Vector1_f50df504d56a437d865fded164607659: 0.468
-    - Vector1_f924efb4373f44459b29f859a3054e46: 0.05
+    - Vector1_f924efb4373f44459b29f859a3054e46: 0
+    - _Edge: 0
     - _EnableExternalAlpha: 0
     m_Colors:
     - Color_bf454659c5ba41c382232fa29e45c2c6: {r: 1, g: 0.8204683, b: 0.20392156, a: 1}

@@ -15,6 +15,7 @@ TagManager:
   - Spike
   - Coin
   - Metaball_liquid
+  - TailEffect
   layers:
   - Default
   - TransparentFX
