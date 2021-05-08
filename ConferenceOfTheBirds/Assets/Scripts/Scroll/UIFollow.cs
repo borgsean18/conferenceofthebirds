@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIFollow : MonoBehaviour
 {
-    public Transform player;
+    Transform player;
     // Start is called before the first frame update
     void Start()
     {

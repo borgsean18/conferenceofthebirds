@@ -16,6 +16,7 @@ TagManager:
   - Coin
   - Metaball_liquid
   - TailEffect
+  - ScrolPic
   layers:
   - Default
   - TransparentFX

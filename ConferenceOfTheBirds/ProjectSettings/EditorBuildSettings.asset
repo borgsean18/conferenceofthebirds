@@ -8,7 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Prototypes/Parallax.unity
     guid: 26a2ee96b6070824ca2712f7c810865e
+  - enabled: 1
+    path: Assets/Scenes/Prototypes/Scroll.unity
+    guid: 4806e83d20b90384e85351544ea9cc2b
+  - enabled: 1
+    path: Assets/Scenes/Prototypes/MainMenu.unity
+    guid: 6358a381b6645d24096f05c6ae2a1dd1
   m_configObjects: {}
