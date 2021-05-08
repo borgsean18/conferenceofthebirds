@@ -793,6 +793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 535853225}
   - component: {fileID: 535853224}
+  - component: {fileID: 535853226}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -822,7 +823,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 30
+    OrthographicSize: 200
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -843,13 +844,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535853223}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -200}
+  m_LocalPosition: {x: -276, y: -106, z: -200}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 873978861}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &535853226
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535853223}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f3daa7b665077aa44b4920b1b69353bd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &549215584
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,7 +1072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 673967789}
   m_Layer: 0
-  m_Name: GameObject (5)
+  m_Name: R_SCroll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1066,16 +1086,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673967788}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.5, y: -2.3, z: 4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 150.5, y: -111.1, z: -58}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children:
   - {fileID: 604110436}
   - {fileID: 41642452}
   - {fileID: 1219714890}
   - {fileID: 2136641195}
   - {fileID: 1377408520}
-  m_Father: {fileID: 2125699169}
-  m_RootOrder: 6
+  m_Father: {fileID: 1395039974}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &867937973
 GameObject:
@@ -1132,7 +1152,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 30
+  orthographic size: 200
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1156,7 +1176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867937973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -200}
+  m_LocalPosition: {x: -276, y: -106, z: -200}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1327,7 +1347,7 @@ GameObject:
   - component: {fileID: 1171479341}
   - component: {fileID: 1171479340}
   m_Layer: 5
-  m_Name: Image
+  m_Name: lace1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1373,10 +1393,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 5a06023ca946959449eca9386a9fddd2, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -1714,6 +1734,7 @@ GameObject:
   - component: {fileID: 1395039973}
   - component: {fileID: 1395039972}
   - component: {fileID: 1395039971}
+  - component: {fileID: 1395039975}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1801,6 +1822,7 @@ RectTransform:
   - {fileID: 1688340608}
   - {fileID: 1171479339}
   - {fileID: 2083183970}
+  - {fileID: 673967789}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1809,6 +1831,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 744, y: 418}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1395039975
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395039970}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f6ff3327fc4a90d4dbe1c07450570c33, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1688340607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,7 +1862,7 @@ GameObject:
   - component: {fileID: 1688340610}
   - component: {fileID: 1688340609}
   m_Layer: 5
-  m_Name: Image
+  m_Name: sc
   m_TagString: ScrolPic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1867,10 +1908,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: da06f7174fd45984a8ef443008ad4686, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -1968,7 +2009,7 @@ GameObject:
   - component: {fileID: 2083183972}
   - component: {fileID: 2083183971}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: lace2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2014,10 +2055,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 5a06023ca946959449eca9386a9fddd2, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -2196,11 +2237,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab988ec0447d8f14bbf5a57b22e4cfc7, type: 3}
---- !u!4 &2125699169 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1818762074839480764, guid: ab988ec0447d8f14bbf5a57b22e4cfc7, type: 3}
-  m_PrefabInstance: {fileID: 2125699168}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2125699170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1818762076056868667, guid: ab988ec0447d8f14bbf5a57b22e4cfc7, type: 3}

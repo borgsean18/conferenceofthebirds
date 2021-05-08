@@ -41,7 +41,7 @@ public class MenuController : MonoBehaviour
     }
     IEnumerator change_pic()
     {
-        yield return new WaitForSeconds(1);
+        yield return null;
         Image a = GameObject.FindGameObjectWithTag("ScrolPic").GetComponent<Image>();
         a.sprite = Sprite.Create(screenshot, new Rect(0, 0, screenshot.width, screenshot.height), Vector2.zero);
         a.SetNativeSize();
