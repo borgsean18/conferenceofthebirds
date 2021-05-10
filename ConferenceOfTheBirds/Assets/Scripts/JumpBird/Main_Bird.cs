@@ -117,6 +117,7 @@ public class Main_Bird : MonoBehaviour
         {
             trails[i].enabled = false;
         }
+
     }
     public void get_hurt(float damage)
     {
