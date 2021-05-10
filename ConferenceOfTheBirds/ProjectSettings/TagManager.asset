@@ -18,6 +18,8 @@ TagManager:
   - TailEffect
   - ScrolPic
   - SCRect
+  - MainMenuManager
+  - MenuController
   layers:
   - Default
   - TransparentFX

@@ -102,8 +102,8 @@ public class Main_Bird : MonoBehaviour
         health_slider.fillAmount = 1;
         //magic_to_save_slider = BirdMagic_O.GetComponent<Slider>();
         save_point_position = transform.position;
-        respawn_point = GameObject.FindGameObjectWithTag("RespawnPoint");
-        respawn_point.transform.position = transform.position;
+        //respawn_point = GameObject.FindGameObjectWithTag("RespawnPoint");
+        //respawn_point.transform.position = transform.position;
         gliding_time = gliding_time_max;
         GameObject BirdStamina_O = GameObject.FindGameObjectWithTag("BirdStaminaSlider");
         stamina_meter= BirdStamina_O.GetComponent<Image>();

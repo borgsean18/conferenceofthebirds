@@ -6,6 +6,10 @@ public class MainMainManager : MonoBehaviour
 {
     public Animator anim1;
     public Animator anim2;
+    public Vector3 bird_position;
+    public Vector3 save_position;
+    public float health;
+    public float gliding_time;
     // Start is called before the first frame update
     public void EnterGame()
     {
@@ -18,7 +22,8 @@ public class MainMainManager : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(1.2f);
-        SceneManager.LoadSceneAsync("Scroll");
+        SceneManager.LoadScene("Parallax");
+        GameObject.FindGameObjectWithTag("MenuController").GetComponent<MenuController>().Enter_game();
 
     }
     public void QuitGame()
