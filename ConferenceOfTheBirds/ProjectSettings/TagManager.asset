@@ -17,6 +17,7 @@ TagManager:
   - Metaball_liquid
   - TailEffect
   - ScrolPic
+  - SCRect
   layers:
   - Default
   - TransparentFX

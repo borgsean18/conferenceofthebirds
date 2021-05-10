@@ -11,7 +11,7 @@ public class MenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         is_in_game = true;
     }
     Texture2D CaptureScreenshot2(Rect rect)
@@ -44,16 +44,16 @@ public class MenuController : MonoBehaviour
         yield return null;
         Image a = GameObject.FindGameObjectWithTag("ScrolPic").GetComponent<Image>();
         a.sprite = Sprite.Create(screenshot, new Rect(0, 0, screenshot.width, screenshot.height), Vector2.zero);
-        a.SetNativeSize();
+        Image temp=GameObject.FindGameObjectWithTag("SCRect").GetComponent<Image>();
+        a.rectTransform.position = temp.rectTransform.position;
+        a.rectTransform.rect.Set(temp.rectTransform.rect.x, temp.rectTransform.rect.y, width: temp.rectTransform.rect.width, height: temp.rectTransform.rect.height);
     }
+
     void Update()
     {
-        if(is_in_game)
-        {
             if(Input.GetKeyDown(KeyCode.Escape))
             {
                 StartCoroutine(do_sc());
             }
-        }
     }
 }
