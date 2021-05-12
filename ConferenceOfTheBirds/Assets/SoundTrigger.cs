@@ -7,9 +7,12 @@ public class SoundTrigger : MonoBehaviour
 
     public AudioSource playSound;
     
-    void OnTriggerEnter (Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        playSound.Play();
+        if (other.tag == "Player")
+        {
+            playSound.Play();
+        }
     }
 
 }
