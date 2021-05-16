@@ -59,6 +59,7 @@ public class TalkablePeople : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inProximity = true;
+            GameManagerScript.current.InteractionButton.SetActive(true);
         }
     }
 
@@ -67,6 +68,7 @@ public class TalkablePeople : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inProximity = false;
+            GameManagerScript.current.InteractionButton.SetActive(false);
         }
     }
 

@@ -9,10 +9,14 @@ public class NewDoorScript : MonoBehaviour
 
     private List<NewLeverLogic> leverScripts;
 
+    private SpriteRenderer sr;
+
     // Start is called before the first frame update
     void Start()
     {
         leverScripts = new List<NewLeverLogic>();
+
+        sr = GetComponent<SpriteRenderer>();
 
         for (int i = 0; i < levers.Count; i++)
         {
@@ -38,6 +42,32 @@ public class NewDoorScript : MonoBehaviour
         }
 
         if (leverCounter == levers.Count)
+        {
             isOpen = true;
+            sr.enabled = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (sr.enabled)
+        {
+            if (collision.tag == "Player")
+            {
+                GameManagerScript.current.InteractionButton.SetActive(true);
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (sr.enabled)
+        {
+            if (collision.tag == "Player")
+            {
+                if(GameManagerScript.current.InteractionButton.activeSelf)
+                    GameManagerScript.current.InteractionButton.SetActive(false);
+            }
+        }
     }
 }
