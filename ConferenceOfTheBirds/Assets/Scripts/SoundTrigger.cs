@@ -15,6 +15,7 @@ public class SoundTrigger : MonoBehaviour
         {
             playSound.Play();
             print("playing");
+            Destroy(gameObject);
         }
     }
 
