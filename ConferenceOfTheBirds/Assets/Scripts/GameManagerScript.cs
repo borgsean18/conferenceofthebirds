@@ -9,6 +9,7 @@ public class GameManagerScript : MonoBehaviour
     [Header("UI")]
     public GameObject NotificationsCanvas;
     public GameObject levelCompleteText;
+    public GameObject InteractionButton;
 
     //Singleton
     public static GameManagerScript current;
