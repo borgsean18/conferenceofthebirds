@@ -8,11 +8,16 @@ public class NewLeverLogic : MonoBehaviour
     public bool isPlayerClose = false;
     public GameObject door;
     public GameObject doorLight;
+    public AudioClip leverSound;
+
+    private AudioSource asrc;
 
     // Start is called before the first frame update
     void Start()
     {
         doorLight.SetActive(false);
+
+        asrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,6 +30,7 @@ public class NewLeverLogic : MonoBehaviour
                 isActive = true;
                 doorLight.SetActive(true);
                 door.GetComponent<NewDoorScript>().CheckAllLevers();
+                asrc.PlayOneShot(leverSound);
             }
         }
     }
