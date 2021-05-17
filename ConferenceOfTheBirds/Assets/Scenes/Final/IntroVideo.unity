@@ -250,6 +250,7 @@ GameObject:
   - component: {fileID: 1577140206}
   - component: {fileID: 1577140205}
   - component: {fileID: 1577140207}
+  - component: {fileID: 1577140208}
   m_Layer: 0
   m_Name: IntroVideo
   m_TagString: Untagged
@@ -265,7 +266,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577140204}
   m_Enabled: 1
-  m_VideoClip: {fileID: 0}
+  m_VideoClip: {fileID: 32900000, guid: fd491d741ae31bb4ab938c386a899e05, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 1033348611}
@@ -402,3 +403,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1577140208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577140204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b1bb3cb78ebd14ab765eb07c848bf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lengthOfVideo: 68

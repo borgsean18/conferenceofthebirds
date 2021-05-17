@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NotificationsCanvas: {fileID: 0}
   levelCompleteText: {fileID: 0}
+  InteractionButton: {fileID: 0}
