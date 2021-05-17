@@ -59,7 +59,9 @@ public class TalkablePeople : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             inProximity = true;
-            GameManagerScript.current.InteractionButton.SetActive(true);
+            
+            if (!convoEnded)
+                GameManagerScript.current.InteractionButton.SetActive(true);
         }
     }
 
