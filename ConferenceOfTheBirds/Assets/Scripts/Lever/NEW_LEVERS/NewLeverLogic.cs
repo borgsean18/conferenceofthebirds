@@ -31,6 +31,7 @@ public class NewLeverLogic : MonoBehaviour
                 doorLight.SetActive(true);
                 door.GetComponent<NewDoorScript>().CheckAllLevers();
                 asrc.PlayOneShot(leverSound);
+                GameManagerScript.current.InteractionButton.SetActive(false);
             }
         }
     }
@@ -40,7 +41,8 @@ public class NewLeverLogic : MonoBehaviour
         if (collision.tag == "Player")
         {
             isPlayerClose = true;
-            GameManagerScript.current.InteractionButton.SetActive(true);
+            if (!isActive)
+                GameManagerScript.current.InteractionButton.SetActive(true);
         }
     }
 
