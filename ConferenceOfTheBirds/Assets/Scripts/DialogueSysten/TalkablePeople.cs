@@ -108,6 +108,7 @@ public class TalkablePeople : MonoBehaviour
         StartCoroutine(TurnOffDialogueBoxesTimer());
         //CharacterControllingScript.current.canWalk = true;
         convoEnded = true;
+        GameManagerScript.current.InteractionButton.SetActive(false);
         Player.GetComponent<Main_Bird>().CanMove = true;
     }
 
