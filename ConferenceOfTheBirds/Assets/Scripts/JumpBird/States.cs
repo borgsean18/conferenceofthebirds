@@ -164,6 +164,7 @@ public class Jump : State<Main_Bird>
         bird.animator.SetTrigger("Ground_Fly");
         timer = 0;
         is_press_space = true;
+        //bird.ControlFlappingSound(true);
     }
 
     public override void Execute(Main_Bird bird)
@@ -212,6 +213,7 @@ public class Jump : State<Main_Bird>
     public override void Exit(Main_Bird bird)
     {
         height = 0;
+
     }
 }
 
@@ -306,7 +308,7 @@ public class Gliding : State<Main_Bird>
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Fly");
         Debug.Log("here");
-        
+
     }
 
     public override void Execute(Main_Bird bird)
@@ -397,6 +399,7 @@ public class Gliding : State<Main_Bird>
     {
         bird.rb.gravityScale = 1f;
         bird.set_trail(false);
+
     }
 }
 
@@ -413,6 +416,7 @@ public class Fall : State<Main_Bird>
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Fall");
         bird.rb.gravityScale = 2;
+
     }
 
     public override void Execute(Main_Bird bird)
@@ -581,6 +585,7 @@ public class Death : State<Main_Bird>
     {
         timer = 0;
         bird.text.text = "DEAD";
+        bird.ControlDyingSound(true);
     }
 
     public override void Execute(Main_Bird bird)
@@ -598,6 +603,7 @@ public class Death : State<Main_Bird>
 
     public override void Exit(Main_Bird bird)
     {
+
     }
 }
 

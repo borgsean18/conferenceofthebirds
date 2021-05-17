@@ -80,7 +80,8 @@ public class Main_Bird : MonoBehaviour
 
     public float Dash_Distance;
     public float Dash_Stamina_Cost;
-
+    AudioSource FlappingSound;
+    AudioSource DyingSound;
     public bool CanMove;
     [HideInInspector]
     public TrailRenderer[] trails;
@@ -117,7 +118,8 @@ public class Main_Bird : MonoBehaviour
         {
             trails[i].enabled = false;
         }
-
+        FlappingSound = GameObject.Find("FlappingSound").GetComponent<AudioSource>();
+        DyingSound = GameObject.Find("DyingSound").GetComponent<AudioSource>();
     }
     public void get_hurt(float damage)
     {
@@ -134,7 +136,28 @@ public class Main_Bird : MonoBehaviour
         }
             
     }
-
+    public void ControlFlappingSound(bool a)
+    {
+        if(a)
+        {
+            FlappingSound.Play();
+        }
+        else
+        {
+            FlappingSound.Stop();
+        }
+    }
+    public void ControlDyingSound(bool a)
+    {
+        if(a)
+        {
+            DyingSound.Play();
+        }
+        else
+        {
+            DyingSound.Stop();
+        }
+    }
     public void test_co()
     {
         StartCoroutine(Wait(0.1f));
