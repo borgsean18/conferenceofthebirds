@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class WaitForVideoToPlay : MonoBehaviour
 {
     public float lengthOfVideo;
+    public Animator transition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,11 @@ public class WaitForVideoToPlay : MonoBehaviour
     private IEnumerator WaitForVideo()
     {
         yield return new WaitForSeconds(lengthOfVideo);
-        //go to next scene
-        SceneManager.LoadScene("Main Level");
+        //scene transition
+        transition.SetTrigger("start");
+
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }
