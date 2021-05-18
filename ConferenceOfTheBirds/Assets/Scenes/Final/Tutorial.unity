@@ -9412,11 +9412,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1532272667587207494, guid: f616f2ed011adfc48b8ae44f6c18b660, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7
+      value: 9.68
       objectReference: {fileID: 0}
     - target: {fileID: 1532272667587207494, guid: f616f2ed011adfc48b8ae44f6c18b660, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 32.2
+      value: 33.08
       objectReference: {fileID: 0}
     - target: {fileID: 1532272667587207494, guid: f616f2ed011adfc48b8ae44f6c18b660, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21809,7 +21809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 246472828019097013, guid: 12b220cb91c16c3448c7b5f248f406ef, type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 246472828019097013, guid: 12b220cb91c16c3448c7b5f248f406ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23835,7 +23835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5937247544792896508, guid: 8237d491232e09d41b6922a2922b1c42, type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 5937247544792896508, guid: 8237d491232e09d41b6922a2922b1c42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24685,7 +24685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187154066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.298398, y: 25.401428, z: -10}
+  m_LocalPosition: {x: -10.265023, y: 25.401428, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25688,6 +25688,22 @@ PrefabInstance:
     - target: {fileID: 8611451036358826991, guid: 4f15557ecbfac1843bd00f305a6a7983, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611451036358826992, guid: 4f15557ecbfac1843bd00f305a6a7983, type: 3}
+      propertyPath: m_Size.x
+      value: 2.620031
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611451036358826992, guid: 4f15557ecbfac1843bd00f305a6a7983, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5523298
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611451036358826992, guid: 4f15557ecbfac1843bd00f305a6a7983, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.016924024
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611451036358826992, guid: 4f15557ecbfac1843bd00f305a6a7983, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.018137336
       objectReference: {fileID: 0}
     - target: {fileID: 8611451036358826995, guid: 4f15557ecbfac1843bd00f305a6a7983, type: 3}
       propertyPath: m_Name
@@ -35855,6 +35871,7 @@ GameObject:
   - component: {fileID: 1698280059}
   - component: {fileID: 1698280058}
   - component: {fileID: 1698280068}
+  - component: {fileID: 1698280071}
   m_Layer: 10
   m_Name: section_Tutorial_platform
   m_TagString: Untagged
@@ -35925,7 +35942,7 @@ Transform:
   m_LocalScale: {x: 1.6662444, y: 1.6662444, z: 1.6662444}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1698280057
 BoxCollider2D:
@@ -36215,7 +36232,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698280054}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -36233,6 +36250,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 113.742966, y: 3.2644577}
+  m_EdgeRadius: 0
+--- !u!61 &1698280071
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698280054}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -14.439902, y: -4.717078}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 113.39, y: 68.03123}
+    newSize: {x: 113.39, y: 68.03123}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.3479023, y: 1.2600136}
   m_EdgeRadius: 0
 --- !u!1 &1698664451
 GameObject:
@@ -39949,6 +39992,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 8611451036358826992, guid: 4f15557ecbfac1843bd00f305a6a7983, type: 3}
+      propertyPath: m_Size.x
+      value: 2.587391
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611451036358826992, guid: 4f15557ecbfac1843bd00f305a6a7983, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5849724
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611451036358826992, guid: 4f15557ecbfac1843bd00f305a6a7983, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.03324485
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611451036358826992, guid: 4f15557ecbfac1843bd00f305a6a7983, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0018157363
+      objectReference: {fileID: 0}
     - target: {fileID: 8611451036358826995, guid: 4f15557ecbfac1843bd00f305a6a7983, type: 3}
       propertyPath: m_Name
       value: spike (11)
@@ -40016,7 +40075,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895118585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.298398, y: 25.401428, z: -10}
+  m_LocalPosition: {x: -10.265023, y: 25.401428, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 150981489}
@@ -45584,6 +45643,68 @@ PrefabInstance:
       propertyPath: PlayerDialogueBox
       value: 
       objectReference: {fileID: 644721708}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[1]
+      value: O:So, whose brave enough to take the first step?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[2]
+      value: I:Ah-
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[3]
+      value: O:Finally! A brave soul has stepped forward to show the way.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[4]
+      value: I:Wait a sec-
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[5]
+      value: O:To make it to the Seven Valleys, you must be fit. Now, show us your
+        moves!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[6]
+      value: 'O: Use your directions (WASD) to move.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[7]
+      value: I:O-okay!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[8]
+      value: O:The deadly environments that await you, means you must be able to
+        rise to the challenge. Now, soar!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[9]
+      value: O:Flaps like you were to jump (SPACEBAR) and hold to take off
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[10]
+      value: O:You can use your directions to fly freely while airborne
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[11]
+      value: O:but be careful not to run out of stamina.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[12]
+      value: 'O:Showed me you listened! Quick: go and collect all silver coins!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[13]
+      value: O:Until you run out of stamina...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460670554502747315, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
+      propertyPath: DialogeWithThisPerson.Array.data[14]
+      value: O:Until you run out of stamina...
+      objectReference: {fileID: 0}
     - target: {fileID: 8061985485438156850, guid: 3196e6ac1fa037b409a6581ee8bb7359, type: 3}
       propertyPath: m_SortingOrder
       value: 9
