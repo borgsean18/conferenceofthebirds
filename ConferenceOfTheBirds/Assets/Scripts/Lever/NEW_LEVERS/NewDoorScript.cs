@@ -5,23 +5,15 @@ using UnityEngine;
 public class NewDoorScript : MonoBehaviour
 {
     public bool isOpen = false;
-    public List<GameObject> levers;
-
-    private List<NewLeverLogic> leverScripts;
+    public int activeLevers = 0;
+    public int totalLevers = 3;
 
     private SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
     {
-        leverScripts = new List<NewLeverLogic>();
-
         sr = GetComponent<SpriteRenderer>();
-
-        for (int i = 0; i < levers.Count; i++)
-        {
-            leverScripts.Add(levers[i].GetComponent<NewLeverLogic>());
-        }
     }
 
     // Update is called once per frame
@@ -32,16 +24,9 @@ public class NewDoorScript : MonoBehaviour
 
     public void CheckAllLevers()
     {
-        int leverCounter = 0;
-        for (int i = 0; i < leverScripts.Count; i++)
-        {
-            if (leverScripts[i].isActive)
-            {
-                leverCounter++;
-            }
-        }
+        activeLevers++;
 
-        if (leverCounter == levers.Count)
+        if (activeLevers == totalLevers)
         {
             isOpen = true;
             sr.enabled = true;
@@ -54,19 +39,11 @@ public class NewDoorScript : MonoBehaviour
         {
             if (collision.tag == "Player")
             {
-                GameManagerScript.current.InteractionButton.SetActive(true);
-            }
-        }
-    }
+                if (sr.enabled)
+                {
+                    //load next scene
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (sr.enabled)
-        {
-            if (collision.tag == "Player")
-            {
-                if(GameManagerScript.current.InteractionButton.activeSelf)
-                    GameManagerScript.current.InteractionButton.SetActive(false);
+                }
             }
         }
     }
