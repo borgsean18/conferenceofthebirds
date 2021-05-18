@@ -123,7 +123,7 @@ public class Main_Bird : MonoBehaviour
     }
     public void get_hurt(float damage)
     {
-        if(!m_stateMachine.IsInState(Fall.Instance))
+        if(!m_stateMachine.IsInState(Hurt.Instance))
         {
             GetFSM().ChangeState(Hurt.Instance);
             health -= damage;
@@ -318,6 +318,10 @@ public class Main_Bird : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             grab_thing();
+        }
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            m_stateMachine.ChangeState(Death.Instance);
         }
         
     }
