@@ -514,7 +514,15 @@ public class Hurt : State<Main_Bird>
 
     public override void Execute(Main_Bird bird)
     {
-        if(timer<time_cool_down)
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            bird.GetFSM().ChangeState(Gliding.Instance);
+        }
+        else if(Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            bird.GetFSM().ChangeState(Air_Dash.Instance);
+        }
+        if (timer<time_cool_down)
         {
             timer += Time.deltaTime;
         }
