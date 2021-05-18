@@ -852,14 +852,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogeWithThisPerson:
   - EMPTY
-  - O:WASD to move
-  - O:press SPACEBAR while running to take off
-  - O:Hold SPACEBAR and use WASD to fly freely
-  - O:Until you run out of stamina...
+  - "O:It seems we\u2019ve reached the end for now."
+  - "I:Really? But I don\u2019t see the Simurgh anywhere\u2026.or anything honestly."
+  - "O:If finding the Simurgh was simple, the world would\u2019ve been saved a long
+    time ago."
+  - "I:I know but, what now? I don\u2019t see anything around here despite all the
+    flying we did."
+  - "I:I know but, what now? I don\u2019t see anything around here despite all the
+    flying we did."
+  - 'O:This place looks safe enough, I advise taking a break and resting. '
+  - I:Agreed. We travelled a lot today. Everyone must be exhaust-
+  - O:?!?!
+  - I:What an explosion! What was that?
+  - "O:I don\u2019t know!"
+  - I:We need to find the Simurgh now!
+  - O:Wait young bird! Don't be so impulsive!
   canTalk: 1
   convoEnded: 0
   inProximity: 0
   CanTalkToThisPerson: 1
+  isTutorialLevel: 0
   personDialogueBox: {fileID: 841630029}
   personTextObject: {fileID: 1802093146}
   PlayerDialogueBox: {fileID: 644721708}
@@ -1038,6 +1050,7 @@ MonoBehaviour:
   convoEnded: 0
   inProximity: 0
   CanTalkToThisPerson: 1
+  isTutorialLevel: 0
   personDialogueBox: {fileID: 0}
   personTextObject: {fileID: 0}
   PlayerDialogueBox: {fileID: 0}
