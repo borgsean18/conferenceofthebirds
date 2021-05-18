@@ -334,7 +334,6 @@ public class Gliding : State<Main_Bird>
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     bird.face_direction = -1;
-
                 }
                 else if (Input.GetKeyDown(KeyCode.D))
                 {
@@ -347,7 +346,8 @@ public class Gliding : State<Main_Bird>
                 }
                 if (Input.GetKey(KeyCode.W))
                 {
-                    bird.rb.velocity = new Vector2(bird.face_direction*bird.gliding_speed, bird.fly_up_speed);
+                    if (Mathf.Abs(bird.rb.velocity.x) <= bird.gliding_speed)
+                        bird.rb.velocity = new Vector2(bird.face_direction*bird.gliding_speed, bird.fly_up_speed);
                     if(!(Input.GetKey(KeyCode.A)|| Input.GetKey(KeyCode.D)))
                     {
                         bird.rb.velocity = new Vector2(0, bird.fly_up_speed*1.5f);
@@ -444,13 +444,14 @@ public class Fall : State<Main_Bird>
                 if (Input.GetKeyDown(KeyCode.A))
                 {
                     bird.face_direction = -1;
-                    bird.rb.velocity = new Vector2(-bird.fall_x_speed, bird.rb.velocity.y);
                 }
                 else if (Input.GetKeyDown(KeyCode.D))
                 {
                     bird.face_direction = 1;
-                    bird.rb.velocity = new Vector2(bird.fall_x_speed, bird.rb.velocity.y);
+                    
                 }
+                if (Mathf.Abs(bird.rb.velocity.x) <= bird.fall_x_speed)
+                    bird.rb.velocity = new Vector2(bird.face_direction*bird.fall_x_speed, bird.rb.velocity.y);
                 if (Input.GetKey(KeyCode.Space) && bird.gliding_time > 0.5f)
                 {
                     bird.GetFSM().ChangeState(Gliding.Instance);
@@ -506,7 +507,7 @@ public class Hurt : State<Main_Bird>
         bird.rb.gravityScale = 1f;
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Idle");
-        time_cool_down = 0.5f;
+        time_cool_down = 1f;
         timer = 0;
         bird.MyInpulse.GenerateImpulse();
     }
