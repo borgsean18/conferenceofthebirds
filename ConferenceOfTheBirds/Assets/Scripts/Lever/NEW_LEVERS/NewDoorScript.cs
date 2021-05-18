@@ -42,7 +42,7 @@ public class NewDoorScript : MonoBehaviour
                 if (sr.enabled)
                 {
                     //load next scene
-
+                    StartCoroutine(LevelLoader.current.FadeToNextScene());
                 }
             }
         }

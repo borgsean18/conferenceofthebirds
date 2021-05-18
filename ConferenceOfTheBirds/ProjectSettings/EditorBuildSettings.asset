@@ -9,12 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Final/IntroVideo.unity
     guid: 060c3d103d8528c43aecc62341d36b72
   - enabled: 1
+    path: Assets/Scenes/Final/Tutorial.unity
+    guid: a08c3e757aa028e40b8681acc6012151
+  - enabled: 1
     path: Assets/Scenes/Final/Main Level.unity
     guid: 26a2ee96b6070824ca2712f7c810865e
-  - enabled: 0
-    path: Assets/Scenes/Prototypes/Scroll.unity
-    guid: 4806e83d20b90384e85351544ea9cc2b
-  - enabled: 0
-    path: Assets/Scenes/Prototypes/MainMenu.unity
-    guid: 6358a381b6645d24096f05c6ae2a1dd1
+  - enabled: 1
+    path: Assets/Scenes/Final/Epilogue.unity
+    guid: 263a752d17fe0474a9e0472987097c31
   m_configObjects: {}

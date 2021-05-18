@@ -11,6 +11,7 @@ public class TalkablePeople : MonoBehaviour
     public bool convoEnded = false;
     public bool inProximity = false;
     public bool CanTalkToThisPerson = true;
+    public bool isTutorialLevel = false;
 
     //GameObject
     public GameObject personDialogueBox;
@@ -112,6 +113,10 @@ public class TalkablePeople : MonoBehaviour
         convoEnded = true;
         GameManagerScript.current.InteractionButton.SetActive(false);
         Player.GetComponent<Main_Bird>().CanMove = true;
+        if (isTutorialLevel)
+        {
+            StartCoroutine(TutorialLevelLoader.current.FadeToNextScene());
+        }
     }
 
     private IEnumerator waitForKeyPress(KeyCode key)
