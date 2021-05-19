@@ -112,6 +112,11 @@ public class TalkablePeople : MonoBehaviour
         convoEnded = true;
         GameManagerScript.current.InteractionButton.SetActive(false);
         Player.GetComponent<Main_Bird>().CanMove = true;
+
+        if (GameManagerScript.current.isEpilogue)
+        {
+            GameManagerScript.current.endCanvas.SetActive(true);
+        }
     }
 
     private IEnumerator waitForKeyPress(KeyCode key)

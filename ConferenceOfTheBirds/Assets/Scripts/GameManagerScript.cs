@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour
 {
+    public bool isEpilogue = false;
+    public GameObject endCanvas;
+
     //UI
     [Header("UI")]
     public GameObject NotificationsCanvas;
