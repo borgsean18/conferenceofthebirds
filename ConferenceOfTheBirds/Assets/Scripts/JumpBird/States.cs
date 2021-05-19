@@ -606,7 +606,7 @@ public class Death : State<Main_Bird>
         if (timer>0.2f)
         {
             bird.transform.position = bird.save_point_position;
-            bird.health = 100;
+            bird.health = bird.max_health;
             bird.health_slider.fillAmount = bird.health/bird.max_health;
             bird.GetFSM().ChangeState(Idle.Instance);
         }

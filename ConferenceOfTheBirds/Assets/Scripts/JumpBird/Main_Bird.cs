@@ -93,8 +93,8 @@ public class Main_Bird : MonoBehaviour
         Bird_Bone = GameObject.Find("bone_1").transform;
         rb = GetComponent<Rigidbody2D>();
         face_direction = 1;
-        text = GetComponentInChildren<Text>();
-        text.text = "hello";
+        //text = GetComponentInChildren<Text>();
+        //text.text = "hello";
         GameObject BirdHealth_O = GameObject.FindGameObjectWithTag("BirdHealthSlider");
         //print(BirdHealth_O.name);
         health_slider = BirdHealth_O.GetComponent<Image>();
@@ -304,7 +304,7 @@ public class Main_Bird : MonoBehaviour
     void Update()
     {
         //print(GetFSM().CurrentState());
-        text.text = GetFSM().CurrentState().ToString();
+        //text.text = GetFSM().CurrentState().ToString();
         if(CanMove)
         {
             m_stateMachine.StateMachineUpdate();
