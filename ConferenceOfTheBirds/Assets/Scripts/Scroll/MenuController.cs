@@ -7,6 +7,7 @@ public class MenuController : MonoBehaviour
 {
     Scene Game_Scene;
     bool is_in_game;
+    bool is_first_time;
     Texture2D screenshot;
     Main_Bird bird;
     Vector3 temp_position;
@@ -69,7 +70,8 @@ public class MenuController : MonoBehaviour
         Image temp=GameObject.FindGameObjectWithTag("SCRect").GetComponent<Image>();
         a.rectTransform.position = temp.rectTransform.position;
         a.rectTransform.rect.Set(temp.rectTransform.rect.x, temp.rectTransform.rect.y, width: temp.rectTransform.rect.width, height: temp.rectTransform.rect.height);
-
+        MainMainManager b = GameObject.FindGameObjectWithTag("MainMenuManager").GetComponent<MainMainManager>();
+        b.is_first_time = false;
     }
     void Update()
     {

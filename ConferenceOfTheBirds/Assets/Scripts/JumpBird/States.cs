@@ -308,6 +308,7 @@ public class Gliding : State<Main_Bird>
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Fly");
         Debug.Log("here");
+        
 
     }
 
@@ -371,7 +372,6 @@ public class Gliding : State<Main_Bird>
 
                     bird.ResetAllTriggers(bird.animator);
                     bird.animator.SetTrigger("Glide");
-                    bird.set_trail(true);
                 }
                 else if (Input.GetKeyUp(KeyCode.S))
                 {
@@ -398,7 +398,7 @@ public class Gliding : State<Main_Bird>
     public override void Exit(Main_Bird bird)
     {
         bird.rb.gravityScale = 1f;
-        bird.set_trail(false);
+        
 
     }
 }
@@ -416,6 +416,7 @@ public class Fall : State<Main_Bird>
         bird.ResetAllTriggers(bird.animator);
         bird.animator.SetTrigger("Fall");
         bird.rb.gravityScale = 2;
+        
 
     }
 
@@ -489,6 +490,7 @@ public class Fall : State<Main_Bird>
     {
         bird.ResetAllTriggers(bird.animator);
         bird.rb.gravityScale = 1;
+        
 
     }
 }
