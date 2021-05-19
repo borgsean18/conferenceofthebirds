@@ -6732,7 +6732,6 @@ MonoBehaviour:
   convoEnded: 0
   inProximity: 0
   CanTalkToThisPerson: 1
-  isTutorialLevel: 0
   personDialogueBox: {fileID: 0}
   personTextObject: {fileID: 0}
   PlayerDialogueBox: {fileID: 0}
@@ -14574,6 +14573,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 37441405340797615, guid: eada2e66906ee424f85aa6337e9981fa, type: 3}
   m_PrefabInstance: {fileID: 37441405931584728}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &626122028 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8518726292309508139, guid: 98461542b6dab7b4b8a01e5a4befa3a7, type: 3}
+  m_PrefabInstance: {fileID: 1091750523}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &626122036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626122028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5aeafb239e851948906b6eb64282d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: 0
 --- !u!1001 &627909850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24765,7 +24782,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187154066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.265023, y: 25.401428, z: -10}
+  m_LocalPosition: {x: -10.298398, y: 25.401428, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40296,7 +40313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895118585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.265023, y: 25.401428, z: -10}
+  m_LocalPosition: {x: -10.298398, y: 25.401428, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 150981489}
