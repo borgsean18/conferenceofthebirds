@@ -481,7 +481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5937247544792896483, guid: 8237d491232e09d41b6922a2922b1c42, type: 3}
       propertyPath: lengthOfVideo
-      value: 20
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 5937247544792896508, guid: 8237d491232e09d41b6922a2922b1c42, type: 3}
       propertyPath: m_RootOrder
